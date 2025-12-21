@@ -1,0 +1,32 @@
+// // main.scss
+// @use './variables' as *;
+// @use './mixins' as *;
+// @use '../components/Layout/layout.scss';
+// @use '../components/Header/header.scss';
+// @use '../components/Footer/footer.scss';
+
+
+// * {
+//   font-family: $font-primary;
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// html {
+//   scroll-behavior: smooth;
+//   scrollbar-gutter: stable; // pour éviter que le contenu ne bouge lors du scroll
+//   font-size: 62.5%; /* 1rem = 10px car la base du navigateur est 16px */
+// }
+
+// body {
+//   background: $white;
+//   min-height: 100vh;
+//   max-width: 1440px;
+//   margin: 0 auto;
+
+//   a {
+//     text-decoration: none;
+//     color: $black;
+//   }
+// }

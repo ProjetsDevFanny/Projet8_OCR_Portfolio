@@ -1,0 +1,53 @@
+/**
+ * @file _mixins.scss
+ * @description Fichier de mixins réutilisables pour l'application.
+ *              Contient les mixins pour les styles récurrents (flexbox, typographie) et les media queries.
+ *              Approche desktop-first : utiliser les mixins dans l'ordre desktop → tablet → mobile.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
+@use './variables' as *;
+
+// @mixin card-shadow {
+//   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+// }
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// @mixin font-style($size, $weight: $weight-default, $line-height: $line-height-default) {
+//   font-family: $font-primary;
+//   line-height: $line-height;
+//   font-size: $size;
+//   font-weight: $weight;
+// }
+
+// Mixins desktop-first => max-width uniquement
+@mixin desktop {
+  @media (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+
+// ⚠️ Important : dans les SCSS, toujours appliquer les mixins dans cet ordre : desktop → tablet → mobile
+// Les plus petits écrasent les plus grands pour chaque propriété !

@@ -1,0 +1,38 @@
+/**
+ * @file _variables.scss
+ * @description Fichier de variables globales SCSS pour l'application.
+ *              Définit les couleurs, typographie, espacements et breakpoints pour les media queries.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
+// couleurs
+$background: #1c0d30;
+$dark_background: #0e0e0e;
+$medium_purple: #bc60fb;
+$light_purple: #bc60fb;
+$violet: #923fe6;
+$dark_purple:#430d79;
+$dark_violet: #241d41;;
+$blue: #4340da;
+$white:#ffffff;
+$black:#0a0a0a;
+
+
+// // radius
+// $radiusCard: 10px;
+
+// fontes
+$font-primary: 'roboto monospace', sans-serif;
+// $line-height-default: 1.43;
+// $weight-default: 500;
+$font-secondary: 'Poppins', sans-serif;
+
+
+// media queries
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
