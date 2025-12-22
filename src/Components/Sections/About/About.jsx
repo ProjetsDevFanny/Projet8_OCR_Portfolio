@@ -15,23 +15,22 @@ function About() {
   return (
     <div className="about">
       <div className="about__container">
-        <h2 className="about__title">À propos de moi</h2>
-
-        <div className="about__content">
-          <div className="about__text">
+        <div className="about__container_text">
+          <div className="about__container_text_title">
+            <h2>À propos de moi</h2>
+          </div>
+          <div className="about__container_text_paragraph">
             <p>
-              Développeuse web passionnée avec une solide expérience en développement full-stack.
-              Je crée des applications web modernes, performantes et accessibles.
-            </p>
-            <p>
-              Spécialisée en Javascript, React, Node.js, Express, MongoDB, je m'efforce toujours de produire
-              un code de qualité et des expériences utilisateur exceptionnelles.
+              Développeuse web passionnée par la programmation informatique depuis 2 ans. <br /> J'ai commencé par apprendre le HTML, le CSS et le JavaScript pour ensuite me spécialiser en React, Node.js, Express, MongoDB.              
             </p>
           </div>
         </div>
+        <div className="about__container_picture">
+          <img className="about__container_picture_photo" src="/src/assets/images/photo_profile.jpg" alt="About_photo_of_Fanny_Simon" />
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default About

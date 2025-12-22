@@ -7,6 +7,11 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    min-height: calc(50vh - 8rem); // 50vh moins le padding top/bottom de 4rem chacun
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centre horizontalement tous les éléments enfants
+    justify-content: center; // Centre verticalement dans le conteneur
   }
 
   &__subtitle {
@@ -15,20 +20,37 @@
     color: $white;
   }
   
+  // &__content {
+  //   }
+  
   &__skills-grid { 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Les boutons restent centrés dans leur grille
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
   .skill-tag {
     background-color: $medium_purple;
     color: $white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    @include font-style(1.5rem);
+    padding: 1rem 1.5rem; // Padding horizontal ajusté pour le texte
+    border-radius: 15px;
     text-align: center;
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: block;
+    display: inline-block; // Changement important pour l'adaptation au contenu
+    transition: all 0.3s ease;
+    border: 2px solid $medium_purple;
+    white-space: nowrap; // Empêche le texte de passer à la ligne
+    flex-shrink: 0; // Empêche la compression de l'élément
+
+      &:hover {
+        background-color: transparent;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+      }
+
   }
 }
+

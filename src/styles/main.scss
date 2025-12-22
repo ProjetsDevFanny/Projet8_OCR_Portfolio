@@ -70,45 +70,22 @@ body {
 // ===============================================================================
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-secondary;
-  font-weight: 700;
-  line-height: 1.2;
+  font-family: $font-primary;
   margin-bottom: 1rem;
   color: $white;
 }
 
-h1 {
-  font-size: 3.2rem;
-
-  @include mobile {
-    font-size: 2.5rem;
-  }
-}
-
 h2 {
-  font-size: 2.5rem;
-
-  @include mobile {
-    font-size: 2rem;
-  }
-}
-
-h3 {
-  font-size: 1.8rem;
-}
-
-p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  @include font-style(2rem);
+  margin-bottom: 3rem;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
+  @include font-style(1rem);
+  font-family: $font-primary;
   background-color: $medium_purple;
   color: $white;
   cursor: pointer;
