@@ -1,0 +1,35 @@
+/**
+ * @file home.scss
+ * @description Styles pour la page d'accueil du portfolio
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+ 
+ @use '../../styles/variables' as *;
+ @use '../../styles/mixins' as *;
+
+
+
+// ===============================================================================
+// HOME_ sytles communs pour toutes les sections
+// ===============================================================================
+.home { 
+  &__about,
+  &__projects,
+  &__history,
+  &__references,
+  &__contact {
+    padding: 4rem 2rem;
+    min-height: 50vh;
+  }
+
+  // Styles spécifiques pour chaque section si nécessaire
+  &__skills {
+    background-color: var(--color-secondary);
+  }
+
+  &__projects {
+    background-color: var(--color-background);
+  }
+}

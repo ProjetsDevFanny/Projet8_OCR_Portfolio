@@ -1,0 +1,34 @@
+/**
+ * @file footer.scss
+ * @description Styles pour le composant Footer
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+
+.footer {
+  background-color: var(--color-primary, #1c0d30);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__links {
+    margin-top: 1rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

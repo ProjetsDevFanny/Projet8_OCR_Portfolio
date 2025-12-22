@@ -22,12 +22,12 @@
   align-items: center;
 }
 
-// @mixin font-style($size, $weight: $weight-default, $line-height: $line-height-default) {
-//   font-family: $font-primary;
-//   line-height: $line-height;
-//   font-size: $size;
-//   font-weight: $weight;
-// }
+@mixin font-style($size, $weight: $weight-default, $line-height: $line-height-default) {
+  font-family: $font-primary;
+  line-height: $line-height;
+  font-size: $size;
+  font-weight: $weight;
+}
 
 // Mixins desktop-first => max-width uniquement
 @mixin desktop {

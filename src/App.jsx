@@ -1,21 +1,23 @@
 /**
  * @file App.jsx
- * @description Composant racine de l'application qui initialise le RouterProvider pour gérer le routage.
+ * @description Composant racine de l'application qui rend le layout et la page d'accueil.
  * @author Simon Fanny
  * @date 21/12/2025
  * @project Portfolio - Projet8 - OpenClassrooms
- * 
+ *
  * ===============================================================================
  */
 
 import React from 'react'
-import { RouterProvider } from 'react-router-dom'
-import { router } from './components/Router'
+import Layout from './Components/Layout/Layout'
+import Home from './Pages/Home/Home'
 import './styles/main.scss'
-    
+
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Layout>
+      <Home />
+    </Layout>
   )
 }
 

@@ -1,32 +1,179 @@
-// // main.scss
-// @use './variables' as *;
-// @use './mixins' as *;
-// @use '../components/Layout/layout.scss';
-// @use '../components/Header/header.scss';
-// @use '../components/Footer/footer.scss';
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+
+ @use './variables' as *;
+ @use './mixins' as *;
+
+ // ===============================================================================
+// IMPORTS DES COMPOSANTS
+// ===============================================================================
+
+@use '../Components/Layout/layout.scss';
+@use '../Components/Header/header.scss';
+@use '../Components/Footer/footer.scss';
+@use '../Components/Sections/About/about.scss';
+@use '../Components/Sections/Contacts/contacts.scss';
+@use '../Components/Sections/History/history.scss';
+@use '../Components/Sections/Projects/projects.scss';
+@use '../Components/Sections/References/references.scss';
 
 
-// * {
-//   font-family: $font-primary;
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
+// ===============================================================================
+// RESET CSS ET NORMALISATION
+// ===============================================================================
+
+* {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable; // pour éviter que le contenu ne bouge lors du scroll
+  font-size: 62.5%; /* 1rem = 10px car la base du navigateur est 16px */
+  background: linear-gradient(135deg, $background 0%, $dark_violet 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  line-height: $line-height-default;
+  font-weight: $weight-default;
+  color: $white;
+
+  a {
+    text-decoration: none;
+    color: $white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: $medium_purple;
+  }
+}
+
+// ===============================================================================
+// ÉLÉMENTS HTML DE BASE
+// ===============================================================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: $white;
+}
+
+h1 {
+  font-size: 3.2rem;
+
+  @include mobile {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: $medium_purple;
+  color: $white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: $violet;
+    border-color: $violet;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+// ===============================================================================
+// LISTES ET AUTRES ÉLÉMENTS
+// ===============================================================================
+
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+// blockquote {
+//   margin: 2rem 0;
+//   padding: 1rem 2rem;
+//   border-left: 4px solid $medium_purple;
+//   background-color: rgba($medium_purple, 0.1);
+//   font-style: italic;
 // }
 
-// html {
-//   scroll-behavior: smooth;
-//   scrollbar-gutter: stable; // pour éviter que le contenu ne bouge lors du scroll
-//   font-size: 62.5%; /* 1rem = 10px car la base du navigateur est 16px */
+// code {
+//   background-color: $background;
+//   color: $medium_purple;
+//   padding: 0.2rem 0.4rem;
+//   border-radius: 4px;
+//   font-family: 'Courier New', monospace;
+//   font-size: 0.9em;
 // }
 
-// body {
-//   background: $white;
-//   min-height: 100vh;
-//   max-width: 1440px;
-//   margin: 0 auto;
+// pre {
+//   background-color: $background;
+//   color: $white;
+//   padding: 1rem;
+//   border-radius: 8px;
+//   overflow-x: auto;
+//   margin-bottom: 1rem;
 
-//   a {
-//     text-decoration: none;
-//     color: $black;
+//   code {
+//     background-color: transparent;
+//     color: inherit;
+//     padding: 0;
 //   }
 // }
+

@@ -1,0 +1,88 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+// ===============================================================================
+// HERO
+// ===============================================================================
+.hero {
+  &__container {
+    background: linear-gradient(135deg, $background 0%, $dark_violet 100%);
+    color: $white;
+    @include center-flex;
+    text-align: center;
+    padding: 2rem;
+    .hero__content {
+      max-width: 800px;
+
+      .hero__title {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      .hero__subtitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .hero__description {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        line-height: 1.6;
+        opacity: 0.8;
+      }
+
+      .hero__actions {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .hero__button {
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+
+        &--primary {
+          background-color: $medium_purple;
+          color: white;
+          border: 2px solid $medium_purple;
+
+          &:hover {
+            background-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+          }
+        }
+
+        &--secondary {
+          background-color: transparent;
+          color: white;
+          border: 2px solid white;
+
+          &:hover {
+            background-color: white;
+            color: $background;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+}
