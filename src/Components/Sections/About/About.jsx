@@ -28,19 +28,6 @@ function About() {
               un code de qualité et des expériences utilisateur exceptionnelles.
             </p>
           </div>
-
-          <div className="about__skills">
-            <h3>Technologies principales</h3>
-            <div className="about__skills-grid">
-              <span className="skill-tag">HTML/CSS</span>
-              <span className="skill-tag">Sass</span>
-              <span className="skill-tag">JavaScript</span>
-              <span className="skill-tag">React</span>
-              <span className="skill-tag">Node.js</span>
-              <span className="skill-tag">Express</span>
-              <span className="skill-tag">MongoDB</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>

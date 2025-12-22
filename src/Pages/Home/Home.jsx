@@ -15,6 +15,7 @@ import Contacts from '../../Components/Sections/Contacts/Contacts'
 import References from '../../Components/Sections/References/References'
 import History from '../../Components/Sections/History/History'
 import Hero from '../../Components/Hero/Hero'
+import Skills from '../../Components/Sections/Skills/Skills'
 import './home.scss'
 
 function Home() {
@@ -30,6 +31,11 @@ function Home() {
         <About />
       </section>
 
+      {/* Section Skills */}
+      <section id="skills" className="home__skills">
+        <Skills />
+      </section>
+      
       {/* Section Projets */}
       <section id="projects" className="home__projects">
         <Projects />

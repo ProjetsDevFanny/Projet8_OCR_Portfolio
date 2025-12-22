@@ -16,15 +16,15 @@ function Hero() {
    <div className="hero">
     <div className="hero__container">
       <div className="hero__content">
-        <h1 className="hero__title">Simon Fanny</h1>
+        <h1 className="hero__title">Fanny SIMON</h1>
         <h2 className="hero__subtitle">Développeuse Web Full Stack</h2>
         <p className="hero__description">
-          Passionnée par la création d'expériences web modernes et intuitives.
-          Spécialisée en Javascript, React, Node.js, Express, MongoDB.
+          Passionnée par la création d'expériences web modernes et intuitives. <br />
+          Spécialisée en Javascript, React, Node.js, Express, MongoDB. <br />
         </p>
         <div className="hero__actions">
-          <a href="#about" className="hero__button hero__button--primary">À propos</a>
-          <a href="#projects" className="hero__button hero__button--secondary">Projets</a>
+          <a href="#projects" className="hero__button hero__button--primary">Projets</a>
+          <a href="#history" className="hero__button hero__button--secondary">Parcours</a>
         </div>
       </div>
     </div>

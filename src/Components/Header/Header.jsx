@@ -23,8 +23,8 @@ function Header() {
           </a>
         </div>
         <nav className="header__nav">
-          <a href="#home">Accueil</a>
           <a href="#about">À propos</a>      
+          <a href="#skills">Compétences</a>
           <a href="#projects">Projets</a>
           <a href="#history">Parcours</a>
           <a href="#references">References</a>

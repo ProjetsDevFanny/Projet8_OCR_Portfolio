@@ -6,17 +6,25 @@
 // ===============================================================================
 .hero {
   &__container {
-    background: linear-gradient(135deg, $background 0%, $dark_violet 100%);
+    background: 
+    linear-gradient(135deg, rgba($background, 0.8) 0%, rgba($dark_violet, 0.8) 100%),
+    url('/src/assets/images/frequency-wave.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
     color: $white;
     @include center-flex;
     text-align: center;
+    min-height: 50vh;
     padding: 2rem;
+
     .hero__content {
       max-width: 800px;
 
       .hero__title {
-        font-size: 4rem;
-        font-weight: 700;
+        @include font-style(6rem);
+        font-family: $font-primary;
         margin-bottom: 1rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 
@@ -26,8 +34,7 @@
       }
 
       .hero__subtitle {
-        font-size: 1.5rem;
-        font-weight: 300;
+        @include font-style(1.8rem);
         margin-bottom: 2rem;
         opacity: 0.9;
       }
@@ -52,6 +59,7 @@
       }
 
       .hero__button {
+        @include font-style(1.2rem);
         padding: 1rem 2rem;
         border-radius: 5px;
         text-decoration: none;

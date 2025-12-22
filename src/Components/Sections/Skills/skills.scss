@@ -1,0 +1,34 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+
+.skills {
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: $white;
+  }
+  
+  &__skills-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skill-tag {
+    background-color: $medium_purple;
+    color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: block;
+  }
+}

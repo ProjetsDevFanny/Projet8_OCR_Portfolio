@@ -6,11 +6,21 @@
 // Police de signature
 .header {
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, $background 0%, $dark_violet 100%);
+  backdrop-filter: blur(10px); // Optionnel : effet de flou pour un look moderne
+  transition: all 0.3s ease;
+
+  // Ombre subtile quand sticky pour un meilleur design
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 
   &__container {
     @include center-flex;
     justify-content: space-between;
-    // padding: 3rem 4rem;
+    align-items: center;
+    padding: 0rem 2rem;
     margin: 0 auto;
 
     @include mobile {
@@ -21,9 +31,7 @@
   &__signature {
     @include font-style(4rem);
     color: $white;
-    text-decoration: none;
-    margin-bottom: 24px;
-  
+   
     &, a {
       font-family: $font-signature;
      }
@@ -31,7 +39,7 @@
 
   &__nav {
     display: flex;
-    gap: 6rem;
+    gap: 4rem;
 
     @include tablet {
       gap: 3rem;
@@ -41,18 +49,18 @@
       gap: 2rem;
     }
 
-    .a {
-      @include font-style(2.4rem);
+    a {
+      @include font-style(1.2rem);
       text-decoration: none;
       color: $white;
       position: relative;
 
       @include tablet {
-        @include font-style(1.8rem);
+        @include font-style(1.4rem);
       }
 
       @include mobile {
-        @include font-style(1.2rem);
+        @include font-style(1rem);
         text-transform: uppercase;
       }
     }
