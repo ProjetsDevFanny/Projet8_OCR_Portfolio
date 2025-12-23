@@ -14,11 +14,7 @@
    color: $white;
  
    &__container {
-     max-width: 1200px;
-     margin: 0 auto;
-     padding: 4rem 2rem;
-     min-height: calc(50vh - 8rem);
-     display: flex;
+    @include container-style; 
      flex-direction: column;
      align-items: center;
      justify-content: flex-start;
@@ -43,7 +39,7 @@
  // Formulaire de contact
  .contact-form {
    width: 100%;
-   max-width: 600px;
+   max-width: 800px;
    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
    backdrop-filter: blur(10px);
    border: 1px solid rgba(255, 255, 255, 0.2);
@@ -67,7 +63,7 @@
  }
  
  .form-label {
-   @include font-style(1rem);
+   @include font-style(1.3rem);
    color: $white;
    display: block;
    margin-bottom: 0.5rem;
@@ -82,7 +78,7 @@
    border: 1px solid rgba(255, 255, 255, 0.2);
    border-radius: 8px;
    color: $white;
-   @include font-style(1rem);
+   @include font-style(1.2rem);
    transition: all 0.3s ease;
    backdrop-filter: blur(5px);
  
@@ -100,17 +96,17 @@
  
  .form-textarea {
    resize: vertical;
-   min-height: 120px;
+   min-height: 150px;
  }
  
  .form-submit-btn {
-   width: 100%;
+   width: 50%;
    padding: 1rem 2rem;
    background: $medium_purple;
    color: white;
    border: 1px solid $medium_purple;
    border-radius: 8px;
-   @include font-style(1.1rem);
+   @include font-style(1.3rem);
    font-weight: 600;
    cursor: pointer;
    transition: all 0.3s ease;
@@ -140,12 +136,14 @@
      background-color: rgba(76, 175, 80, 0.2);
      color: #4caf50;
      border: 1px solid rgba(76, 175, 80, 0.3);
+     @include font-style(1.3rem);
    }
  
    &--error {
      background-color: rgba(244, 67, 54, 0.2);
      color: #f44336;
      border: 1px solid rgba(244, 67, 54, 0.3);
+     @include font-style(1.3rem);
    }
  }
  

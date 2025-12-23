@@ -10,17 +10,35 @@
 
 import React from 'react'
 import './footer.scss'
+import githubIcon from '../../assets/images/Icones/github.svg'
+import linkedinIcon from '../../assets/images/Icones/linkedin.svg'
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <p>&copy; 2025 Simon Fanny. Tous droits réservés.</p>
-        <div className="footer__links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:contact@simonfanny.dev">Email</a>
+        <div className="footer__social-links">
+        <a 
+            href="https://github.com/ProjetsDevFanny" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-link social-link--github"
+            aria-label="Visitez mon GitHub"
+          >
+            <img src={githubIcon} alt="GitHub" className="social-icon social-icon--github" />
+          </a>
+          
+          <a 
+            href="https://www.linkedin.com/in/fannysimon-dev-web/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-link social-link--linkedin"
+            aria-label="Visitez mon LinkedIn"
+          >
+            <img src={linkedinIcon} alt="LinkedIn" className="social-icon social-icon--linkedin" />
+          </a>
         </div>
+        <p>&copy; 2025 Simon Fanny. Tous droits réservés.</p>
       </div>
     </footer>
   )

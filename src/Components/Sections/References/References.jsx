@@ -15,7 +15,7 @@ function References() {
   return (
     <div className="references">
       <div className="references__container">
-        <h2 className="references__title">References</h2>
+        <h2 className="references__title">Recommandations</h2>
       </div>
     </div>
   )

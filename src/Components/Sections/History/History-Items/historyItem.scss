@@ -1,0 +1,154 @@
+/**
+ * @file historyItem.scss
+ * @description Styles pour le composant HistoryItem (timeline)
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+
+ @use '../../../../styles/variables' as *;
+ @use '../../../../styles/mixins' as *;
+ 
+ // Block: timeline-item
+ .timeline-item {
+   position: relative;
+   width: 50%;
+   padding: 2rem;
+   box-sizing: border-box;
+ 
+   // Modifier: --left
+   &--left {
+     text-align: right;
+     padding-right: 3rem;
+ 
+     .timeline-item__content {
+       margin-right: 2rem;
+     }
+ 
+     .timeline-item__dot {
+       right: -1rem;
+     }
+ 
+     .timeline-item__date {
+       right: 3rem;
+     }
+   }
+ 
+   // Modifier: --right
+   &--right {
+     margin-left: 50%;
+     text-align: left;
+     padding-left: 3rem;
+ 
+     .timeline-item__content {
+       margin-left: 2rem;
+     }
+ 
+     .timeline-item__dot {
+       left: -1rem;
+     }
+ 
+     .timeline-item__date {
+       left: 3rem;
+     }
+   }
+ 
+   // Element: __content
+   &__content {
+    //  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+     background-color: $white;
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     border-radius: 10px;
+     padding: 3rem 2rem;
+     position: relative;
+     transition: all 0.3s ease;
+ 
+     &:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 10px 25px rgba(188, 96, 251, 0.2);
+       border-color: $medium_purple;
+     }
+   }
+ 
+   // Element: __title
+   &__title {
+     @include font-style(1.4rem);
+     color: $black;
+     margin-bottom: 0.5rem;
+     font-weight: 600;
+   }
+ 
+   // Element: __location
+   &__location {
+     @include font-style(0.9rem);
+     color: $medium_purple;
+     display: block;
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+   }
+ 
+   // Element: __description
+   &__description {
+     @include font-style(1rem);
+     color: $black;
+     line-height: 1.5;
+     margin: 0;
+   }
+ 
+   // Element: __dot
+   &__dot {
+     position: absolute;
+     top: 2rem;
+     width: 2rem;
+     height: 2rem;
+     background: $medium_purple;
+     border: 3px solid $background;
+     border-radius: 50%;
+     z-index: 1;
+     box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.3);
+   }
+ 
+   // Element: __date
+   &__date {
+     position: absolute;
+     top: 1.5rem;
+     @include font-style(0.9rem);
+     color: $medium_purple;
+     font-weight: 600;
+     background: $background;
+     padding: 0.3rem 0.8rem;
+     border-radius: 20px;
+     border: 1px solid rgba(188, 96, 251, 0.3);
+     white-space: nowrap;
+   }
+ }
+ 
+ // Responsive
+ @media (max-width: 768px) {
+   .timeline-item {
+     width: 100%;
+     margin-left: 0 !important;
+     text-align: left !important;
+     padding-left: 3rem !important;
+     padding-right: 1rem !important;
+ 
+     &--left,
+     &--right {
+       .timeline-item__content {
+         margin-left: 2rem !important;
+         margin-right: 0 !important;
+       }
+ 
+       .timeline-item__dot {
+         left: -1rem !important;
+         right: auto !important;
+       }
+ 
+       .timeline-item__date {
+         left: 3rem !important;
+         right: auto !important;
+       }
+     }
+   }
+ }

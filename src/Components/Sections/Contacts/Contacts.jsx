@@ -62,7 +62,7 @@ function Contacts() {
       <div className="contacts__container">
         <h2 className="contacts__title">Contactez-moi</h2>
         <p className="contacts__subtitle">
-          N'hésitez pas à me contacter pour discuter de vos projets ou opportunités professionnelles.
+          Un projet ? Une opportunité professionnelle ? <br /> N'hésitez pas à me contacter.
         </p>
 
         <form className="contact-form" onSubmit={handleSubmit}>

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Consultant en technologie",
+    "location": "Dallas, Texas",
+    "date": "2022 – aujourd'hui",
+    "description": "Développement web full-stack, GenAI/LLM, gestion de projet, développement commercial",
+    "side": "left"
+  },
+  {
+    "id": 2,
+    "title": "Ingénieur Full Stack",
+    "location": "Laie, Hawaï",
+    "date": "2020 – 2022",
+    "description": "Développement front-end, développement back-end, expérience utilisateur, gestion d'équipe",
+    "side": "right"
+  },
+  {
+    "id": 3,
+    "title": "Ingénieur stagiaire",
+    "location": "Laie, Hawaï",
+    "date": "2021",
+    "description": "Développement full-stack, développement d’API, expérience utilisateur",
+    "side": "left"
+  },
+  {
+    "id": 4,
+    "title": "Stagiaire analyste de données",
+    "location": "Tokyo, Japon",
+    "date": "2020",
+    "description": "Automatisation, gouvernance des données, analyse statistique",
+    "side": "right"
+  }
+]

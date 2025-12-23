@@ -10,12 +10,23 @@
 
 import React from 'react'
 import './history.scss'
+import HistoryItem from "../History-Items/HistoryItem";
+import experiences from "../../../../assets/data/experiencesData.json";
 
 function History() {
   return (
     <div className="history">
       <div className="history__container">
-        <h2 className="history__title">Parcours</h2>
+        <h2 className="history__title">Parcours professionnel</h2>
+
+        <div className="timeline__container">
+          {experiences.map((experience) => (
+            <HistoryItem
+              key={experience.id}
+              experience={experience}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
