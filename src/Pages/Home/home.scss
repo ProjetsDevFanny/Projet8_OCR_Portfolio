@@ -14,22 +14,3 @@
 // ===============================================================================
 // HOME_ sytles communs pour toutes les sections
 // ===============================================================================
-.home { 
-  &__about,
-  &__projects,
-  &__history,
-  &__references,
-  &__contact {
-    // padding: 4rem 2rem;
-    min-height: 50vh;
-  }
-
-  // Styles spécifiques pour chaque section si nécessaire
-  &__skills {
-    background-color: var(--color-secondary);
-  }
-
-  &__projects {
-    background-color: var(--color-background);
-  }
-}

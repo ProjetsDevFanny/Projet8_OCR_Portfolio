@@ -1,0 +1,160 @@
+/**
+ * @file contacts.scss
+ * @description Styles pour la section Contacts
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+
+ @use '../../../styles/variables' as *;
+ @use '../../../styles/mixins' as *;
+ 
+ .contacts {
+   background-color: $background;
+   color: $white;
+ 
+   &__container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 4rem 2rem;
+     min-height: calc(50vh - 8rem);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+     text-align: center;
+   }
+ 
+   &__title {
+     @include font-style(3rem);
+     color: $white;
+     margin-bottom: 1rem;
+   }
+ 
+   &__subtitle {
+     @include font-style(1.2rem);
+     color: rgba(255, 255, 255, 0.8);
+     margin-bottom: 3rem;
+     max-width: 600px;
+     line-height: 1.6;
+   }
+ }
+ 
+ // Formulaire de contact
+ .contact-form {
+   width: 100%;
+   max-width: 600px;
+   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+   backdrop-filter: blur(10px);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   border-radius: 15px;
+   padding: 2rem;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .form-row {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+ 
+   @media (max-width: 768px) {
+     grid-template-columns: 1fr;
+   }
+ }
+ 
+ .form-group {
+   margin-bottom: 1.5rem;
+ }
+ 
+ .form-label {
+   @include font-style(1rem);
+   color: $white;
+   display: block;
+   margin-bottom: 0.5rem;
+   font-weight: 600;
+ }
+ 
+ .form-input,
+ .form-textarea {
+   width: 100%;
+   padding: 1rem;
+   background: rgba(255, 255, 255, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   border-radius: 8px;
+   color: $white;
+   @include font-style(1rem);
+   transition: all 0.3s ease;
+   backdrop-filter: blur(5px);
+ 
+   &::placeholder {
+     color: rgba(255, 255, 255, 0.6);
+   }
+ 
+   &:focus {
+     outline: none;
+     border-color: $medium_purple;
+     background: rgba(255, 255, 255, 0.15);
+     box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.2);
+   }
+ }
+ 
+ .form-textarea {
+   resize: vertical;
+   min-height: 120px;
+ }
+ 
+ .form-submit-btn {
+   width: 100%;
+   padding: 1rem 2rem;
+   background: $medium_purple;
+   color: white;
+   border: 1px solid $medium_purple;
+   border-radius: 8px;
+   @include font-style(1.1rem);
+   font-weight: 600;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   margin-top: 1rem;
+ 
+   &:hover:not(:disabled) {
+     background: transparent;
+     transform: translateY(-2px);
+     box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+   }
+ 
+   &:disabled {
+     opacity: 0.7;
+     cursor: not-allowed;
+     transform: none;
+   }
+ }
+ 
+ .form-message {
+   margin-top: 1rem;
+   padding: 1rem;
+   border-radius: 8px;
+   text-align: center;
+   font-weight: 500;
+ 
+   &--success {
+     background-color: rgba(76, 175, 80, 0.2);
+     color: #4caf50;
+     border: 1px solid rgba(76, 175, 80, 0.3);
+   }
+ 
+   &--error {
+     background-color: rgba(244, 67, 54, 0.2);
+     color: #f44336;
+     border: 1px solid rgba(244, 67, 54, 0.3);
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .contact-form {
+     padding: 1.5rem;
+   }
+ 
+   .contacts__container {
+     padding: 3rem 1rem;
+   }
+ }

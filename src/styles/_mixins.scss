@@ -12,14 +12,19 @@
 
 @use './variables' as *;
 
-// @mixin card-shadow {
-//   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
-// }
 
 @mixin center-flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin container-style {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(50vh - 8rem); // 50vh moins le padding top/bottom de 4rem chacun
+  display: flex;
 }
 
 @mixin font-style($size, $weight: $weight-default, $line-height: $line-height-default) {

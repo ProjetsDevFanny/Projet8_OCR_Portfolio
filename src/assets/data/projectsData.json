@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Application React",
+    "description": "Kasa est une application web de location immobilière entre particuliers, développée avec React, permettant de consulter des logements et leurs informations détaillées (photos, description, équipements...).",
+    "image": "/src/assets/images/projects/screenshot_HomePage_kasa.png",
+    "technologies": ["HTML/CSS", "JavaScript", "React", "Sass"],
+    "githubUrl": "https://github.com/ProjetsDevFanny/Projet5_OCR_Kasa_REACT",
+    "liveUrl": "https://projet-kasa-fanny.netlify.app/",
+    "featured": false
+  },
+  {
+    "id": 2,
+    "title": "Application Backend",
+    "description": "Backend complet d'une API REST pour une application de gestion de livres avec système de notation. Le développement a été entièrement réalisé en backend, mettant en œuvre une architecture moderne et sécurisée.",
+    "image": "/src/assets/images/projects/vieux_grimoire.png",
+    "technologies": ["Node.js", "Express", "MongoDB"],
+    "githubUrl": "https://github.com/ProjetsDevFanny/Projet6_OCR_Mon_vieux_grimoire_Backend",
+    "liveUrl": "https://votre-ecommerce.com",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "Degugging & SEO",
+    "description": "Optimisation complète d'un site vitrine existant pour une photographe : corrections de bugs, amélioration des performances (98% de réduction du poids des images), accessibilité renforcée et SEO optimisé.",
+    "image": "/src/assets/images/projects/screenshot_carducci_desktop.png",
+    "technologies": ["Lighthouse", "SEO", "Wave", "Accessibilité"],
+    "githubUrl": "https://github.com/ProjetsDevFanny/Projet4_OCR_Debuggez-et-optimisez-un-site-de-photographe",
+    "liveUrl": "https://ninacarducci-photographe-bordeaux.netlify.app",
+    "featured": false
+  }
+]

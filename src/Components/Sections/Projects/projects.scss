@@ -1,0 +1,234 @@
+/**
+ * @file projects.scss
+ * @description Styles pour la section Projects
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.projects {
+  background-color: $background;
+  color: $white;
+
+  &__container {
+    @include container-style;
+    padding: 10rem 2rem;
+    min-height: calc(50vh - 20rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    @include font-style(3rem);
+    color: $white;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    align-items: start; // Aligne les cartes en haut pour éviter les sauts
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+}
+
+// Cartes de projet
+.project-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  height: 100%; // Hauteur égale pour toutes les cartes
+
+  &__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(188, 96, 251, 0.1), rgba(188, 96, 251, 0.05));
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(188, 96, 251, 0.3);
+    border-color: $medium_purple;
+  }
+
+  &--featured {
+    border-color: $medium_purple;
+    box-shadow: 0 5px 20px rgba(188, 96, 251, 0.2);
+
+    .project-card__badge {
+      display: block;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 300px; // Hauteur fixe pour éviter les variations
+    overflow: hidden;
+    flex-shrink: 0; // Empêche la compression de l'image
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      transition: transform 0.3s ease;
+      opacity: 0.9;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0) 40%,
+        rgba(0,0,0,0.5) 100%
+      );
+    }
+
+      &:hover img {
+        transform: scale(1.02);
+        opacity: 1;
+      }
+    }
+
+    &__badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: $medium_purple;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: none;
+    }
+
+    &__content {
+      padding: 1.5rem;
+      flex: 1; // Le contenu prend tout l'espace disponible
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      @include font-style(2rem);
+      color: $white;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      flex-shrink: 0; // Empêche la compression du titre
+    }
+
+    &__description {
+      @include font-style(1.2rem);
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      flex: 1; // La description prend l'espace disponible
+    }
+
+    &__technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-shrink: 0; // Empêche la compression des technologies
+    }
+
+    &__links {
+      display: flex;
+      gap: 1rem;
+      margin-top: auto; // Pousse les liens en bas
+      flex-shrink: 0; // Empêche la compression des liens
+    }
+  }
+
+  // Tags de technologies
+  .technology-tag {
+    background-color: rgba(188, 96, 251, 0.2);
+    color: $medium_purple;
+    @include font-style(1.2rem);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-weight: 500;
+    border: 1px solid rgba(188, 96, 251, 0.3);
+  }
+
+  // Liens des projets
+  .project-link {
+    @include font-style(1rem);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &--github {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+    }
+
+    &--live {
+      background-color: $medium_purple;
+      color: white;
+      border: 1px solid $medium_purple;
+
+      &:hover {
+        background-color: transparent;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-card__links {
+      flex-direction: column;
+    }
+
+    .project-link {
+      justify-content: center;
+    }
+  }

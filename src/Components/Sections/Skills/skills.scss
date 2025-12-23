@@ -4,20 +4,19 @@
 
 .skills {
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    min-height: calc(50vh - 8rem); // 50vh moins le padding top/bottom de 4rem chacun
-    display: flex;
+    @include container-style;
+    min-height: calc(50vh - 20rem);
     flex-direction: column;
-    align-items: center; // Centre horizontalement tous les éléments enfants
-    justify-content: center; // Centre verticalement dans le conteneur
+    align-items: center; // Changement de center à flex-start pour aligner à gauche
+    justify-content: center; // Changement de center à flex-start pour commencer du haut
+    
   }
 
-  &__subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+   &__title {
+    @include font-style(3rem);
     color: $white;
+    margin-bottom: 4rem;
+    text-align: center;
   }
   
   // &__content {
@@ -26,17 +25,16 @@
   &__skills-grid { 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; // Les boutons restent centrés dans leur grille
+    justify-content: flex-start; // Change de center à flex-start pour aligner les boutons à gauche
     gap: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 100%;
   }
   
   .skill-tag {
-    background-color: $medium_purple;
+    background-color: $dark_violet;
     color: $white;
     @include font-style(1.5rem);
-    padding: 1rem 1.5rem; // Padding horizontal ajusté pour le texte
+    padding: 0.5rem 1.5rem; // Padding horizontal ajusté pour le texte
     border-radius: 15px;
     text-align: center;
     display: inline-block; // Changement important pour l'adaptation au contenu

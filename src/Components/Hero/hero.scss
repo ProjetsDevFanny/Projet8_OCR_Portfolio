@@ -1,3 +1,12 @@
+/**
+ * @file hero.scss
+ * @description Styles pour la section Hero
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+
+
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
@@ -16,7 +25,7 @@
     color: $white;
     @include center-flex;
     text-align: center;
-    min-height: 50vh;
+    min-height: 70vh;
     padding: 2rem;
 
     .hero__content {
