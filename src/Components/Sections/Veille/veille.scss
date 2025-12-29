@@ -1,15 +1,15 @@
 /**
- * @file references.scss
- * @description Styles pour la section References
+* @file veille.scss
+ * @description Styles pour la section Veille
  * @author Simon Fanny
  * @date 22/12/2025
  * @project Portfolio - Projet8 - OpenClassrooms
  */
 
- @use '../../../styles/variables' as *;
- @use '../../../styles/mixins' as *;
- 
- .references { 
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.veille { 
   background-color: $background;
   color: $white;
 

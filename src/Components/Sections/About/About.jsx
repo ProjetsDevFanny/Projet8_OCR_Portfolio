@@ -15,18 +15,32 @@ function About() {
   return (
     <div className="about">
       <div className="about__container">
-        <div className="about__container_text">
-          <div className="about__container_text_title">
-            <h2>À propos de moi</h2>
-          </div>
-          <div className="about__container_text_paragraph">
-            <p>
-              Développeuse web passionnée par la programmation informatique depuis 2 ans. <br /> J'ai commencé par apprendre le HTML, le CSS et le JavaScript pour ensuite me spécialiser en React, Node.js, Express, MongoDB.              
-            </p>
-          </div>
+        <div className="about__container_title">
+          <h2>À propos de moi</h2>
         </div>
-        <div className="about__container_picture">
-          <img className="about__container_picture_photo" src="/src/assets/images/photo_profile.jpg" alt="About_photo_of_Fanny_Simon" />
+        <div className="about__container_content">
+          <div className="about__container_content_text">
+            <p>
+              Développeuse JavaScript Full Stack, passionnée par les interfaces claires, interactives et pensées pour l'utilisateur.
+            </p>
+            <ul>
+              <li>
+                Parcours : Découverte du développement web en autodidacte (SoloLearn), puis formation Front-End avec Julien Azambourg (<a href="https://fromscratch.podia.com/parcours-complet-mastering-front-end" target="_blank" rel="noopener noreferrer">From Scratch</a>) et formation <a href="https://openclassrooms.com/fr/paths/185-developpeur-web" target="_blank" rel="noopener noreferrer">Développeur Web</a> diplômante d'OpenClassrooms.
+              </li>
+              <li>
+                Technologies : JavaScript, React, Sass, Node.js, MongoDB
+              </li>
+              <li>
+                Projets : <a href="#project-kasa">Kasa</a> (React/Sass), <a href="#project-mon-vieux-grimoire">Mon Vieux Grimoire</a> (Node.js/MongoDB), <a href="https://github.com/ProjetsDevFanny/Galerie_dArt_Interactive" target="_blank" rel="noopener noreferrer">Galerie artistique interactive</a> (en cours)
+              </li>
+              <li>
+                Recherche : Poste de développeuse Full Stack JavaScript junior, au sein d'une équipe Agile, bienveillante et orientée partage.
+              </li>
+            </ul>
+          </div>
+          <div className="about__container_content_picture">
+            <img className="about__container_content_picture_photo" src="/src/assets/images/photo_profile.jpg" alt="About_photo_of_Fanny_Simon" />
+          </div>
         </div>
       </div>
     </div>

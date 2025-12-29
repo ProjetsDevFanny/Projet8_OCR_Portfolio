@@ -28,8 +28,13 @@ function Projects() {
         <h2 className="projects__title">Projets</h2>
              
         <div className="projects__grid">
-          {projectsData.map((project) => (
-            <div key={project.id} className={`project-card ${project.featured ? 'project-card--featured' : ''}`}>
+          {projectsData.map((project) => {
+            // Créer un ID basé sur le titre du projet pour les liens internes
+            const projectId = project.id === 1 ? 'project-kasa' : 
+                             project.id === 2 ? 'project-mon-vieux-grimoire' : 
+                             `project-${project.id}`;
+            return (
+            <div key={project.id} id={projectId} className={`project-card ${project.featured ? 'project-card--featured' : ''}`}>
               <div className="project-card__image">
                 {!imageErrors[project.id] ? (
                   <img 
@@ -65,7 +70,7 @@ function Projects() {
                     rel="noopener noreferrer"
                     className="project-link project-link--github"
                   >
-                    <span>🔗</span> Code source
+                    <span>🔗</span> GitHub
                   </a>
                   {project.liveUrl && (
                     <a 
@@ -80,7 +85,8 @@ function Projects() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

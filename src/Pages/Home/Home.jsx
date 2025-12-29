@@ -12,7 +12,7 @@ import React from 'react'
 import About from '../../Components/Sections/About/About'
 import Projects from '../../Components/Sections/Projects/Projects'
 import Contacts from '../../Components/Sections/Contacts/Contacts'
-import References from '../../Components/Sections/References/References'
+import Veille from '../../Components/Sections/Veille/Veille'
 import History from '../../Components/Sections/History/History-global/History'
 import Hero from '../../Components/Hero/Hero'
 import Skills from '../../Components/Sections/Skills/Skills'
@@ -46,9 +46,9 @@ function Home() {
         <History />
       </section>
 
-      {/* Section References */}
-      <section id="references" className="home__references">
-        <References />
+      {/* Section Veille */}
+      <section id="veille" className="home__veille">
+        <Veille />
       </section>
 
       {/* Section Contact */}
