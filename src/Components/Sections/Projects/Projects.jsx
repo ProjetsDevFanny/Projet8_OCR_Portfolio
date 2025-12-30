@@ -113,8 +113,8 @@ function Projects() {
             <div className="project-modal__image">
               {!imageErrors[selectedProject.id] ? (
                 <img 
-                  src={selectedProject.image} 
-                  alt={selectedProject.title}
+                  src={selectedProject.imageModal} 
+                  alt={selectedProject.titleModal}
                   onError={() => handleImageError(selectedProject.id)}
                 />
               ) : (
@@ -126,12 +126,40 @@ function Projects() {
             </div>
             
             <div className="project-modal__content">
-              <h2 className="project-modal__title">{selectedProject.title}</h2>
+              <h2 className="project-modal__title">{selectedProject.titleModal}</h2>
               
-              <div className="project-modal__description">
-                <h3>Description</h3>
-                <p>{selectedProject.detailedDescription || selectedProject.description}</p>
-              </div>
+              {selectedProject.projectSheet ? (
+                <div className="project-modal__sheet">
+                  <div className="project-modal__sheet-section">
+                    <p>{selectedProject.projectSheet.context}</p>
+                  </div>
+
+                  <div className="project-modal__sheet-section">
+                    <p>{selectedProject.projectSheet.objectives}</p>
+                  </div>
+
+                  <div className="project-modal__sheet-section">
+                    <p>{selectedProject.projectSheet.stack}</p>
+                  </div>
+
+                  <div className="project-modal__sheet-section">
+                    <p>{selectedProject.projectSheet.skills}</p>
+                  </div>
+
+                  <div className="project-modal__sheet-section">
+                    <p>{selectedProject.projectSheet.results}</p>
+                  </div>
+
+                  <div className="project-modal__sheet-section">
+                    <p>{selectedProject.projectSheet.improvements}</p>
+                  </div>
+                </div>
+              ) : (
+                <div className="project-modal__description">
+                  <h3>Description</h3>
+                  <p>{selectedProject.detailedDescription || selectedProject.description}</p>
+                </div>
+              )}
 
               <div className="project-modal__technologies">
                 <h3>Technologies utilisées</h3>

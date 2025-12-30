@@ -2,10 +2,24 @@
   {
     "id": 1,
     "title": "Application React",
+    "titleModal": "KASA - Application Immobilière avec React",
     "description": "Kasa est une application web de location immobilière entre particuliers, développée avec React, permettant de consulter des logements et leurs informations détaillées (photos, description, équipements...).",
     "detailedDescription": "Kasa est une application web de location immobilière entre particuliers développée avec React. Ce projet m'a permis de maîtriser les concepts fondamentaux de React : composants, props, état, hooks (useState, useEffect), et la gestion de la navigation avec React Router. J'ai également utilisé Sass pour le styling avec une architecture BEM, créant une interface moderne et responsive. L'application permet de consulter une liste de logements, de voir les détails de chaque logement avec un carrousel d'images, et de gérer les erreurs 404. Le code est structuré de manière modulaire avec des composants réutilisables.",
+    "projectSheet": {
+      "context": "Kasa est une application web de location immobilière développée dans le cadre du Projet 5 de la formation Développeur Web OpenClassrooms, avec pour enjeu principal la prise en main de React et du routing côté client.",
+      "objectives": "L'objectif était de créer une application responsive et dynamique permettant la consultation de logements, tout en respectant une architecture React moderne et des contraintes fonctionnelles précises (navigation, gestion des erreurs, composants réutilisables).",
+      "stack": "Le projet a été réalisé avec React, React Router DOM, Vite, et Sass, en utilisant des données simulées au format JSON et une organisation modulaire des composants.",
+      "skills": "Ce projet m'a permis de renforcer ma compréhension des composants React, des hooks (useState, useEffect, useParams), de la gestion du routing et de la structuration d'une application front-end maintenable.",
+      "results": "L'application est entièrement fonctionnelle, responsive et conforme aux spécifications, avec une navigation fluide, une page 404 gérée et un déploiement en ligne via Netlify.",
+      "improvements": "Des évolutions possibles incluent la connexion à une API réelle, l'ajout de tests automatisés, l'amélioration des performances et l'optimisation de l'accessibilité."
+    },
     "image": "/src/assets/images/projects/screenshot_HomePage_kasa.png",
-    "technologies": ["HTML/CSS", "JavaScript", "React", "Sass"],
+    "technologies": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Sass"
+    ],
     "githubUrl": "https://github.com/ProjetsDevFanny/Projet5_OCR_Kasa_REACT",
     "liveUrl": "https://projet-kasa-fanny.netlify.app/",
     "featured": false
@@ -13,10 +27,23 @@
   {
     "id": 2,
     "title": "Application Backend",
+    "titleModal": "Mon Vieux Grimoire - Application de Gestion de Livres avec Backend",
     "description": "Backend complet d'une API REST pour une application de gestion de livres avec système de notation. Le développement a été entièrement réalisé en backend, mettant en œuvre une architecture moderne et sécurisée.",
     "detailedDescription": "Mon Vieux Grimoire est une API REST complète développée avec Node.js et Express pour une application de gestion de livres. Ce projet m'a permis de maîtriser le développement backend : création d'API RESTful, gestion de base de données MongoDB avec Mongoose, authentification JWT, sécurisation des routes, gestion des fichiers (multer), et validation des données. J'ai implémenté un système de notation des livres, de gestion des utilisateurs avec différents rôles, et de gestion des images. L'API est documentée et suit les bonnes pratiques de sécurité (helmet, rate limiting, validation des entrées).",
+    "projectSheet": {
+      "context": "Mon Vieux Grimoire est une API REST développée dans le cadre de la formation Développeur Web OpenClassrooms, avec pour objectif de concevoir un backend complet, sécurisé et conforme aux bonnes pratiques professionnelles.",
+      "objectives": "Le projet visait à créer une API permettant l’authentification des utilisateurs, la gestion CRUD de livres, l’upload et l’optimisation d’images, ainsi qu’un système de notation avec règles métier strictes.",
+      "stack": "L’API a été développée avec Node.js, Express, MongoDB et Mongoose, en intégrant des outils de sécurité et de performance comme JWT, bcrypt, Helmet, express-rate-limit, Multer et Sharp.",
+      "skills": "Ce projet m’a permis de renforcer mes compétences en architecture MVC, sécurisation d’API, gestion de base de données NoSQL, création de middlewares personnalisés et implémentation de logique métier complexe.",
+      "results": "L’API est entièrement fonctionnelle, testée avec Postman, sécurisée contre les principales vulnérabilités et capable de gérer efficacement les fichiers images et les règles d’autorisation utilisateur.",
+      "improvements": "Des évolutions possibles incluent l’ajout de tests automatisés, la mise en place d’une documentation Swagger/OpenAPI et l’optimisation du cache et des performances à grande échelle."
+    },
     "image": "/src/assets/images/projects/vieux_grimoire.png",
-    "technologies": ["Node.js", "Express", "MongoDB"],
+    "technologies": [
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
     "githubUrl": "https://github.com/ProjetsDevFanny/Projet6_OCR_Mon_vieux_grimoire_Backend",
     "liveUrl": "https://votre-ecommerce.com",
     "featured": false
@@ -24,10 +51,25 @@
   {
     "id": 3,
     "title": "Degugging & SEO",
+    "titleModal": "Carducci - Optimisation de Site Vitrine d'une Photographe",
     "description": "Optimisation complète d'un site vitrine existant pour une photographe : corrections de bugs, amélioration des performances (98% de réduction du poids des images), accessibilité renforcée et SEO optimisé.",
     "detailedDescription": "Optimisation complète d'un site vitrine existant pour une photographe. J'ai effectué un audit complet avec Lighthouse, corrigé les bugs JavaScript, optimisé les performances (réduction de 98% du poids des images avec compression et formats modernes), amélioré l'accessibilité (conformité WCAG avec l'outil Wave), et optimisé le SEO (balises meta, sémantique HTML, structure des données). Le site a gagné plusieurs points sur Lighthouse (Performance, Accessibilité, SEO) et est maintenant conforme aux standards web modernes. J'ai également amélioré l'expérience utilisateur avec des animations fluides et une navigation améliorée.",
+    "projectSheet": {
+      "context": "Ce projet, réalisé dans le cadre du Projet 4 de la formation Développeur Web OpenClassrooms, consistait à optimiser un site vitrine existant pour une photographe professionnelle.",
+      "objectives": "L’objectif était d’améliorer significativement les performances, l’accessibilité (WCAG) et le référencement SEO, tout en corrigeant des bugs fonctionnels identifiés via les outils de diagnostic.",
+      "stack": "Le projet a été réalisé avec Lighthouse, SEO, Wave, Accessibilité, et des outils de compression d'images.",
+      "skills": "Ce projet m’a permis de maîtriser l’analyse de performance, l’optimisation des images (WebP, responsive), l’amélioration de l’accessibilité, la structuration sémantique HTML et les bonnes pratiques SEO.",
+      "results": "Les scores Lighthouse ont atteint 99 % en performance et 100 % en accessibilité et SEO, avec une réduction du poids des images de 98,5 %, améliorant fortement le temps de chargement et l’expérience utilisateur.",
+      "improvements": "Des évolutions possibles incluent l’automatisation des audits de performance, l’ajout de tests d’accessibilité avancés et une migration vers un framework moderne si le projet évoluait."
+    },
     "image": "/src/assets/images/projects/screenshot_carducci_desktop.png",
-    "technologies": ["Lighthouse", "SEO", "Wave", "Accessibilité"],
+    "imageModal": "/src/assets/images/projects/carducci_mokup_desktop.png",
+    "technologies": [
+      "Lighthouse",
+      "SEO",
+      "Wave",
+      "Accessibilité"
+    ],
     "githubUrl": "https://github.com/ProjetsDevFanny/Projet4_OCR_Debuggez-et-optimisez-un-site-de-photographe",
     "liveUrl": "https://ninacarducci-photographe-bordeaux.netlify.app",
     "featured": false
