@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/**
+ * @file home.scss
+ * @description Styles pour la page d'accueil du portfolio
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _variables.scss
+ * @description Fichier de variables globales SCSS pour l'application.
+ *              Définit les couleurs, typographie, espacements et breakpoints pour les media queries.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+/**
+ * @file home.scss
+ * @description Styles pour la page d'accueil du portfolio
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _mixins.scss
+ * @description Fichier de mixins réutilisables pour l'application.
+ *              Contient les mixins pour les styles récurrents (flexbox, typographie) et les media queries.
+ *              Approche desktop-first : utiliser les mixins dans l'ordre desktop → tablet → mobile.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ *//*# sourceMappingURL=home.css.map */

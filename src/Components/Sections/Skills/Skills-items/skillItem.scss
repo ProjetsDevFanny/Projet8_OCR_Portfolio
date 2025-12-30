@@ -1,0 +1,30 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  &__tag {
+    background-color: $dark_violet;
+    color: $white;
+    @include font-style(1.5rem);
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid $medium_purple;
+    white-space: nowrap;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+    }
+  }
+}
+

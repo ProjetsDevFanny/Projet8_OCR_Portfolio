@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/**
+ * @file footer.scss
+ * @description Styles pour le composant Footer
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _variables.scss
+ * @description Fichier de variables globales SCSS pour l'application.
+ *              Définit les couleurs, typographie, espacements et breakpoints pour les media queries.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+/**
+ * @file footer.scss
+ * @description Styles pour le composant Footer
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _mixins.scss
+ * @description Fichier de mixins réutilisables pour l'application.
+ *              Contient les mixins pour les styles récurrents (flexbox, typographie) et les media queries.
+ *              Approche desktop-first : utiliser les mixins dans l'ordre desktop → tablet → mobile.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+.footer {
+  background: linear-gradient(145deg, rgb(11, 2, 20) 0%, rgb(19, 2, 29) 100%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 2rem 0 2rem 0;
+  margin-top: auto;
+}
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .footer__container {
+    text-align: center;
+  }
+}
+.footer__social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.social-link:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  background: #bc60fb;
+  border-color: #bc60fb;
+  -webkit-box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+          box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+}
+.social-link--github:hover {
+  background: #923fe6;
+  border-color: #923fe6;
+}
+.social-link--linkedin:hover {
+  background: #4340da;
+  border-color: #4340da;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+
+.social-link--github:hover .social-icon {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.social-link--linkedin:hover .social-icon {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .footer__social-links {
+    gap: 1rem;
+  }
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+}/*# sourceMappingURL=footer.css.map */

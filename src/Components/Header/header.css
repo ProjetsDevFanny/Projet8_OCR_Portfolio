@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/**
+ * @file _variables.scss
+ * @description Fichier de variables globales SCSS pour l'application.
+ *              Définit les couleurs, typographie, espacements et breakpoints pour les media queries.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+/**
+ * @file _mixins.scss
+ * @description Fichier de mixins réutilisables pour l'application.
+ *              Contient les mixins pour les styles récurrents (flexbox, typographie) et les media queries.
+ *              Approche desktop-first : utiliser les mixins dans l'ordre desktop → tablet → mobile.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #1c0d30 0%, #241d41 100%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2rem;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .header__container {
+    padding: 2rem;
+  }
+}
+.header__signature {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.header__signature, .header__signature a {
+  font-family: "Allison", cursive, sans-serif;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+}
+@media (max-width: 768px) {
+  .header__nav {
+    gap: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .header__nav {
+    gap: 2rem;
+  }
+}
+.header__nav a {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .header__nav a {
+    font-family: "Roboto Mono", monospace, sans-serif;
+    line-height: 1.43;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+@media (max-width: 480px) {
+  .header__nav a {
+    font-family: "Roboto Mono", monospace, sans-serif;
+    line-height: 1.43;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}/*# sourceMappingURL=header.css.map */

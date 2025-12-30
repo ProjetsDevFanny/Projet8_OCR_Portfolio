@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/**
+ * @file about.scss
+ * @description Styles pour la section About
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _variables.scss
+ * @description Fichier de variables globales SCSS pour l'application.
+ *              Définit les couleurs, typographie, espacements et breakpoints pour les media queries.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+/**
+ * @file about.scss
+ * @description Styles pour la section About
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _mixins.scss
+ * @description Fichier de mixins réutilisables pour l'application.
+ *              Contient les mixins pour les styles récurrents (flexbox, typographie) et les media queries.
+ *              Approche desktop-first : utiliser les mixins dans l'ordre desktop → tablet → mobile.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+.about {
+  background-color: #1c0d30;
+  color: #ffffff;
+}
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(50vh - 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .about__container {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.about__container_content {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 4rem;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .about__container_content {
+    grid-template-columns: 1fr;
+  }
+}
+.about__container_content_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+}
+.about__container_content_text p {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Consolas", monospace, sans-serif;
+  margin-bottom: 1.5rem;
+}
+.about__container_content_text ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.about__container_content_text ul li {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Consolas", monospace, sans-serif;
+  margin-bottom: 1.2rem;
+  padding-left: 1.8rem;
+  position: relative;
+  line-height: 1.2;
+  cursor: default;
+  opacity: 0;
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
+  -webkit-animation: liFadeIn 0.5s ease forwards;
+          animation: liFadeIn 0.5s ease forwards;
+}
+.about__container_content_text ul li:nth-child(1) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+.about__container_content_text ul li:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.about__container_content_text ul li:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.about__container_content_text ul li:nth-child(4) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.about__container_content_text ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #bc60fb;
+  font-size: 2rem;
+  line-height: 1.2;
+  -webkit-transform: translateY(-0.2em);
+          transform: translateY(-0.2em);
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+}
+.about__container_content_text ul li:hover::before {
+  -webkit-transform: translateX(6px) translateY(-0.2em) scale(1.2);
+          transform: translateX(6px) translateY(-0.2em) scale(1.2);
+  opacity: 0.9;
+}
+@-webkit-keyframes liFadeIn {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes liFadeIn {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes liFadeIn {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.about__container_content_text a {
+  color: #bc60fb;
+  font-family: "Consolas", monospace, sans-serif;
+  font-style: italic;
+}
+.about__container_content_text a:hover {
+  color: #bc60fb;
+}
+.about__container_content_picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about__container_content_picture_photo {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 30px rgba(188, 96, 251, 0.6), 0 0 60px rgba(188, 96, 251, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 30px rgba(188, 96, 251, 0.6), 0 0 60px rgba(188, 96, 251, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.about__container_content_picture_photo:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 40px rgba(188, 96, 251, 0.8), 0 0 80px rgba(188, 96, 251, 0.4), inset 0 0 40px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 40px rgba(188, 96, 251, 0.8), 0 0 80px rgba(188, 96, 251, 0.4), inset 0 0 40px rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 768px) {
+  .about__container_content_picture_photo {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}/*# sourceMappingURL=about.css.map */

@@ -55,6 +55,7 @@
   display: flex;
   flex-direction: column;
   height: 100%; // Hauteur égale pour toutes les cartes
+  cursor: pointer;
 
   &__placeholder {
     display: flex;
@@ -118,117 +119,216 @@
       );
     }
 
-      &:hover img {
-        transform: scale(1.02);
-        opacity: 1;
-      }
-    }
-
-    &__badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: $medium_purple;
-      color: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      display: none;
-    }
-
-    &__content {
-      padding: 1.5rem;
-      flex: 1; // Le contenu prend tout l'espace disponible
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__title {
-      @include font-style(2rem);
-      color: $white;
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-      flex-shrink: 0; // Empêche la compression du titre
-    }
-
-    &__description {
-      @include font-style(1.2rem);
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-      flex: 1; // La description prend l'espace disponible
-    }
-
-    &__technologies {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      flex-shrink: 0; // Empêche la compression des technologies
-    }
-
-    &__links {
-      display: flex;
-      gap: 1rem;
-      margin-top: auto; // Pousse les liens en bas
-      flex-shrink: 0; // Empêche la compression des liens
+    &:hover img {
+      transform: scale(1.02);
+      opacity: 1;
     }
   }
 
-  // Tags de technologies
-  .technology-tag {
-    background-color: rgba(188, 96, 251, 0.2);
-    color: $medium_purple;
-    @include font-style(1.2rem);
+  &__badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: $medium_purple;
+    color: white;
     padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-weight: 500;
-    border: 1px solid rgba(188, 96, 251, 0.3);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: none;
   }
 
-  // Liens des projets
-  .project-link {
-    @include font-style(1rem);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
+  &__content {
+    padding: 1.5rem;
+    flex: 1; // Le contenu prend tout l'espace disponible
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include font-style(2rem);
+    color: $white;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    flex-shrink: 0; // Empêche la compression du titre
+  }
+
+  &__description {
+    @include font-style(1.2rem);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex: 1; // La description prend l'espace disponible
+  }
+
+  &__technologies {
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0; // Empêche la compression des technologies
+  }
 
-    &--github {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: $white;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+  &__links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto; // Pousse les liens en bas
+    flex-shrink: 0; // Empêche la compression des liens
+  }
+}
 
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        transform: translateY(-2px);
-      }
-    }
+// Tags de technologies
+.technology-tag {
+  background-color: rgba(188, 96, 251, 0.2);
+  color: $medium_purple;
+  @include font-style(1.2rem);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: 500;
+  border: 1px solid rgba(188, 96, 251, 0.3);
+}
 
-    &--live {
-      background-color: $medium_purple;
-      color: white;
-      border: 1px solid $medium_purple;
+// Liens des projets
+.project-link {
+  @include font-style(1rem);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
-      &:hover {
-        background-color: transparent;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
-      }
+  &--github {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
     }
   }
+
+  &--live {
+    background-color: $medium_purple;
+    color: white;
+    border: 1px solid $medium_purple;
+
+    &:hover {
+      background-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card__links {
+    flex-direction: column;
+  }
+
+  .project-link {
+    justify-content: center;
+  }
+}
+
+// Styles pour la modal de projet
+.project-modal {
+  padding: 2rem;
 
   @media (max-width: 768px) {
-    .project-card__links {
-      flex-direction: column;
-    }
+    padding: 1.5rem;
+  }
 
-    .project-link {
-      justify-content: center;
+  &__image {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(188, 96, 251, 0.3);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
+
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(188, 96, 251, 0.1), rgba(188, 96, 251, 0.05));
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &__content {
+    color: $white;
+  }
+
+  &__title {
+    @include font-style(2.5rem);
+    color: $white;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      @include font-style(2rem);
+    }
+  }
+
+  &__description {
+    margin-bottom: 2rem;
+
+    h3 {
+      @include font-style(1.8rem);
+      color: $medium_purple;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      @include font-style(1.4rem);
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.8;
+      text-align: justify;
+    }
+  }
+
+  &__technologies {
+    margin-bottom: 2rem;
+
+    h3 {
+      @include font-style(1.8rem);
+      color: $medium_purple;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  &__tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}

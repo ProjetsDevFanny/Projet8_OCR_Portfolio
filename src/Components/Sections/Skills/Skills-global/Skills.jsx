@@ -9,6 +9,8 @@
  */
 import React from 'react'
 import './skills.scss'
+import SkillItem from '../Skills-items/SkillItem'
+import skillsData from '../../../../assets/data/skillsData.json'
 
 function Skills() {
   return (
@@ -17,15 +19,14 @@ function Skills() {
         <h2 className="skills__title">Compétences</h2>        
         <div className="skills__content">
           <div className="skills__skills-grid">
-              <span className="skill-tag">HTML/CSS</span>
-              <span className="skill-tag">Sass</span>
-              <span className="skill-tag">JavaScript</span>
-              <span className="skill-tag">React</span>
-              <span className="skill-tag">Node.js</span>
-              <span className="skill-tag">Express</span>
-              <span className="skill-tag">MongoDB</span>
-            </div>
+            {skillsData.map((skill) => (
+              <SkillItem 
+                key={skill.id} 
+                skill={skill}
+              />
+            ))}
           </div>
+        </div>
       </div>
     </div>
   );

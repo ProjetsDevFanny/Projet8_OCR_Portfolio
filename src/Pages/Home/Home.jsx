@@ -15,7 +15,7 @@ import Contacts from '../../Components/Sections/Contacts/Contacts'
 import Veille from '../../Components/Sections/Veille/Veille'
 import History from '../../Components/Sections/History/History-global/History'
 import Hero from '../../Components/Hero/Hero'
-import Skills from '../../Components/Sections/Skills/Skills'
+import Skills from '../../Components/Sections/Skills/Skills-global/Skills'
 import './home.scss'
 
 function Home() {

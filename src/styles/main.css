@@ -1,54 +1,1169 @@
-/* header__container {
+@charset "UTF-8";
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _variables.scss
+ * @description Fichier de variables globales SCSS pour l'application.
+ *              Définit les couleurs, typographie, espacements et breakpoints pour les media queries.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _mixins.scss
+ * @description Fichier de mixins réutilisables pour l'application.
+ *              Contient les mixins pour les styles récurrents (flexbox, typographie) et les media queries.
+ *              Approche desktop-first : utiliser les mixins dans l'ordre desktop → tablet → mobile.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+.layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+.layout__main-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #1c0d30 0%, #241d41 100%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   align-items: center;
-  justify-content: space-between;
-  padding: 40px 0 30px 0;
-  max-width: 1200px;
+  padding: 0rem 2rem;
   margin: 0 auto;
 }
-header__logo {
-  font-size: 2.5rem;
+@media (max-width: 480px) {
+  .header__container {
+    padding: 2rem;
+  }
 }
-header__nav a {
-  color: #000;
+.header__signature {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.header__signature, .header__signature a {
+  font-family: "Allison", cursive, sans-serif;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+}
+@media (max-width: 768px) {
+  .header__nav {
+    gap: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .header__nav {
+    gap: 2rem;
+  }
+}
+.header__nav a {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.2rem;
+  font-weight: 500;
   text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .header__nav a {
+    font-family: "Roboto Mono", monospace, sans-serif;
+    line-height: 1.43;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+@media (max-width: 480px) {
+  .header__nav a {
+    font-family: "Roboto Mono", monospace, sans-serif;
+    line-height: 1.43;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file footer.scss
+ * @description Styles pour le composant Footer
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+.footer {
+  background: linear-gradient(145deg, rgb(11, 2, 20) 0%, rgb(19, 2, 29) 100%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 2rem 0 2rem 0;
+  margin-top: auto;
+}
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .footer__container {
+    text-align: center;
+  }
+}
+.footer__social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.social-link:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  background: #bc60fb;
+  border-color: #bc60fb;
+  -webkit-box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+          box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+}
+.social-link--github:hover {
+  background: #923fe6;
+  border-color: #923fe6;
+}
+.social-link--linkedin:hover {
+  background: #4340da;
+  border-color: #4340da;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+
+.social-link--github:hover .social-icon {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.social-link--linkedin:hover .social-icon {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .footer__social-links {
+    gap: 1rem;
+  }
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file about.scss
+ * @description Styles pour la section About
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+.about {
+  background-color: #1c0d30;
+  color: #ffffff;
+}
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(50vh - 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .about__container {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.about__container_content {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 4rem;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .about__container_content {
+    grid-template-columns: 1fr;
+  }
+}
+.about__container_content_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+}
+.about__container_content_text p {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Consolas", monospace, sans-serif;
+  margin-bottom: 1.5rem;
+}
+.about__container_content_text ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.about__container_content_text ul li {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Consolas", monospace, sans-serif;
+  margin-bottom: 1.2rem;
+  padding-left: 1.8rem;
+  position: relative;
+  line-height: 1.2;
+  cursor: default;
+  opacity: 0;
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
+  -webkit-animation: liFadeIn 0.5s ease forwards;
+          animation: liFadeIn 0.5s ease forwards;
+}
+.about__container_content_text ul li:nth-child(1) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+.about__container_content_text ul li:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.about__container_content_text ul li:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.about__container_content_text ul li:nth-child(4) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.about__container_content_text ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #bc60fb;
+  font-size: 2rem;
+  line-height: 1.2;
+  -webkit-transform: translateY(-0.2em);
+          transform: translateY(-0.2em);
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+}
+.about__container_content_text ul li:hover::before {
+  -webkit-transform: translateX(6px) translateY(-0.2em) scale(1.2);
+          transform: translateX(6px) translateY(-0.2em) scale(1.2);
+  opacity: 0.9;
+}
+@-webkit-keyframes liFadeIn {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes liFadeIn {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes liFadeIn {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.about__container_content_text a {
+  color: #bc60fb;
+  font-family: "Consolas", monospace, sans-serif;
+  font-style: italic;
+}
+.about__container_content_text a:hover {
+  color: #bc60fb;
+}
+.about__container_content_picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about__container_content_picture_photo {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 30px rgba(188, 96, 251, 0.6), 0 0 60px rgba(188, 96, 251, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 30px rgba(188, 96, 251, 0.6), 0 0 60px rgba(188, 96, 251, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.about__container_content_picture_photo:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 40px rgba(188, 96, 251, 0.8), 0 0 80px rgba(188, 96, 251, 0.4), inset 0 0 40px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 40px rgba(188, 96, 251, 0.8), 0 0 80px rgba(188, 96, 251, 0.4), inset 0 0 40px rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 768px) {
+  .about__container_content_picture_photo {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file contacts.scss
+ * @description Styles pour la section Contacts
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+.contacts {
+  background-color: #1c0d30;
+  color: #ffffff;
+}
+.contacts__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(50vh - 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+}
+.contacts__title {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.contacts__subtitle {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 800px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.2rem;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.form-input::-webkit-input-placeholder, .form-textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-input::-moz-placeholder, .form-textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-input:-ms-input-placeholder, .form-textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-input::-ms-input-placeholder, .form-textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #bc60fb;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.2);
+          box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.2);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-submit-btn {
+  width: 50%;
+  padding: 1rem 2rem;
+  background: #bc60fb;
+  color: white;
+  border: 1px solid #bc60fb;
+  border-radius: 8px;
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+.form-submit-btn:hover:not(:disabled) {
+  background: transparent;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+          box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+}
+.form-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+.form-message--success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.form-message--error {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
-footer {
-  background: #000;
-  color: #fff;
-  padding: 48px 0 18px 0;
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+  .contacts__container {
+    padding: 3rem 1rem;
+  }
+}
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file history.scss
+ * @description Styles pour la section History
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+.history {
+  padding: 4rem 0;
+}
+.history__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(50vh - 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-footer__logo-footer {
-  font-size: 1.45rem;
-  letter-spacing: 1.5px;
-  margin-bottom: 24px;
-  color: #fff;
+.history__title {
+  margin-bottom: 4rem;
 }
-footer__logo-footer span {
-  color: #ff6060;
+
+/* Timeline */
+.timeline__container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem 0;
 }
-footer__p {
+.timeline__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file projects.scss
+ * @description Styles pour la section Projects
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+.projects {
+  background-color: #1c0d30;
+  color: #ffffff;
+}
+.projects__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(50vh - 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8rem 2rem;
+  min-height: calc(50vh - 20rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.projects__title {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 1100px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+@media (max-width: 768px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.project-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.project-card__placeholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(188, 96, 251, 0.1), rgba(188, 96, 251, 0.05));
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 1rem;
+}
+.project-card .placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+.project-card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 15px 35px rgba(188, 96, 251, 0.3);
+          box-shadow: 0 15px 35px rgba(188, 96, 251, 0.3);
+  border-color: #bc60fb;
+}
+.project-card--featured {
+  border-color: #bc60fb;
+  -webkit-box-shadow: 0 5px 20px rgba(188, 96, 251, 0.2);
+          box-shadow: 0 5px 20px rgba(188, 96, 251, 0.2);
+}
+.project-card--featured .project-card__badge {
+  display: block;
+}
+.project-card__image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  opacity: 0.9;
+}
+.project-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%);
+}
+.project-card__image:hover img {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  opacity: 1;
+}
+.project-card__badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #bc60fb;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: none;
+}
+.project-card__content {
+  padding: 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.project-card__title {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.project-card__description {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.project-card__technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.project-card__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.technology-tag {
+  background-color: rgba(188, 96, 251, 0.2);
+  color: #bc60fb;
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: 500;
+  border: 1px solid rgba(188, 96, 251, 0.3);
+}
+
+.project-link {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
   font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.project-link--github {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.project-link--github:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.project-link--live {
+  background-color: #bc60fb;
+  color: white;
+  border: 1px solid #bc60fb;
+}
+.project-link--live:hover {
+  background-color: transparent;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+          box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+}
+
+@media (max-width: 768px) {
+  .project-card__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project-link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/**
+ * @file main.scss
+ * @description Styles de base : reset CSS, éléments HTML.
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+* @file veille.scss
+ * @description Styles pour la section Veille
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+.veille {
+  background-color: #1c0d30;
+  color: #ffffff;
+}
+.veille__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(50vh - 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* {
+  font-family: "Roboto Mono", monospace, sans-serif;
   margin: 0;
-  letter-spacing: 0.8px;
-  opacity: 0.8;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  font-size: 62.5%; /* 1rem = 10px car la base du navigateur est 16px */
+  background: linear-gradient(135deg, #1c0d30 0%, #241d41 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: "Montserrat", Arial, sans-serif;
-  background: #fff;
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
+  margin: 0 auto;
+  line-height: 1.43;
+  font-weight: 500;
+  color: #ffffff;
 }
 body a {
   text-decoration: none;
-  color: #000;
-}# sourceMappingURL=main.css.map */
+  color: #ffffff;
+  font-weight: 500;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+body a:hover {
+  color: #bc60fb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Roboto Mono", monospace, sans-serif;
+  background-color: #bc60fb;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+button:hover {
+  background-color: #923fe6;
+  border-color: #923fe6;
+}
+button:focus, button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=main.css.map */

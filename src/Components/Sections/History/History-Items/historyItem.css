@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/**
+ * @file historyItem.scss
+ * @description Styles pour le composant HistoryItem (timeline)
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _variables.scss
+ * @description Fichier de variables globales SCSS pour l'application.
+ *              Définit les couleurs, typographie, espacements et breakpoints pour les media queries.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+/**
+ * @file historyItem.scss
+ * @description Styles pour le composant HistoryItem (timeline)
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+/**
+ * @file _mixins.scss
+ * @description Fichier de mixins réutilisables pour l'application.
+ *              Contient les mixins pour les styles récurrents (flexbox, typographie) et les media queries.
+ *              Approche desktop-first : utiliser les mixins dans l'ordre desktop → tablet → mobile.
+ * @author Simon Fanny
+ * @date 21/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.timeline-item--left {
+  text-align: right;
+  padding-right: 3rem;
+}
+.timeline-item--left .timeline-item__content {
+  margin-right: 2rem;
+}
+.timeline-item--left .timeline-item__dot {
+  right: -1rem;
+}
+.timeline-item--left .timeline-item__date {
+  right: 3rem;
+}
+.timeline-item--right {
+  margin-left: 50%;
+  text-align: left;
+  padding-left: 3rem;
+}
+.timeline-item--right .timeline-item__content {
+  margin-left: 2rem;
+}
+.timeline-item--right .timeline-item__dot {
+  left: -1rem;
+}
+.timeline-item--right .timeline-item__date {
+  left: 3rem;
+}
+.timeline-item__content {
+  background-color: #ffffff;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.timeline-item__content:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 10px 25px rgba(188, 96, 251, 0.2);
+          box-shadow: 0 10px 25px rgba(188, 96, 251, 0.2);
+  border-color: #bc60fb;
+}
+.timeline-item__title {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #0a0a0a;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.timeline-item__location {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #bc60fb;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.timeline-item__description {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0a0a0a;
+  line-height: 1.5;
+  margin: 0;
+}
+.timeline-item__dot {
+  position: absolute;
+  top: 2rem;
+  width: 2rem;
+  height: 2rem;
+  background: #bc60fb;
+  border: 3px solid #1c0d30;
+  border-radius: 50%;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.3);
+          box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.3);
+}
+.timeline-item__date {
+  position: absolute;
+  top: 1.5rem;
+  font-family: "Roboto Mono", monospace, sans-serif;
+  line-height: 1.43;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #bc60fb;
+  font-weight: 600;
+  background: #1c0d30;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(188, 96, 251, 0.3);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    margin-left: 0 !important;
+    text-align: left !important;
+    padding-left: 3rem !important;
+    padding-right: 1rem !important;
+  }
+  .timeline-item--left .timeline-item__content, .timeline-item--right .timeline-item__content {
+    margin-left: 2rem !important;
+    margin-right: 0 !important;
+  }
+  .timeline-item--left .timeline-item__dot, .timeline-item--right .timeline-item__dot {
+    left: -1rem !important;
+    right: auto !important;
+  }
+  .timeline-item--left .timeline-item__date, .timeline-item--right .timeline-item__date {
+    left: 3rem !important;
+    right: auto !important;
+  }
+}/*# sourceMappingURL=historyItem.css.map */

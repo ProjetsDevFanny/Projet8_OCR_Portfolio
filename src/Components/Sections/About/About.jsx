@@ -25,13 +25,16 @@ function About() {
             </p>
             <ul>
               <li>
-                Parcours : Découverte du développement web en autodidacte (SoloLearn), puis formation Front-End avec Julien Azambourg (<a href="https://fromscratch.podia.com/parcours-complet-mastering-front-end" target="_blank" rel="noopener noreferrer">From Scratch</a>) et formation <a href="https://openclassrooms.com/fr/paths/185-developpeur-web" target="_blank" rel="noopener noreferrer">Développeur Web</a> diplômante d'OpenClassrooms.
+                Parcours : En 2024, découverte du développement web en autodidacte (SoloLearn), puis formation Front-End avec Julien Azambourg (<a href="https://fromscratch.podia.com/parcours-complet-mastering-front-end" target="_blank" rel="noopener noreferrer">From Scratch</a>) et formation <a href="https://openclassrooms.com/fr/paths/185-developpeur-web" target="_blank" rel="noopener noreferrer">Développeur Web</a> diplômante d'OpenClassrooms.
               </li>
               <li>
-                Technologies : JavaScript, React, Sass, Node.js, MongoDB
+                Stacks : JavaScript, React, Sass, Node.js, MongoDB
               </li>
               <li>
                 Projets : <a href="#project-kasa">Kasa</a> (React/Sass), <a href="#project-mon-vieux-grimoire">Mon Vieux Grimoire</a> (Node.js/MongoDB), <a href="https://github.com/ProjetsDevFanny/Galerie_dArt_Interactive" target="_blank" rel="noopener noreferrer">Galerie artistique interactive</a> (en cours)
+              </li>
+              <li>
+                Approche : Agile, Scrum, Kanban (Notion, Trello), XP
               </li>
               <li>
                 Recherche : Poste de développeuse Full Stack JavaScript junior, au sein d'une équipe Agile, bienveillante et orientée partage.

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "HTML/CSS",
+    "percentage": 85
+  },
+  {
+    "id": 2,
+    "name": "Sass",
+    "percentage": 80
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "percentage": 75
+  },
+  {
+    "id": 4,
+    "name": "React",
+    "percentage": 70
+  },
+  {
+    "id": 5,
+    "name": "Node.js",
+    "percentage": 65
+  },
+  {
+    "id": 6,
+    "name": "Express",
+    "percentage": 60
+  },
+  {
+    "id": 7,
+    "name": "MongoDB",
+    "percentage": 55
+  }
+]
+

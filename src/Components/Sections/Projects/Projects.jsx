@@ -10,10 +10,13 @@
 
 import React, { useState } from 'react'
 import projectsData from '../../../assets/data/projectsData.json'
+import Modal from '../../Modal/Modal'
 import './projects.scss'
 
 function Projects() {
   const [imageErrors, setImageErrors] = useState({});
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleImageError = (projectId) => {
     setImageErrors(prev => ({
@@ -22,11 +25,20 @@ function Projects() {
     }));
   };
 
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <div className="projects">
       <div className="projects__container">
-        <h2 className="projects__title">Projets</h2>
-             
+        <h2 className="projects__title">Projets</h2>            
         <div className="projects__grid">
           {projectsData.map((project) => {
             // Créer un ID basé sur le titre du projet pour les liens internes
@@ -34,12 +46,17 @@ function Projects() {
                              project.id === 2 ? 'project-mon-vieux-grimoire' : 
                              `project-${project.id}`;
             return (
-            <div key={project.id} id={projectId} className={`project-card ${project.featured ? 'project-card--featured' : ''}`}>
+            <div 
+              key={project.id} 
+              id={projectId} 
+              className={`project-card ${project.featured ? 'project-card--featured' : ''}`}
+              onClick={() => handleProjectClick(project)}
+            >
               <div className="project-card__image">
                 {!imageErrors[project.id] ? (
                   <img 
                     src={project.image} 
-                    alt="" // Alt vide pour éviter le clignotement
+                    alt={project.title}
                     onError={() => handleImageError(project.id)}
                     loading="lazy"
                   />
@@ -63,7 +80,7 @@ function Projects() {
                   ))}
                 </div>
                 
-                <div className="project-card__links">
+                <div className="project-card__links" onClick={(e) => e.stopPropagation()}>
                   <a 
                     href={project.githubUrl} 
                     target="_blank" 
@@ -89,6 +106,66 @@ function Projects() {
           })}
         </div>
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        {selectedProject && (
+          <div className="project-modal">
+            <div className="project-modal__image">
+              {!imageErrors[selectedProject.id] ? (
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  onError={() => handleImageError(selectedProject.id)}
+                />
+              ) : (
+                <div className="project-modal__placeholder">
+                  <div className="placeholder-icon">📁</div>
+                  <p>Image à venir</p>
+                </div>
+              )}
+            </div>
+            
+            <div className="project-modal__content">
+              <h2 className="project-modal__title">{selectedProject.title}</h2>
+              
+              <div className="project-modal__description">
+                <h3>Description</h3>
+                <p>{selectedProject.detailedDescription || selectedProject.description}</p>
+              </div>
+
+              <div className="project-modal__technologies">
+                <h3>Technologies utilisées</h3>
+                <div className="project-modal__tech-list">
+                  {selectedProject.technologies.map((tech, index) => (
+                    <span key={index} className="technology-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="project-modal__links">
+                <a 
+                  href={selectedProject.githubUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link project-link--github"
+                >
+                  <span>🔗</span> Voir sur GitHub
+                </a>
+                {selectedProject.liveUrl && (
+                  <a 
+                    href={selectedProject.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="project-link project-link--live"
+                  >
+                    <span>🌐</span> Voir le site en ligne
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </Modal>
     </div>
   )
 }
