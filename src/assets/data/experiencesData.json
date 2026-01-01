@@ -1,34 +1,38 @@
 [
   {
     "id": 1,
-    "title": "Consultant en technologie",
-    "location": "Dallas, Texas",
-    "date": "2022 – aujourd'hui",
-    "description": "Développement web full-stack, GenAI/LLM, gestion de projet, développement commercial",
+    "title": "Technicienne contrôle qualité microbiologie",
+    "entreprise": "BIOCODEX",
+    "location": "Beauvais, Hauts-de-France",
+    "date": "2024",
+    "description": "Préparation des milieux de cultures, contrôle des vitalités des échantillons, travail d'équipe.",
     "side": "left"
   },
   {
     "id": 2,
-    "title": "Ingénieur Full Stack",
-    "location": "Laie, Hawaï",
-    "date": "2020 – 2022",
-    "description": "Développement front-end, développement back-end, expérience utilisateur, gestion d'équipe",
+    "title": "Technicienne de laboratoire ",
+    "entreprise": "Lycée St Esprit - Pôle Scientifique",
+    "location": "Beauvais, Hauts-de-France",
+    "date": "2022 – 2023",
+    "description": "Préparation des TP scientifiques et des réactifs chimiques (colorants, indicateurs de pH, tests analytiques, encadrement.",
     "side": "right"
   },
   {
     "id": 3,
-    "title": "Ingénieur stagiaire",
-    "location": "Laie, Hawaï",
-    "date": "2021",
-    "description": "Développement full-stack, développement d’API, expérience utilisateur",
+    "title": "Technicienne de laboratoire culture cellulaire.",
+    "entreprise": "VILMORIN",
+    "location": "Ledenon, Occitanie",
+    "date": "2019",
+    "description": "Travaux de laboratoire en biologie végétale : culture in vitro, dissections florales, cytométrie en flux, préparation de milieux.",
     "side": "left"
   },
   {
     "id": 4,
-    "title": "Stagiaire analyste de données",
-    "location": "Tokyo, Japon",
-    "date": "2020",
-    "description": "Automatisation, gouvernance des données, analyse statistique",
+    "title": "Technicienne production semences de tournesol",
+    "entreprise": "SYNGENTA",
+    "location": "Servian, Occitanie",
+    "date": "2017-2018",
+    "description": "Suivi de la bonne application de l'itinéraire technique auprès des agriculteurs. Travail autonome, de terrain.",
     "side": "right"
   }
 ]

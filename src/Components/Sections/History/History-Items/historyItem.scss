@@ -22,15 +22,16 @@
      padding-right: 3rem;
  
      .timeline-item__content {
-       margin-right: 2rem;
+      //  margin-right: 2rem;
      }
  
      .timeline-item__dot {
-       right: -1rem;
+       right: -1.25rem;
      }
  
      .timeline-item__date {
-       right: 3rem;
+      top: 1.8rem;
+      left: 48rem;
      }
    }
  
@@ -41,15 +42,16 @@
      padding-left: 3rem;
  
      .timeline-item__content {
-       margin-left: 2rem;
+      //  margin-left: 2rem;
      }
  
      .timeline-item__dot {
-       left: -1rem;
+       left: -1.25rem;
      }
  
      .timeline-item__date {
-       left: 3rem;
+       top: 1.8rem;
+       right: 48rem;
      }
    }
  
@@ -60,7 +62,7 @@
      backdrop-filter: blur(10px);
      border: 1px solid rgba(255, 255, 255, 0.2);
      border-radius: 10px;
-     padding: 3rem 2rem;
+     padding: 2rem;
      position: relative;
      transition: all 0.3s ease;
  
@@ -73,16 +75,23 @@
  
    // Element: __title
    &__title {
-     @include font-style(1.4rem);
+     @include font-style(1.5rem);
      color: $black;
      margin-bottom: 0.5rem;
      font-weight: 600;
    }
- 
+
+   &__entreprise {
+     @include font-style(1.2rem);
+     color: $medium_purple;
+     margin-bottom: 0.5rem;
+     font-weight: 600;
+   } 
+
    // Element: __location
    &__location {
      @include font-style(0.9rem);
-     color: $medium_purple;
+     color: $dark_purple;
      display: block;
      margin-bottom: 0.5rem;
      font-weight: 500;
@@ -100,8 +109,8 @@
    &__dot {
      position: absolute;
      top: 2rem;
-     width: 2rem;
-     height: 2rem;
+     width: 2.5rem;
+     height: 2.5rem;
      background: $medium_purple;
      border: 3px solid $background;
      border-radius: 50%;
