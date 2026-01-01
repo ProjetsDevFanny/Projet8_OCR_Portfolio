@@ -27,7 +27,6 @@ function Header() {
           <a href="#skills">Compétences</a>
           <a href="#projects">Projets</a>
           <a href="#history">Parcours</a>
-          <a href="#veille">Veille</a>
           <a href="/cv-simon-fanny.pdf" target="_blank" rel="noopener noreferrer">CV</a>
           <a href="#contact">Contact</a>
         </nav>

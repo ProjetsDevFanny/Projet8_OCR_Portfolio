@@ -12,7 +12,6 @@ import React from 'react'
 import About from '../../Components/Sections/About/About'
 import Projects from '../../Components/Sections/Projects/Projects'
 import Contacts from '../../Components/Sections/Contacts/Contacts'
-import Veille from '../../Components/Sections/Veille/Veille'
 import History from '../../Components/Sections/History/History-global/History'
 import Hero from '../../Components/Hero/Hero'
 import Skills from '../../Components/Sections/Skills/Skills-global/Skills'
@@ -44,11 +43,6 @@ function Home() {
       {/* Section Parcours */}
       <section id="history" className="home__history">
         <History />
-      </section>
-
-      {/* Section Veille */}
-      <section id="veille" className="home__veille">
-        <Veille />
       </section>
 
       {/* Section Contact */}

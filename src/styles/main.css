@@ -1046,36 +1046,6 @@
  * @date 22/12/2025
  * @project Portfolio - Projet8 - OpenClassrooms
  */
-/**
-* @file veille.scss
- * @description Styles pour la section Veille
- * @author Simon Fanny
- * @date 22/12/2025
- * @project Portfolio - Projet8 - OpenClassrooms
- */
-.veille {
-  background-color: #1c0d30;
-  color: #ffffff;
-}
-.veille__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  min-height: calc(50vh - 8rem);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 
 * {
   font-family: "Roboto Mono", monospace, sans-serif;

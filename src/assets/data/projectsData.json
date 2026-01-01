@@ -14,6 +14,7 @@
       "improvements": "Des évolutions possibles incluent la connexion à une API réelle, l'ajout de tests automatisés, l'amélioration des performances et l'optimisation de l'accessibilité."
     },
     "image": "/src/assets/images/projects/screenshot_HomePage_kasa.png",
+    "imageModal": "/src/assets/images/projects/kasa_mokup_desktop.png",
     "technologies": [
       "HTML/CSS",
       "JavaScript",
@@ -39,6 +40,7 @@
       "improvements": "Des évolutions possibles incluent l’ajout de tests automatisés, la mise en place d’une documentation Swagger/OpenAPI et l’optimisation du cache et des performances à grande échelle."
     },
     "image": "/src/assets/images/projects/vieux_grimoire.png",
+    "imageModal": "/src/assets/images/projects/vieux_grimoire_mokup_desktop.png",
     "technologies": [
       "Node.js",
       "Express",
