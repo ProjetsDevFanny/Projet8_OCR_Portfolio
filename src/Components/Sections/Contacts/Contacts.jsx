@@ -10,6 +10,7 @@
 
 import React, { useState } from 'react'
 import './contacts.scss'
+import emailjs from '@emailjs/browser';
 
 function Contacts() {
   const [formData, setFormData] = useState({
@@ -37,13 +38,28 @@ function Contacts() {
 
     // Simulation d'envoi (à remplacer par votre logique d'envoi réel)
     try {
-      // Ici vous pouvez ajouter votre logique d'envoi (API, email service, etc.)
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
       console.log('Données du formulaire:', formData);
       
       // Simulation d'un délai d'envoi
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       setSubmitMessage('Merci ! Votre message a été envoyé avec succès.');
+      setTimeout(() => {
+        setSubmitMessage('');
+      }, 3000);
+
       setFormData({
         firstName: '',
         lastName: '',
