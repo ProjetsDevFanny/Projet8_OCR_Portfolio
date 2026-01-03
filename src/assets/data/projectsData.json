@@ -13,8 +13,8 @@
       "results": "L'application est entièrement fonctionnelle, responsive et conforme aux spécifications, avec une navigation fluide, une page 404 gérée et un déploiement en ligne via Netlify.",
       "improvements": "Des évolutions possibles incluent la connexion à une API réelle, l'ajout de tests automatisés, l'amélioration des performances et l'optimisation de l'accessibilité."
     },
-    "image": "/src/assets/images/projects/screenshot_HomePage_kasa.png",
-    "imageModal": "/src/assets/images/projects/kasa_mokup_desktop.png",
+    "image": "/src/assets/images/projects/screenshot_HomePage_kasa.webp",
+    "imageModal": "/src/assets/images/projects/kasa_mokup_desktop.webp",
     "technologies": [
       "HTML/CSS",
       "JavaScript",
@@ -39,8 +39,8 @@
       "results": "L’API est entièrement fonctionnelle, testée avec Postman, sécurisée contre les principales vulnérabilités et capable de gérer efficacement les fichiers images et les règles d’autorisation utilisateur.",
       "improvements": "Des évolutions possibles incluent l’ajout de tests automatisés, la mise en place d’une documentation Swagger/OpenAPI et l’optimisation du cache et des performances à grande échelle."
     },
-    "image": "/src/assets/images/projects/vieux_grimoire.png",
-    "imageModal": "/src/assets/images/projects/vieux_grimoire_mokup_desktop.png",
+    "image": "/src/assets/images/projects/vieux_grimoire.webp",
+    "imageModal": "/src/assets/images/projects/vieux_grimoire_mokup_desktop.webp",
     "technologies": [
       "Node.js",
       "Express",
@@ -64,8 +64,8 @@
       "results": "Les scores Lighthouse ont atteint 99 % en performance et 100 % en accessibilité et SEO, avec une réduction du poids des images de 98,5 %, améliorant fortement le temps de chargement et l’expérience utilisateur.",
       "improvements": "Des évolutions possibles incluent l’automatisation des audits de performance, l’ajout de tests d’accessibilité avancés et une migration vers un framework moderne si le projet évoluait."
     },
-    "image": "/src/assets/images/projects/screenshot_carducci_desktop.png",
-    "imageModal": "/src/assets/images/projects/carducci_mokup_desktop.png",
+    "image": "/src/assets/images/projects/screenshot_carducci_desktop.webp",
+    "imageModal": "/src/assets/images/projects/carducci_mokup_desktop.webp",
     "technologies": [
       "Lighthouse",
       "SEO",

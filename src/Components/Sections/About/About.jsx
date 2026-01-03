@@ -9,6 +9,7 @@
  */
 
 import React from 'react'
+import photoProfile from "../../../assets/images/photo_profile.webp";
 import './about.scss'
 
 function About() {
@@ -42,7 +43,7 @@ function About() {
             </ul>
           </div>
           <div className="about__container_content_picture">
-            <img className="about__container_content_picture_photo" src="/src/assets/images/photo_profile.jpg" alt="About_photo_of_Fanny_Simon" />
+            <img className="about__container_content_picture_photo" src={photoProfile}alt="About_photo_of_Fanny_Simon" />
           </div>
         </div>
       </div>

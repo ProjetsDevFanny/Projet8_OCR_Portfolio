@@ -16,13 +16,16 @@
     margin-bottom: 4rem;
     text-align: center;
   }
-  
-  &__skills-grid { 
+
+  &__skills-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1.5rem;
     max-width: 100%;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 }
-
