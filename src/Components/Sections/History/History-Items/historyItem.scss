@@ -6,158 +6,210 @@
  * @project Portfolio - Projet8 - OpenClassrooms
  */
 
- @use '../../../../styles/variables' as *;
- @use '../../../../styles/mixins' as *;
- 
- // Block: timeline-item
- .timeline-item {
-   position: relative;
-   width: 50%;
-   padding: 2rem;
-   box-sizing: border-box;
- 
-   // Modifier: --left
-   &--left {
-     text-align: right;
-     padding-right: 3rem;
- 
-     .timeline-item__content {
-      //  margin-right: 2rem;
-     }
- 
-     .timeline-item__dot {
-       right: -1.25rem;
-     }
- 
-     .timeline-item__date {
-      top: 1.8rem;
-      left: 48rem;
-     }
-   }
- 
-   // Modifier: --right
-   &--right {
-     margin-left: 50%;
-     text-align: left;
-     padding-left: 3rem;
- 
-     .timeline-item__content {
-      //  margin-left: 2rem;
-     }
- 
-     .timeline-item__dot {
-       left: -1.25rem;
-     }
- 
-     .timeline-item__date {
-       top: 1.8rem;
-       right: 48rem;
-     }
-   }
- 
-   // Element: __content
-   &__content {
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+// Block: timeline-item
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  @include tablet {
+    width: 100%;
+    margin-left: 0 !important;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  // Modifier: --left
+  &--left {
+    text-align: right;
+    padding-right: 3rem;
+
+      .timeline-item__content {
+
+        // Flèche pointant vers la droite (desktop)
+        &::before {
+          right: -0.7em;
+          top: 1.5rem; // Aligné avec les dots à 2rem
+          border-left-color: $white;
+          border-right: none;
+
+          @include tablet {
+            left: -0.7em !important;   
+            transform: rotate(180deg) !important;  
+          }
+        }
+      }
+    
+
+    .timeline-item__dot {
+      right: -1.25rem;
+
+      @include tablet {
+        right: 10rem;
+      }
+    }
+
+    .timeline-item__date {
+      left: 47.5rem;
+    }
+  }
+
+  // Modifier: --right
+  &--right {
+    margin-left: 50%;
+    text-align: left;
+    padding-left: 3rem;
+
+    .timeline-item__content {
+
+      // Flèche pointant vers la gauche (desktop)
+      &::before {
+        left: -0.7em;
+        top: 1.5rem; // Aligné avec les dots à 2rem
+        border-right-color: $white;
+        border-left: none;
+
+        @include tablet {
+          left: -0.7em !important;
+          right: auto !important;
+        }
+      }
+    }
+
+
+    .timeline-item__dot {
+      left: -1.25rem;
+    }
+
+    .timeline-item__date {
+      right: 47.5rem;
+    }
+  }
+
+  &--right,
+  &--left {
+    @include tablet {
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+  }
+
+  // Element: __content
+  &__content {
     //  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-     background-color: $white;
-     backdrop-filter: blur(10px);
-     border: 1px solid rgba(255, 255, 255, 0.2);
-     border-radius: 10px;
-     padding: 2rem;
-     position: relative;
-     transition: all 0.3s ease;
- 
-     &:hover {
-       transform: translateY(-5px);
-       box-shadow: 0 10px 25px rgba(188, 96, 251, 0.2);
-       border-color: $medium_purple;
-     }
-   }
- 
-   // Element: __title
-   &__title {
-     @include font-style(1.5rem);
-     color: $black;
-     margin-bottom: 0.5rem;
-     font-weight: 600;
-   }
+    background-color: $white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
 
-   &__entreprise {
-     @include font-style(1.2rem);
-     color: $medium_purple;
-     margin-bottom: 0.5rem;
-     font-weight: 600;
-   } 
+    // Flèche pointant vers les dots
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      top: 1.5rem; // Aligné avec les dots
+      z-index: 1;
+    }
 
-   // Element: __location
-   &__location {
-     @include font-style(0.9rem);
-     color: $dark_purple;
-     display: block;
-     margin-bottom: 0.5rem;
-     font-weight: 500;
-   }
- 
-   // Element: __description
-   &__description {
-     @include font-style(1rem);
-     color: $black;
-     line-height: 1.5;
-     margin: 0;
-   }
- 
-   // Element: __dot
-   &__dot {
-     position: absolute;
-     top: 2rem;
-     width: 2.5rem;
-     height: 2.5rem;
-     background: $medium_purple;
-     border: 3px solid $background;
-     border-radius: 50%;
-     z-index: 1;
-     box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.3);
-   }
- 
-   // Element: __date
-   &__date {
-     position: absolute;
-     top: 1.5rem;
-     @include font-style(0.9rem);
-     color: $medium_purple;
-     font-weight: 600;
-     background: $background;
-     padding: 0.3rem 0.8rem;
-     border-radius: 20px;
-     border: 1px solid rgba(188, 96, 251, 0.3);
-     white-space: nowrap;
-   }
- }
- 
- // Responsive
- @media (max-width: 768px) {
-   .timeline-item {
-     width: 100%;
-     margin-left: 0 !important;
-     text-align: left !important;
-     padding-left: 3rem !important;
-     padding-right: 1rem !important;
- 
-     &--left,
-     &--right {
-       .timeline-item__content {
-         margin-left: 2rem !important;
-         margin-right: 0 !important;
-       }
- 
-       .timeline-item__dot {
-         left: -1rem !important;
-         right: auto !important;
-       }
- 
-       .timeline-item__date {
-         left: 3rem !important;
-         right: auto !important;
-       }
-     }
-   }
- }
+    @include tablet {
+      max-width: 400px;
+      padding: 1.5rem;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(188, 96, 251, 0.2);
+      border-color: $medium_purple;
+    }
+  }
+
+  // Element: __title
+  &__title {
+    @include font-style(1.5rem);
+    color: $black;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  &__entreprise {
+    @include font-style(1.2rem);
+    color: $medium_purple;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  // Element: __location
+  &__location {
+    @include font-style(0.9rem);
+    color: $dark_purple;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  // Element: __description
+  &__description {
+    @include font-style(1rem);
+    color: $black;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  // Element: __dot
+  &__dot {
+    position: absolute;
+    top: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: $medium_purple;
+    border: 3px solid $background;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.3);
+
+    @include tablet {
+      left: 18% !important;
+      right: auto !important;
+      top: 4rem;
+      transform: translateX(-50%) !important;
+      z-index: 2;
+    }
+  }
+
+  // Element: __date
+  &__date {
+    position: absolute;
+    top: 3rem;
+    @include font-style(0.9rem);
+    color: $medium_purple;
+    font-weight: 600;
+    background: $background;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid $medium_purple;
+    white-space: nowrap;
+
+    @include tablet {
+      left: 50% !important;
+      right: auto !important;
+      top: 2rem !important;
+      transform: translateX(-50%) !important;
+      border: 0.5px solid $medium_purple;
+      padding: 0rem 0.5em !important;
+      z-index: 2;
+    }
+  }
+}

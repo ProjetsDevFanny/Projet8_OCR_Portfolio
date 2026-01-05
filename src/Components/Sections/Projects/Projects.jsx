@@ -116,6 +116,7 @@ function Projects() {
                   src={selectedProject.imageModal} 
                   alt={selectedProject.titleModal}
                   onError={() => handleImageError(selectedProject.id)}
+                  className={selectedProject.id === 1 ? 'project-modal__image--large' : ''}
                 />
               ) : (
                 <div className="project-modal__placeholder">

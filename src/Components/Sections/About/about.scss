@@ -34,6 +34,7 @@
 
     @include tablet {
       grid-template-columns: 1fr;
+      grid-template-rows: auto auto; // Image et textes s'adaptent prafaitement au contenu
     }
 
     &_text {
@@ -42,6 +43,10 @@
       justify-content: center;
       align-items: center;
       margin: 0 2rem;
+
+      @include tablet {
+        order: 2; // Texte en deuxième position sur mobile
+      }
     
     p {
       @include font-style(1.4rem);
@@ -127,6 +132,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet {
+      order: 1; // Image en première position sur mobile
+    }
     
     &_photo {
       width: 200px !important;

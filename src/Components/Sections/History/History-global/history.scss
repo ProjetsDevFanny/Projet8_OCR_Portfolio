@@ -40,5 +40,9 @@
     width: 3px;
     background-color: $white;
     transform: translateX(-50%);
+
+    @include tablet {
+      left: 18%;
+    }
   }
 }
