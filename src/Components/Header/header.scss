@@ -22,19 +22,25 @@
     align-items: center;
     padding: 0rem 2rem;
     margin: 0 auto;
-
-    @include mobile {
-      padding: 2rem;
+    
+    @include tablet {
+      justify-content: space-around;     
+      flex-wrap: wrap;
+      padding: 1rem;
     }
   }
 
   &__signature {
     @include font-style(4rem);
     color: $white;
-   
+
+    @include tablet {
+     display: none;
+    }
+    
     &, a {
       font-family: $font-signature;
-     }
+    }
   }
 
   &__nav {
@@ -42,29 +48,14 @@
     gap: 4rem;
 
     @include tablet {
-      gap: 3rem;
+      gap: 2.5rem;
     }
-
-    @include mobile {
-      gap: 2rem;
-    }
-
+   
     a {
       @include font-style(1.2rem);
       text-decoration: none;
       color: $white;
-      position: relative;
-
-      @include tablet {
-        @include font-style(1.4rem);
-      }
-
-      @include mobile {
-        @include font-style(1rem);
-        text-transform: uppercase;
-      }
-    }
-
-    
+      position: relative;      
+    }    
   }
 }
