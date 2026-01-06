@@ -8,7 +8,7 @@
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 5;
   background: linear-gradient(135deg, $background 0%, $dark_violet 100%);
   backdrop-filter: blur(10px); // Optionnel : effet de flou pour un look moderne
   transition: all 0.3s ease;
@@ -16,17 +16,36 @@
   // Ombre subtile quand sticky pour un meilleur design
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @include mobile {
+    width: 23%;
+    position: absolute;
+    position: fixed;
+    left: 0;
+    z-index: 15;
+    opacity: 0.8;
+    border-radius: 0 20px 20px 0;
+  }
+
   &__container {
     @include center-flex;
     justify-content: space-between;
     align-items: center;
     padding: 0rem 2rem;
     margin: 0 auto;
-    
+
     @include tablet {
-      justify-content: space-around;     
-      flex-wrap: wrap;
+      justify-content: space-around;
       padding: 1rem;
+
+      @include mobile {
+       border-radius: 0 20px 20px 0;
+       justify-content: flex-start;
+      }
     }
   }
 
@@ -35,10 +54,11 @@
     color: $white;
 
     @include tablet {
-     display: none;
+      display: none;
     }
-    
-    &, a {
+
+    &,
+    a {
       font-family: $font-signature;
     }
   }
@@ -48,14 +68,21 @@
     gap: 4rem;
 
     @include tablet {
-      gap: 2.5rem;
+      gap: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include mobile {
+        flex-direction: column;
+      }
     }
-   
+
     a {
       @include font-style(1.2rem);
       text-decoration: none;
       color: $white;
-      position: relative;      
-    }    
+      position: relative;
+    }
   }
 }
