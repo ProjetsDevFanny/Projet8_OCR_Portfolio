@@ -37,7 +37,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable; // pour éviter que le contenu ne bouge lors du scroll
   font-size: 62.5%; /* 1rem = 10px car la base du navigateur est 16px */
-  background: linear-gradient(135deg, $background 0%, $dark_violet 100%);
+  background: linear-gradient(135deg, $background 0%, $dark_background 120%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -77,6 +77,10 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   @include font-style(3rem);
   margin-bottom: 3rem;
+
+  @include mobile {
+    margin-bottom: 1rem;
+  }
 }
 
 button {

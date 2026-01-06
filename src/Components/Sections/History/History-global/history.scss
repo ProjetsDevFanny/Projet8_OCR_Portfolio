@@ -12,6 +12,10 @@
  .history {
   padding: 4rem 0;
 
+  @include mobile {
+    padding: 0;
+  }
+
   &__container {
     @include container-style;
     flex-direction: column;
@@ -21,6 +25,7 @@
 
   &__title {
     margin-bottom: 4rem;
+    text-align: center;
   }
 }
 
@@ -42,7 +47,11 @@
     transform: translateX(-50%);
 
     @include tablet {
-      left: 8%;
+      left: 3%;
+    }
+
+    @include mobile {
+      left: 0;
     }
   }
 }

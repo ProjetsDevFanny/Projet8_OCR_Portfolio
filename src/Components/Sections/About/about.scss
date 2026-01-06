@@ -24,6 +24,14 @@
     @include tablet {
       grid-template-rows: 0.2fr 1fr;
     }
+
+    // Structure plus compacte sur mobile
+    @include mobile {
+      grid-template-rows: auto auto; // Au lieu de 0.2fr 1fr - permet au contenu de déterminer la hauteur
+      gap: 1rem; // Gap réduit
+      padding: 2rem;
+      min-height: auto; // Laisse le contenu déterminer la hauteur naturelle
+    }
   }
 
   &__container_content {
@@ -46,6 +54,10 @@
 
       @include tablet {
         order: 2; // Texte en deuxième position sur mobile
+
+        @include mobile {
+          margin: 0;
+        }
       }
     
     p {
@@ -67,11 +79,15 @@
         position: relative;
         line-height: 1.2;
         cursor: default;
-    
+        
         // animation d’apparition
         opacity: 0;
         transform: translateX(-8px);
         animation: liFadeIn 0.5s ease forwards;
+        
+        @include mobile {
+          margin-bottom: 2rem;
+        }
     
         // petit décalage progressif
         &:nth-child(1) { animation-delay: 0.05s; }
