@@ -136,31 +136,31 @@
 
   // Element: __title
   &__title {
-    @include font-style(1.5rem);
+    @include font-style(1.6rem);
     color: $black;
     margin-bottom: 0.5rem;
     font-weight: 600;
   }
 
   &__entreprise {
-    @include font-style(1.2rem);
-    color: $medium_purple;
+    @include font-style(1.3rem);
+    color: $dark_purple;
     margin-bottom: 0.5rem;
     font-weight: 600;
   }
 
   // Element: __location
   &__location {
-    @include font-style(0.9rem);
-    color: $dark_purple;
+    @include font-style(1.1rem);
+    color: $blue;
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 550;
   }
 
   // Element: __description
   &__description {
-    @include font-style(1rem);
+    @include font-style(1.2rem);
     color: $black;
     line-height: 1.5;
     margin: 0;
@@ -196,13 +196,13 @@
   &__date {
     position: absolute;
     top: 3rem;
-    @include font-style(0.9rem);
-    color: $medium_purple;
+    @include font-style(1.3rem);
+    color: $light_purple;
     font-weight: 600;
     background: $background;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
-    border: 1px solid $medium_purple;
+    border: 1px solid $light_purple;
     white-space: nowrap;
 
     @include tablet {

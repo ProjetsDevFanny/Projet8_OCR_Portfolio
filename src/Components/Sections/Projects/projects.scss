@@ -241,7 +241,7 @@
 
 // Liens des projets
 .project-link {
-  @include font-style(1rem);
+  @include font-style(1.2rem);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   text-decoration: none;
@@ -258,14 +258,16 @@
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.2);
+      color: $dark_purple;
+      font-weight: 900;
       transform: translateY(-2px);
     }
   }
 
   &--live {
-    background-color: $medium_purple;
-    color: white;
-    border: 1px solid $medium_purple;
+    background-color: $light_purple;
+    color: $black;
+    border: 1px solid $light_purple;
 
     &:hover {
       background-color: transparent;
@@ -394,12 +396,13 @@
     h3 {
       @include font-style(1.8rem);
       color: $medium_purple;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-weight: 600;
 
-      @include mobile {
-        text-align: center;
-        margin-bottom: 1.5rem;
+      @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -409,7 +412,7 @@
     flex-wrap: wrap;
     gap: 0.8rem;
 
-    @include mobile {
+    @include tablet {
       justify-content: center;
     }
   }
@@ -417,11 +420,11 @@
   &__links {
     display: flex;
     gap: 1rem;
-    justify-content: center;
     margin-top: 2rem;
 
     @include tablet {
       width: 100%;
+      justify-content: center;
     }
   }
 }

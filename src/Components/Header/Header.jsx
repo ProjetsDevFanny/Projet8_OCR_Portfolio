@@ -18,7 +18,7 @@ function Header() {
       <div className="header__container">
         {/* Logo */}
         <div className="header__signature">
-          <a href="#home">
+          <a href="#hero">
             Fanny Simon
           </a>
         </div>
