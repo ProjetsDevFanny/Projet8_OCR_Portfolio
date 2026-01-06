@@ -1,0 +1,45 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+.scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: $dark_purple;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(188, 96, 251, 0.6), 0 0 40px rgba(188, 96, 251, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+  }
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrollTopBtn:hover {
+  background-color: $medium_purple;
+  box-shadow: 0 0 20px rgba(188, 96, 251, 0.6), 0 0 40px rgba(188, 96, 251, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
