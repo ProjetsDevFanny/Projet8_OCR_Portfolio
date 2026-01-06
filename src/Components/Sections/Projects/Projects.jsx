@@ -178,7 +178,7 @@ function Projects() {
                   rel="noopener noreferrer"
                   className="project-link project-link--github"
                 >
-                  <span>🔗</span> Voir sur GitHub
+                  <span>🔗</span> GitHub
                 </a>
                 {selectedProject.liveUrl && (
                   <a 
@@ -187,7 +187,7 @@ function Projects() {
                     rel="noopener noreferrer"
                     className="project-link project-link--live"
                   >
-                    <span>🌐</span> Voir le site en ligne
+                    <span>🌐</span> Site en ligne
                   </a>
                 )}
               </div>

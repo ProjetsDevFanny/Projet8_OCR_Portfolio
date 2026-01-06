@@ -26,6 +26,10 @@
   &__title {
     margin-bottom: 4rem;
     text-align: center;
+
+    @include mobile {
+      margin-bottom: 2rem;
+    }
   }
 }
 
