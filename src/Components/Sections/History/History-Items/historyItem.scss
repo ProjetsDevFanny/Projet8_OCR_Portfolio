@@ -136,25 +136,25 @@
 
   // Element: __title
   &__title {
-    @include font-style(1.6rem);
+    @include font-style(1.5rem);
     color: $black;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    margin-bottom: 0.2rem;
+    font-weight: 700;
   }
 
   &__entreprise {
     @include font-style(1.3rem);
     color: $dark_purple;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     font-weight: 600;
   }
 
   // Element: __location
   &__location {
-    @include font-style(1.1rem);
+    @include font-style(1.2rem);
     color: $blue;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.8rem;
     font-weight: 550;
   }
 

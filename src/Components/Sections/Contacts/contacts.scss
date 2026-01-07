@@ -6,162 +6,171 @@
  * @project Portfolio - Projet8 - OpenClassrooms
  */
 
- @use '../../../styles/variables' as *;
- @use '../../../styles/mixins' as *;
- 
- .contacts {
-   background-color: $background;
-   color: $white;
- 
-   &__container {
-    @include container-style; 
-     flex-direction: column;
-     align-items: center;
-     justify-content: flex-start;
-     text-align: center;
-   }
- 
-   &__title {
-     @include font-style(3rem);
-     color: $white;
-     margin-bottom: 1rem;
-   }
- 
-   &__subtitle {
-     @include font-style(1.2rem);
-     color: rgba(255, 255, 255, 0.8);
-     margin-bottom: 3rem;
-     max-width: 600px;
-     line-height: 1.6;
-   }
- }
- 
- // Formulaire de contact
- .contact-form {
-   width: 100%;
-   max-width: 800px;
-   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-   backdrop-filter: blur(10px);
-   border: 1px solid rgba(255, 255, 255, 0.2);
-   border-radius: 15px;
-   padding: 2rem;
-   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
-    @include tablet {
-      max-width: 90%;
-    }
+.contacts {
+  background-color: $background;
+  color: $white;
 
-    @include mobile {
-      max-width: 100%;
-    }
- }
- 
- .form-row {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 1rem;
- 
-   @include tablet {
-     grid-template-columns: 1fr;
-   }
- }
- 
- .form-group {
-   margin-bottom: 1.5rem;
- }
- 
- .form-label {
-   @include font-style(1.3rem);
-   color: $white;
-   display: block;
-   margin-bottom: 0.5rem;
-   font-weight: 600;
-   text-align: left;
- }
- 
- .form-input,
- .form-textarea {
-   width: 100%;
-   padding: 1rem;
-   background: rgba(255, 255, 255, 0.1);
-   border: 1px solid rgba(255, 255, 255, 0.2);
-   border-radius: 8px;
-   color: $white;
-   @include font-style(1.2rem);
-   transition: all 0.3s ease;
-   backdrop-filter: blur(5px);
- 
-   &::placeholder {
-     color: rgba(255, 255, 255, 0.6);
-   }
- 
-   &:focus {
-     outline: none;
-     border-color: $medium_purple;
-     background: rgba(255, 255, 255, 0.15);
-     box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.2);
-   }
- }
- 
- .form-textarea {
-   resize: vertical;
-   min-height: 150px;
- }
- 
- .form-submit-btn {
-   width: 50%;
-   padding: 1rem 2rem;
-   background-color: $dark_purple;
-   border: 1.5px solid $medium_purple;
-   color: $white;
-   border-radius: 8px;
-   @include font-style(1.3rem);
-   font-weight: 600;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   margin-top: 1rem;
- 
-   &:hover:not(:disabled) {
-     background: transparent;
-     transform: translateY(-2px);
-     box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
-   }
- 
-   &:disabled {
-     opacity: 0.7;
-     cursor: not-allowed;
-     transform: none;
-   }
- }
- 
- .form-message {
-   margin-top: 1rem;
-   padding: 1rem;
-   border-radius: 8px;
-   text-align: center;
-   font-weight: 500;
- 
-   &--success {
-     background-color: rgba(76, 175, 80, 0.2);
-     color: $green;
-     border: 1px solid rgba(76, 175, 80, 0.3);
-     @include font-style(1.3rem);
-   }
- 
-   &--error {
-     background-color: rgba(244, 67, 54, 0.2);
-     color: #f44336;
-     border: 1px solid rgba(244, 67, 54, 0.3);
-     @include font-style(1.3rem);
-   }
- }
- 
- @media (max-width: 768px) {
-   .contact-form {
-     padding: 1.5rem;
-   }
- 
-   .contacts__container {
-     padding: 3rem 1rem;
-   }
- }
+  &__container {
+    @include container-style;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  &__title {
+    @include font-style(3rem);
+    color: $white;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    @include font-style(1.2rem);
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+}
+
+// Formulaire de contact
+.contact-form {
+  width: 100%;
+  max-width: 800px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+  @include tablet {
+    max-width: 90%;
+  }
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  @include font-style(1.3rem);
+  color: $white;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: $white;
+  @include font-style(1.2rem);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $medium_purple;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(188, 96, 251, 0.2);
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-submit-btn {
+  width: 50%;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  @include font-style(1.3rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+
+  background: linear-gradient(135deg,
+      rgba(138, 43, 226, 1) 0%,
+      rgba(147, 51, 234, 1) 25%,
+      rgba(168, 85, 247, 1) 40%,
+      rgb(54, 1, 75) 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow:
+    0 4px 15px rgba(138, 43, 226, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+
+  &:hover:not(:disabled) {
+    background: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(188, 96, 251, 0.4);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+
+  &--success {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: $green;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    @include font-style(1.3rem);
+  }
+
+  &--error {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    @include font-style(1.3rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contacts__container {
+    padding: 3rem 1rem;
+  }
+}
