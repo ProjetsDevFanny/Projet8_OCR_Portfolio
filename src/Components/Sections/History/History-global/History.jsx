@@ -17,7 +17,8 @@ function History() {
   return (
     <div className="history">
       <div className="history__container">
-        <h2 className="history__title">Parcours professionnel</h2>
+        <h2 className="history__title">Parcours professionnel  
+          <a href="/CV_Fanny_Simon_portfolio.pdf" target="_blank" rel="noopener noreferrer" className="cv-link" aria-label="Télécharger mon CV au format PDF">👉 Voir mon CV</a></h2>
 
         <div className="timeline__container">
           {experiences.map((experience) => (

@@ -56,7 +56,7 @@ function Projects() {
                 {!imageErrors[project.id] ? (
                   <img 
                     src={project.image} 
-                    alt={project.title}
+                    alt={project.altImage}
                     onError={() => handleImageError(project.id)}
                     loading="lazy"
                   />
@@ -114,7 +114,7 @@ function Projects() {
               {!imageErrors[selectedProject.id] ? (
                 <img 
                   src={selectedProject.imageModal} 
-                  alt={selectedProject.titleModal}
+                  alt={selectedProject.altImageModal}
                   onError={() => handleImageError(selectedProject.id)}
                   className={selectedProject.id === 1 ? 'project-modal__image--large' : ''}
                 />

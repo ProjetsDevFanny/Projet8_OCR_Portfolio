@@ -26,12 +26,31 @@
   &__title {
     margin-bottom: 4rem;
     text-align: center;
+    position: relative;
+
+    .cv-link {
+      position: absolute;
+      top: 50%;
+      right: -50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $medium_purple;
+      text-decoration: none;
+      transition: all 0.4s ease;
+  
+      &:hover {
+        color: $light_purple;
+        transform: translateX(8%) translateY(-50%);
+      }
+    }
+  }
 
     @include mobile {
       margin-bottom: 2rem;
     }
   }
-}
+
 
 /* Timeline */
 .timeline__container {

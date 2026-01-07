@@ -27,7 +27,7 @@ function Header() {
           <a href="#skills">Compétences</a>
           <a href="#projects">Projets</a>
           <a href="#history">Parcours</a>
-          <a href="/cv-simon-fanny.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="/CV_Fanny_Simon_portfolio.pdf" target="_blank" rel="noopener noreferrer" aria-label="Télécharger mon CV au format PDF">CV</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>

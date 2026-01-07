@@ -14,7 +14,9 @@
       "improvements": "Des évolutions possibles incluent la connexion à une API réelle, l'ajout de tests automatisés, l'amélioration des performances et l'optimisation de l'accessibilité."
     },
     "image": "/src/assets/images/projects/screenshot_HomePage_kasa.webp",
+    "altImage": "Screenshot de la page d'accueil de Kasa",
     "imageModal": "/src/assets/images/projects/kasa_mokup_desktop.webp",
+    "altImageModal": "Mockup de la page d'accueil de Kasa",
     "technologies": [
       "HTML/CSS",
       "JavaScript",
@@ -40,7 +42,9 @@
       "improvements": "Des évolutions possibles incluent l’ajout de tests automatisés, la mise en place d’une documentation Swagger/OpenAPI et l’optimisation du cache et des performances à grande échelle."
     },
     "image": "/src/assets/images/projects/vieux_grimoire.webp",
+    "altImage": "Screenshot de la page d'accueil de Mon Vieux Grimoire",
     "imageModal": "/src/assets/images/projects/vieux_grimoire_mokup_desktop.webp",
+    "altImageModal": "Mockup de la page d'accueil de Mon Vieux Grimoire",
     "technologies": [
       "Node.js",
       "Express",
@@ -65,7 +69,9 @@
       "improvements": "Des évolutions possibles incluent l’automatisation des audits de performance, l’ajout de tests d’accessibilité avancés et une migration vers un framework moderne si le projet évoluait."
     },
     "image": "/src/assets/images/projects/screenshot_carducci_desktop.webp",
+    "altImage": "Screenshot de la page d'accueil de Carducci",
     "imageModal": "/src/assets/images/projects/carducci_mokup_desktop.webp",
+    "altImageModal": "Mockup de la page d'accueil de Carducci",
     "technologies": [
       "Lighthouse",
       "SEO",
