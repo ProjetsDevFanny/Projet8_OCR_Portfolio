@@ -6,44 +6,45 @@
  * @project Portfolio - Projet8 - OpenClassrooms
  */
 
-
-import { useEffect, useState } from "react";
+import React from 'react';
+import { useEffect} from "react";
 import './scrollToTopButton.scss';
-import arrowUp from '../../assets/images/Icones/fleche-haut.png';
+import arrowUp from '/src/assets/images/Icones/fleche-haut.png';
 
 function ScrollToTopButton() {
-  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 300) {
+            document.body.classList.add('scrolled');
+          } else {
+            document.body.classList.remove('scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
-
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <button
       onClick={scrollToTop}
-      className={`scrollTopBtn ${isVisible ? "show" : ""}`}
+      className="scrollTopBtn"
       aria-label="Retour en haut"
     >
-      <img src={arrowUp} alt="Retour en haut" className="scrollTopBtn__icon" />
+      <img src={arrowUp} alt="Retour en haut" />
     </button>
   );
 }

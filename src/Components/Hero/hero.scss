@@ -15,6 +15,7 @@
 // ===============================================================================
 .hero {
   &__container {
+    position: relative;
     background: 
     linear-gradient(135deg, rgba($background, 0.8) 0%, rgba($dark_violet, 0.8) 100%),
     url('/src/assets/images/frequency-wave.webp');

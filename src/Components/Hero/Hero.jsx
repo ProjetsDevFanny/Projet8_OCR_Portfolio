@@ -10,11 +10,20 @@
 
 import React from 'react'
 import './hero.scss'  
+import frequencyWave from '/src/assets/images/frequency-wave.webp'  // Préchargement de l'image
 
 function Hero() {
   return (
    <div className="hero">
     <div className="hero__container">
+       {/* Préchargement invisible pour LCP */}
+       <img 
+        src={frequencyWave} 
+        alt="Frequency Wave" 
+        style={{ display: 'none' }} 
+        fetchpriority="high"
+      />
+   
       <div className="hero__content">
         <h1 className="hero__title">Fanny SIMON</h1>
         <h2 className="hero__subtitle">Développeuse Web Full Stack</h2>

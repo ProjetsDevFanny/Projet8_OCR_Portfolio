@@ -1,7 +1,6 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
-
 .scrollTopBtn {
   position: fixed;
   bottom: 30px;
@@ -14,11 +13,13 @@
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   z-index: 1000;
   box-shadow: 0 0 20px rgba(188, 96, 251, 0.6), 0 0 40px rgba(188, 96, 251, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 
-  &__icon {
+  img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,19 +28,21 @@
     height: 30px;
     filter: brightness(0) invert(1);
   }
-  
+
   &:focus {
     outline: none;
   }
+
+  &:hover {
+    background-color: $violet;
+    box-shadow: 0 0 20px rgba(188, 96, 251, 0.6), 0 0 40px rgba(188, 96, 251, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
-.scrollTopBtn.show {
+// Version CSS-only pour Lighthouse / performance
+body.scrolled .scrollTopBtn {
   opacity: 1;
   visibility: visible;
-}
-
-.scrollTopBtn:hover {
-  background-color: $medium_purple;
-  box-shadow: 0 0 20px rgba(188, 96, 251, 0.6), 0 0 40px rgba(188, 96, 251, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: auto;
 }
