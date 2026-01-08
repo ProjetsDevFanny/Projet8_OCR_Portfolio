@@ -1,6 +1,6 @@
 # Portfolio — Fanny Simon (Développeuse Web Full Stack)
 
-[![Aperçu du site](public/screenshot-portfolio-FS.png)](https://fannysimon-devweb-fullstack.netlify.app)
+![Aperçu du site](public/screenshot-portfolio-FS.png)
 
 ## Démo en ligne
 
