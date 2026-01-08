@@ -11,6 +11,7 @@
 
 import React from 'react'
 import './header.scss'
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -18,17 +19,17 @@ function Header() {
       <div className="header__container">
         {/* Logo */}
         <div className="header__signature">
-          <a href="#hero">
+          <Link to="/">
             Fanny Simon
-          </a>
+          </Link>
         </div>
         <nav className="header__nav">
-          <a href="#about">À propos</a>      
-          <a href="#skills">Compétences</a>
-          <a href="#projects">Projets</a>
-          <a href="#history">Parcours</a>
-          <a href="/CV_Fanny_Simon_portfolio.pdf" target="_blank" rel="noopener noreferrer" aria-label="Télécharger mon CV au format PDF">CV</a>
-          <a href="#contact">Contact</a>
+          <Link to="/#about">À propos</Link>      
+          <Link to="/#skills">Compétences</Link>
+          <Link to="/#projects">Projets</Link>
+          <Link to="/#history">Parcours</Link>
+          <Link to="/CV_Fanny_Simon_portfolio.pdf" target="_blank" rel="noopener noreferrer" aria-label="Télécharger mon CV au format PDF">CV</Link>
+          <Link to="/#contact">Contact</Link>
         </nav>
       </div>
     </header>

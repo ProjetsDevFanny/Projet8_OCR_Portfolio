@@ -28,6 +28,13 @@
       text-align: center;
     }
 
+    &__legacy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     p {
       @include font-style(1.1rem);
     }

@@ -9,18 +9,32 @@
  * ===============================================================================
  */
 
+import { Outlet, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import './layout.scss'
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton'
 
-function Layout({ children }) {
+function Layout() {
+  const location = useLocation();
+
+  // Support des ancres (#about, #projects, etc.) avec React Router
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [location]);
+
   return (
     <div className="layout">
       <Header />
       <main className="layout__main-container">
-        {children}
+        <Outlet /> {/* Ici s'afficheront le contenu des pages enfants */}
       </main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   )
 }

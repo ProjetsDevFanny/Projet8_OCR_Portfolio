@@ -15,7 +15,6 @@ import Contacts from '../../Components/Sections/Contacts/Contacts'
 import History from '../../Components/Sections/History/History-global/History'
 import Hero from '../../Components/Hero/Hero'
 import Skills from '../../Components/Sections/Skills/Skills-global/Skills'
-import ScrollToTopButton from '../../Components/ScrollToTopButton/ScrollToTopButton'
 import './home.scss'
 
 function Home() {
@@ -51,7 +50,6 @@ function Home() {
         <Contacts />
       </section>
 
-      <ScrollToTopButton />
     </div>
   )
 }

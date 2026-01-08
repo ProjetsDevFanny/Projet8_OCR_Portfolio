@@ -12,6 +12,7 @@ import React from 'react'
 import './footer.scss'
 import githubIcon from '../../assets/images/Icones/github.svg'
 import linkedinIcon from '../../assets/images/Icones/linkedin.svg'
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -38,7 +39,12 @@ function Footer() {
             <img src={linkedinIcon} alt="LinkedIn" className="social-icon social-icon--linkedin" />
           </a>
         </div>
-        <p>&copy; 2025 Simon Fanny. Tous droits réservés.</p>
+        <div className="footer__container__legacy">
+          <p>&copy; 2026 Simon Fanny. Tous droits réservés.</p>
+          <p>
+            <Link to="/mentions">Mentions légales</Link>
+          </p>
+        </div>
       </div>
     </footer>
   )
