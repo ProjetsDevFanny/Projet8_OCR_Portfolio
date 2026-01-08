@@ -4,7 +4,7 @@
 
 ## Démo en ligne
 
-- **Site déployé**: `https://fannysimon-devweb-fullstack.netlify.app`
+- **Site déployé**: [fannysimon-devweb-fullstack.netlify.app](https://fannysimon-devweb-fullstack.netlify.app)
 
 ## Objectif
 
