@@ -128,10 +128,9 @@ function Projects() {
             </div>
             
             <div className="project-modal__content">
-              <h2 className="project-modal__title">{selectedProject.titleModal}</h2>
+              <h3 className="project-modal__title">{selectedProject.titleModal}</h3>
               
-              {selectedProject.projectSheet ? (
-                <div className="project-modal__sheet">
+               <div className="project-modal__sheet">
                   <div className="project-modal__sheet-section">
                     <p>{selectedProject.projectSheet.context}</p>
                   </div>
@@ -154,17 +153,11 @@ function Projects() {
 
                   <div className="project-modal__sheet-section">
                     <p>{selectedProject.projectSheet.improvements}</p>
-                  </div>
                 </div>
-              ) : (
-                <div className="project-modal__description">
-                  <h3>Description</h3>
-                  <p>{selectedProject.detailedDescription || selectedProject.description}</p>
-                </div>
-              )}
+              </div>
 
               <div className="project-modal__technologies">
-                <h3>Technologies utilisées</h3>
+                <h4>Technologies utilisées</h4>
                 <div className="project-modal__tech-list">
                   {selectedProject.technologies.map((tech, index) => (
                     <span key={index} className="technology-tag">{tech}</span>

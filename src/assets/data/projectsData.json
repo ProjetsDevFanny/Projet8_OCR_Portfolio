@@ -4,7 +4,6 @@
     "title": "Application React",
     "titleModal": "KASA - Application Immobilière avec React",
     "description": "Kasa est une application web de location immobilière entre particuliers, développée avec React, permettant de consulter des logements et leurs informations détaillées (photos, description, équipements...).",
-    "detailedDescription": "Kasa est une application web de location immobilière entre particuliers développée avec React. Ce projet m'a permis de maîtriser les concepts fondamentaux de React : composants, props, état, hooks (useState, useEffect), et la gestion de la navigation avec React Router. J'ai également utilisé Sass pour le styling avec une architecture BEM, créant une interface moderne et responsive. L'application permet de consulter une liste de logements, de voir les détails de chaque logement avec un carrousel d'images, et de gérer les erreurs 404. Le code est structuré de manière modulaire avec des composants réutilisables.",
     "projectSheet": {
       "context": "Kasa est une application web de location immobilière développée dans le cadre du Projet 5 de la formation Développeur Web OpenClassrooms, avec pour enjeu principal la prise en main de React et du routing côté client.",
       "objectives": "L'objectif était de créer une application responsive et dynamique permettant la consultation de logements, tout en respectant une architecture React moderne et des contraintes fonctionnelles précises (navigation, gestion des erreurs, composants réutilisables).",
@@ -32,7 +31,6 @@
     "title": "Application Backend",
     "titleModal": "Mon Vieux Grimoire - Application de Gestion de Livres avec Backend",
     "description": "Backend complet d'une API REST pour une application de gestion de livres avec système de notation. Le développement a été entièrement réalisé en backend, mettant en œuvre une architecture moderne et sécurisée.",
-    "detailedDescription": "Mon Vieux Grimoire est une API REST complète développée avec Node.js et Express pour une application de gestion de livres. Ce projet m'a permis de maîtriser le développement backend : création d'API RESTful, gestion de base de données MongoDB avec Mongoose, authentification JWT, sécurisation des routes, gestion des fichiers (multer), et validation des données. J'ai implémenté un système de notation des livres, de gestion des utilisateurs avec différents rôles, et de gestion des images. L'API est documentée et suit les bonnes pratiques de sécurité (helmet, rate limiting, validation des entrées).",
     "projectSheet": {
       "context": "Mon Vieux Grimoire est une API REST développée dans le cadre de la formation Développeur Web OpenClassrooms, avec pour objectif de concevoir un backend complet, sécurisé et conforme aux bonnes pratiques professionnelles.",
       "objectives": "Le projet visait à créer une API permettant l’authentification des utilisateurs, la gestion CRUD de livres, l’upload et l’optimisation d’images, ainsi qu’un système de notation avec règles métier strictes.",
@@ -59,7 +57,6 @@
     "title": "Degugging & SEO",
     "titleModal": "Carducci - Optimisation de Site Vitrine d'une Photographe",
     "description": "Optimisation complète d'un site vitrine existant pour une photographe : corrections de bugs, amélioration des performances (98% de réduction du poids des images), accessibilité renforcée et SEO optimisé.",
-    "detailedDescription": "Optimisation complète d'un site vitrine existant pour une photographe. J'ai effectué un audit complet avec Lighthouse, corrigé les bugs JavaScript, optimisé les performances (réduction de 98% du poids des images avec compression et formats modernes), amélioré l'accessibilité (conformité WCAG avec l'outil Wave), et optimisé le SEO (balises meta, sémantique HTML, structure des données). Le site a gagné plusieurs points sur Lighthouse (Performance, Accessibilité, SEO) et est maintenant conforme aux standards web modernes. J'ai également amélioré l'expérience utilisateur avec des animations fluides et une navigation améliorée.",
     "projectSheet": {
       "context": "Ce projet, réalisé dans le cadre du Projet 4 de la formation Développeur Web OpenClassrooms, consistait à optimiser un site vitrine existant pour une photographe professionnelle.",
       "objectives": "L’objectif était d’améliorer significativement les performances, l’accessibilité (WCAG) et le référencement SEO, tout en corrigeant des bugs fonctionnels identifiés via les outils de diagnostic.",

@@ -21,7 +21,7 @@ function Hero() {
         src={frequencyWave} 
         alt="Frequency Wave" 
         style={{ display: 'none' }} 
-        fetchpriority="high"
+        fetchPriority="high"
       />
    
       <div className="hero__content">
