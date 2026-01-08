@@ -43,7 +43,7 @@ function About() {
             </ul>
           </div>
           <div className="about__container_content_picture">
-            <img className="about__container_content_picture_photo" src={photoProfile}alt="About_photo_of_Fanny_Simon" loading="lazy" />
+            <img className="about__container_content_picture_photo" src={photoProfile} alt="About_photo_of_Fanny_Simon" loading="lazy" aria-label="Photo de profil de Fanny SIMON" />
           </div>
         </div>
       </div>
