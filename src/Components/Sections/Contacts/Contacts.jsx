@@ -23,20 +23,53 @@ function Contacts() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
+  // Gestion des changements des champs du formulaire
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value
-    }));
+    const name = e.target.name;
+    const value = e.target.value;
+  
+    setFormData(previousData => {
+      return {
+        ...previousData,     // copie tous les champs existants actuels dans un nouvel objet (garantit la non perte des données existantes)
+        [name]: value    // met à jour (écrase) uniquement le(les) champ(s) qui a (ont) changé
+      };
+    });
   };
 
+  // reset du formulaire
+  const resetMessageAndForm = () => {
+    setSubmitMessage('');
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',  
+      message: ''
+    });
+  };
+
+  // Vérification de l'email
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
+
+  // Gestion de l'envoi du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage('');
 
-    // Simulation d'envoi (à remplacer par votre logique d'envoi réel)
+      // Vérification de l'email (regex plus stricte) avant envoi
+  if (!validateEmail(formData.email)) {
+    setSubmitMessage('Email invalide !');
+    setTimeout(() => {
+      setSubmitMessage('');
+    }, 3000);
+    setIsSubmitting(false);
+    return;
+  }
+
+    // Envoi des données du formulaire à EmailJS
     try {
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -51,25 +84,24 @@ function Contacts() {
       );
 
       console.log('Données du formulaire:', formData);
-      
-      // Simulation d'un délai d'envoi
+      console.log(typeof emailjs); // "object"
+
+      // Délai d'envoi pour simuler un traitement asynchrone
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setSubmitMessage('Merci ! Votre message a été envoyé avec succès.');
       setTimeout(() => {
-        setSubmitMessage('');
-      }, 3000);
+        resetMessageAndForm();
+      }, 5000);
 
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: ''
-      });
     } catch (error) {
       setSubmitMessage('Une erreur est survenue. Veuillez réessayer.');
+      setTimeout(() => {
+        resetMessageAndForm();
+      }, 4000);
+
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false); // bouton submit redevient cliquable
     }
   };
 
@@ -96,7 +128,7 @@ function Contacts() {
                 placeholder="Votre prénom"
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="lastName" className="form-label">Nom *</label>
               <input
