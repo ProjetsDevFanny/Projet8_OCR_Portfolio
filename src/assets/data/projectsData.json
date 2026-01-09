@@ -13,9 +13,9 @@
       "results": "L'application est entièrement fonctionnelle, responsive et conforme aux spécifications, avec une navigation fluide, une page 404 gérée et un déploiement en ligne via Netlify.",
       "improvements": "Des évolutions possibles incluent la connexion à une API réelle, l'ajout de tests automatisés, l'amélioration des performances et l'optimisation de l'accessibilité."
     },
-    "image": "/src/assets/images/projects/screenshot_HomePage_kasa.webp",
+    "image": "/projects/screenshot_HomePage_kasa.webp",
     "altImage": "Screenshot de la page d'accueil de Kasa",
-    "imageModal": "/src/assets/images/projects/kasa_mokup_desktop.webp",
+    "imageModal": "/projects/kasa_mokup_desktop.webp",
     "altImageModal": "Mockup de la page d'accueil de Kasa",
     "technologies": [
       "HTML/CSS",
@@ -41,9 +41,9 @@
       "results": "L’API est entièrement fonctionnelle, testée avec Postman, sécurisée contre les principales vulnérabilités et capable de gérer efficacement les fichiers images et les règles d’autorisation utilisateur.",
       "improvements": "Des évolutions possibles incluent l’ajout de tests automatisés, la mise en place d’une documentation Swagger/OpenAPI et l’optimisation du cache et des performances à grande échelle."
     },
-    "image": "/src/assets/images/projects/vieux_grimoire.webp",
+    "image": "/projects/vieux_grimoire.webp",
     "altImage": "Screenshot de la page d'accueil de Mon Vieux Grimoire",
-    "imageModal": "/src/assets/images/projects/vieux_grimoire_mokup_desktop.webp",
+    "imageModal": "/projects/vieux_grimoire_mokup_desktop.webp",
     "altImageModal": "Mockup de la page d'accueil de Mon Vieux Grimoire",
     "technologies": [
       "Node.js",
@@ -68,9 +68,9 @@
       "results": "Les scores Lighthouse ont atteint 99 % en performance et 100 % en accessibilité et SEO, avec une réduction du poids des images de 98,5 %, améliorant fortement le temps de chargement et l’expérience utilisateur.",
       "improvements": "Des évolutions possibles incluent l’automatisation des audits de performance, l’ajout de tests d’accessibilité avancés et une migration vers un framework moderne si le projet évoluait."
     },
-    "image": "/src/assets/images/projects/screenshot_carducci_desktop.webp",
+    "image": "/projects/screenshot_carducci_desktop.webp",
     "altImage": "Screenshot de la page d'accueil de Carducci",
-    "imageModal": "/src/assets/images/projects/carducci_mokup_desktop.webp",
+    "imageModal": "/projects/carducci_mokup_desktop.webp",
     "altImageModal": "Mockup de la page d'accueil de Carducci",
     "technologies": [
       "Lighthouse",
