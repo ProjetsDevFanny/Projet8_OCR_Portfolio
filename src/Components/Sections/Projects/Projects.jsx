@@ -14,16 +14,8 @@ import Modal from '../../Modal/Modal'
 import './projects.scss'
 
 function Projects() {
-  const [imageErrors, setImageErrors] = useState({});
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleImageError = (projectId) => {
-    setImageErrors(prev => ({
-      ...prev,
-      [projectId]: true
-    }));
-  };
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
@@ -38,121 +30,100 @@ function Projects() {
   return (
     <div className="projects">
       <div className="projects__container">
-        <h2 className="projects__title">Projets</h2>            
+        <h2 className="projects__title">Projets</h2>
         <div className="projects__grid">
           {projectsData.map((project) => {
-            // Créer un ID basé sur le titre du projet pour les liens internes
-            const projectId = project.id === 1 ? 'project-kasa' : 
-                             project.id === 2 ? 'project-mon-vieux-grimoire' : 
-                             `project-${project.id}`;
             return (
-            <div 
-              key={project.id} 
-              id={projectId} 
-              className={`project-card ${project.featured ? 'project-card--featured' : ''}`}
-              onClick={() => handleProjectClick(project)}
-            >
-              <div className="project-card__image">
-                {!imageErrors[project.id] ? (
-                  <img 
-                    src={project.image} 
+              <div
+                key={project.id}
+                id={project.slug}     // Créer un ID basé sur le slug (dans les data.json) du projet pour les liens internes
+                className={`project-card ${project.featured ? 'project-card--featured' : ''}`}
+                onClick={() => handleProjectClick(project)}
+              >
+                <div className="project-card__image">
+                  <img
+                    src={project.image}
                     alt={project.altImage}
-                    onError={() => handleImageError(project.id)}
                     loading="lazy"
                   />
-                ) : (
-                  // Placeholder quand l'image ne charge pas
-                  <div className="project-card__placeholder">
-                    <div className="placeholder-icon">📁</div>
-                    <p>Image à venir</p>
+                  {project.featured && <span className="project-card__badge">⭐ Projet vedette</span>}
+                </div>
+
+                <div className="project-card__content">
+                  <h3 className="project-card__title">{project.title}</h3>
+                  <p className="project-card__description">{project.description}</p>
+
+                  <div className="project-card__technologies">
+                    {project.technologies.map((tech, index) => (
+                      <span key={index} className="technology-tag">{tech}</span>
+                    ))}
                   </div>
-                )}
-                {project.featured && <span className="project-card__badge">⭐ Projet vedette</span>}
-              </div>
-              
-              <div className="project-card__content">
-                <h3 className="project-card__title">{project.title}</h3>
-                <p className="project-card__description">{project.description}</p>
-                
-                <div className="project-card__technologies">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="technology-tag">{tech}</span>
-                  ))}
-                </div>
-                
-                <div className="project-card__links" onClick={(e) => e.stopPropagation()}>
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link project-link--github"
-                  >
-                    <span>🔗</span> GitHub
-                  </a>
-                  {project.liveUrl && (
-                    <a 
-                      href={project.liveUrl} 
-                      target="_blank" 
+
+                  <div className="project-card__links" onClick={(e) => e.stopPropagation()}>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link project-link--live"
+                      className="project-link project-link--github"
                     >
-                      <span>🌐</span> Voir le site
+                      <span>🔗</span> GitHub
                     </a>
-                  )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link project-link--live"
+                      >
+                        <span>🌐</span> Voir le site
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
             );
           })}
         </div>
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        <Modal isOpen={isModalOpen} onClose={handleCloseModal} /* juste référence, sera appelée plus tard dans la modal */>
         {selectedProject && (
           <div className="project-modal">
             <div className="project-modal__image">
-              {!imageErrors[selectedProject.id] ? (
-                <img 
-                  src={selectedProject.imageModal} 
-                  alt={selectedProject.altImageModal}
-                  onError={() => handleImageError(selectedProject.id)}
-                  className={selectedProject.id === 1 ? 'project-modal__image--large' : ''}
-                  loading="lazy"
-                />
-              ) : (
-                <div className="project-modal__placeholder">
-                  <div className="placeholder-icon">📁</div>
-                  <p>Image à venir</p>
-                </div>
-              )}
+              <img
+                src={selectedProject.imageModal}
+                alt={selectedProject.altImageModal}
+                className={selectedProject.id === 1 ? 'project-modal__image--large' : ''}
+                loading="lazy"
+              />
             </div>
-            
+
             <div className="project-modal__content">
               <h3 className="project-modal__title">{selectedProject.titleModal}</h3>
-              
-               <div className="project-modal__sheet">
-                  <div className="project-modal__sheet-section">
-                    <p>{selectedProject.projectSheet.context}</p>
-                  </div>
 
-                  <div className="project-modal__sheet-section">
-                    <p>{selectedProject.projectSheet.objectives}</p>
-                  </div>
+              <div className="project-modal__sheet">
+                <div className="project-modal__sheet-section">
+                  <p>{selectedProject.projectSheet.context}</p>
+                </div>
 
-                  <div className="project-modal__sheet-section">
-                    <p>{selectedProject.projectSheet.stack}</p>
-                  </div>
+                <div className="project-modal__sheet-section">
+                  <p>{selectedProject.projectSheet.objectives}</p>
+                </div>
 
-                  <div className="project-modal__sheet-section">
-                    <p>{selectedProject.projectSheet.skills}</p>
-                  </div>
+                <div className="project-modal__sheet-section">
+                  <p>{selectedProject.projectSheet.stack}</p>
+                </div>
 
-                  <div className="project-modal__sheet-section">
-                    <p>{selectedProject.projectSheet.results}</p>
-                  </div>
+                <div className="project-modal__sheet-section">
+                  <p>{selectedProject.projectSheet.skills}</p>
+                </div>
 
-                  <div className="project-modal__sheet-section">
-                    <p>{selectedProject.projectSheet.improvements}</p>
+                <div className="project-modal__sheet-section">
+                  <p>{selectedProject.projectSheet.results}</p>
+                </div>
+
+                <div className="project-modal__sheet-section">
+                  <p>{selectedProject.projectSheet.improvements}</p>
                 </div>
               </div>
 
@@ -166,18 +137,18 @@ function Projects() {
               </div>
 
               <div className="project-modal__links">
-                <a 
-                  href={selectedProject.githubUrl} 
-                  target="_blank" 
+                <a
+                  href={selectedProject.githubUrl}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="project-link project-link--github"
                 >
                   <span>🔗</span> GitHub
                 </a>
                 {selectedProject.liveUrl && (
-                  <a 
-                    href={selectedProject.liveUrl} 
-                    target="_blank" 
+                  <a
+                    href={selectedProject.liveUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="project-link project-link--live"
                   >

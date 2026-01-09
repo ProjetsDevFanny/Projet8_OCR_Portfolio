@@ -11,8 +11,7 @@ import './skillItem.scss'
 
 function SkillItem({ skill }) {
   return (
-    <div className="skill-item">
-      
+    <div className="skill-item">      
       <span className="skill-item__tag">{skill.name}</span>
     </div>
   );

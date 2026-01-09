@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Application React",
+    "slug": "project-kasa",
     "titleModal": "KASA - Application Immobilière avec React",
     "description": "Kasa est une application web de location immobilière entre particuliers, développée avec React, permettant de consulter des logements et leurs informations détaillées (photos, description, équipements...).",
     "projectSheet": {
@@ -29,6 +30,7 @@
   {
     "id": 2,
     "title": "Application Backend",
+    "slug": "project-mon-vieux-grimoire",
     "titleModal": "Mon Vieux Grimoire - Application de Gestion de Livres avec Backend",
     "description": "Backend complet d'une API REST pour une application de gestion de livres avec système de notation. Le développement a été entièrement réalisé en backend, mettant en œuvre une architecture moderne et sécurisée.",
     "projectSheet": {
@@ -49,12 +51,13 @@
       "MongoDB"
     ],
     "githubUrl": "https://github.com/ProjetsDevFanny/Projet6_OCR_Mon_vieux_grimoire_Backend",
-    "liveUrl": "https://votre-ecommerce.com",
-    "featured": false
+    "liveUrl": "",
+    "featured": true
   },
   {
     "id": 3,
     "title": "Degugging & SEO",
+    "slug": "project-carducci",
     "titleModal": "Carducci - Optimisation de Site Vitrine d'une Photographe",
     "description": "Optimisation complète d'un site vitrine existant pour une photographe : corrections de bugs, amélioration des performances (98% de réduction du poids des images), accessibilité renforcée et SEO optimisé.",
     "projectSheet": {

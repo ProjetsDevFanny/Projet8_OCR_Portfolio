@@ -18,7 +18,7 @@ function Modal({ isOpen, onClose, children }) {
       document.body.style.overflow = 'unset'
     }
 
-    // Nettoyage au démontage
+    // Nettoyage au démontage (pour ne pas bloquer le scroll de la page arrière si modale fermée trop vite ou si le composant n'existe plus)
     return () => {
       document.body.style.overflow = 'unset'
     }
@@ -31,22 +31,23 @@ function Modal({ isOpen, onClose, children }) {
         onClose()
       }
     }
-
+    // Ajout d'un écouteur d'événement pour la touche Escape
     document.addEventListener('keydown', handleEscape)
     return () => {
+      // Nettoyage de l'écouteur d'événement pour éviter les fuites de mémoire
       document.removeEventListener('keydown', handleEscape)
     }
   }, [isOpen, onClose])
 
-  if (!isOpen) return null
+  if (!isOpen) return null // si la modal n'est pas ouverte, ne rien rendre
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}> 
         <button className="modal-close" onClick={onClose} aria-label="Fermer la modal">
           ×
         </button>
-        {children}
+        {children} 
       </div>
     </div>
   )

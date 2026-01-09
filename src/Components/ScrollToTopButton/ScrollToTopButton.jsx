@@ -12,31 +12,36 @@ import './scrollToTopButton.scss';
 import arrowUp from '/src/assets/images/Icones/fleche-haut.png';
 
 function ScrollToTopButton() {
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+  
+  // Effet pour ajouter la classe scrolled au body lors du scroll
   useEffect(() => {
     let ticking = false;
-
+    
     const handleScroll = () => {
       if (!ticking) {
+        ticking = true;  // bloque les autres scroll events pendant la frame (augmente la performance)
         window.requestAnimationFrame(() => {
           if (window.scrollY > 300) {
             document.body.classList.add('scrolled');
           } else {
             document.body.classList.remove('scrolled');
           }
-          ticking = false;
+          ticking = false; // après la mise à jour, prêt pour la prochaine frame
         });
-        ticking = true;
       }
     };
-
+    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Nettoyage de l'écouteur d'événement pour éviter les fuites de mémoire
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
+
+  // Fonction pour scroll en haut de la page avec animation fluide
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <button

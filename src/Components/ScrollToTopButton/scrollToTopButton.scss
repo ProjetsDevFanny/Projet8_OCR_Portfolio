@@ -48,7 +48,7 @@
   }
 }
 
-// Version CSS-only pour Lighthouse / performance
+// => Version CSS-only (pas de manipulation de style via JavaScript) pour Lighthouse / performance
 body.scrolled .scrollTopBtn {
   opacity: 1;
   visibility: visible;
