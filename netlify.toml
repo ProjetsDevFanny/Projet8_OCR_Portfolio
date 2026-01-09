@@ -6,3 +6,8 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[build.environment]
+VITE_EMAILJS_SERVICE_ID = "service_bscytya"
+VITE_EMAILJS_TEMPLATE_ID = "template_v0oc18i"
+VITE_EMAILJS_PUBLIC_KEY = "DovhYSEi8fuHq1MWU"
