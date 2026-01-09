@@ -13,7 +13,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import './layout.scss'
+import './layoutStyle.scss'
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton'
 
 function Layout() {
