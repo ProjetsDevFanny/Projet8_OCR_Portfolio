@@ -94,7 +94,7 @@ function Projects() {
                 src={selectedProject.imageModal}
                 alt={selectedProject.altImageModal}
                 className={selectedProject.id === 1 ? 'project-modal__image--large' : ''}
-                // loading="lazy"
+                loading="lazy"
               />
             </div>
 
