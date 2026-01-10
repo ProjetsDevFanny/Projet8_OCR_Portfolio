@@ -89,8 +89,8 @@
   
   &__badge {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
     background-color: $light_purple;
     color: $white;
     border: 2px solid $violet;
@@ -156,6 +156,7 @@
     font-weight: 600;
     flex-shrink: 0; // Empêche la compression du titre
     text-align: center;
+    margin-bottom: 0rem;
 
     @include mobile {
       margin-bottom: 1rem;
