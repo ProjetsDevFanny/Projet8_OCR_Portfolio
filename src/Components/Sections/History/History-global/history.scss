@@ -31,14 +31,19 @@
     .cv-link {
       position: absolute;
       top: 50%;
-      right: -50%;
+      right: -18vw;
       transform: translateY(-50%);
       font-size: 1.3rem;
       font-weight: 600;
       color: $medium_purple;
       text-decoration: none;
       transition: all 0.4s ease;
-  
+      
+      @include tablet {
+        top: 60px;
+        right: 38%;
+      }
+        
       &:hover {
         color: $light_purple;
         transform: translateX(8%) translateY(-50%);
@@ -70,7 +75,7 @@
     transform: translateX(-50%);
 
     @include tablet {
-      left: 3%;
+      left: 4%;
     }
 
     @include mobile {
