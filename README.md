@@ -49,9 +49,9 @@ src/
 ## Fonctionnalités clés
 
 - **Navigation**: ancres + menu mobile (burger)
-- **Projets**: cards générées depuis JSON, ouverture en **modal**, gestion des erreurs d’images
+- **Projets**: cards générées depuis JSON, ouverture en **modal**
 - **Contact**: formulaire (nom, prénom, email, message) + envoi via **EmailJS**
-- **SEO / Partage**: meta tags (Open Graph / Twitter Card) dans `index.html`
+- **SEO / Partage**: meta tags (Open Graph / Twitter Card) + microdonnées **Schema.org via JSON-LD** dans `index.html`
 
 ## Installation & lancement
 
