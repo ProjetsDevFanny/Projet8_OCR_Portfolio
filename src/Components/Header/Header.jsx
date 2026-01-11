@@ -24,6 +24,7 @@ function Header() {
           </Link>
         </div>
         <nav className="header__nav">
+          <Link to="/#hero" className="header__nav_link_accueil">Accueil</Link>      
           <Link to="/#about">À propos</Link>      
           <Link to="/#skills">Compétences</Link>
           <Link to="/#projects">Projets</Link>

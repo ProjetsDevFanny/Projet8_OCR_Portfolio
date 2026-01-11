@@ -72,16 +72,25 @@
     display: flex;
     gap: 3.5rem;
     align-items: center;
-
+    
     @include tablet {
-      gap: 1.7rem;
+      gap: 2.5vw; // 2.5vw = 2.5% de la largeur de la viewport
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-     
+      
       @include mobile {
+        gap: 1rem;
         flex-direction: column;      
         align-items: flex-start;
+      }
+    }
+
+    &_link_accueil {
+      display: none;
+
+      @include tablet {
+        display: block;
       }
     }
 
