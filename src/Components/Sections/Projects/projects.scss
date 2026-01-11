@@ -91,9 +91,9 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: $light_purple;
+    background-color: $violet;
     color: $white;
-    border: 2px solid $violet;
+    border: 2px solid rgba($background, 0.35);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     @include font-style(1.3rem);
