@@ -18,15 +18,25 @@
 
   &__container {
     @include container-style;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;    
+    @include center-flex;
   }
 
   &__title {
     margin-bottom: 4rem;
     text-align: center;
     position: relative;
+
+    @include tablet {
+      @include center-flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @include mobile {
+      margin-bottom: 2rem;
+    }
 
     .cv-link {
       position: absolute;
@@ -38,23 +48,21 @@
       color: $medium_purple;
       text-decoration: none;
       transition: all 0.4s ease;
-      
+
+      // En tablet, on annule le positionnement absolu pour que le lien passe
+      // naturellement en dessous du titre (en colonne).
       @include tablet {
-        top: 60px;
-        right: 38%;
+        position: static;
+        @include center-flex;
       }
-        
+
       &:hover {
         color: $light_purple;
         transform: translateX(8%) translateY(-50%);
       }
     }
   }
-
-    @include mobile {
-      margin-bottom: 2rem;
-    }
-  }
+}
 
 
 /* Timeline */
