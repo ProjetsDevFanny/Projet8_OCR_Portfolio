@@ -1,0 +1,68 @@
+[
+  {
+    "idAbout": 1,
+    "introduction": "Développeuse Full Stack diplômée Openclassrooms en 2026 (Parcours Développeur Web)",
+    "stacks": "JS, React, Sass, Node.js, MongoDB",
+    "parcours": [
+      {
+        "idParcours": 1,
+        "name": "Diplôme ingénieur en agriculture(2011)",
+        "link": "https://www.unilasalle.fr/le-campus-de-beauvais"
+      },
+      {
+        "idParcours": 2,
+        "name": "Sololearn app(2024)",
+        "link": "https://www.sololearn.com/fr/"
+      },
+      {
+        "idParcours": 3,
+        "name": "FromScratch(2025)",
+        "link": "https://fromscratch.podia.com/"
+      },
+      {
+        "idParcours": 4,
+        "name": "Openclassrooms(2025-2026)",
+        "link": "https://openclassrooms.com/fr/paths/899-developpeur-web"
+      }
+    ],
+    "projects": [
+      {
+        "idProject": 1,
+        "name": "Kasa (React/Sass)",
+        "link": "#project-kasa"
+      },
+      {
+        "idProject": 2,
+        "name": "Mon Vieux Grimoire (Node.js/MongoDB)",
+        "link": "#project-mon-vieux-grimoire"
+      }
+    ],
+
+    "approach": "Agile, Scrum, Kanban (Notion, Trello), XP",
+    "search": "J'aimerais désormais travailler soit en entreprise ou en freelance. Si vous êtes freelance senior, je peux vous accompagner sur certaines tâches pour vous faire gagner du temps.",
+    "hobbies": [
+      { 
+        "idHobby": 1,
+        "name": "Association (GNUT06) ",
+        "description":  " au sein d'un projet Docker, Symfony, PHP en équipe, je refactorise le css des fichiers twig : ",
+        "textLinkGitHub": " ma branche Github",
+        "linkGithub": "https://github.com/assognut06/symfonygnut06/tree/260207_fanny_front",
+        "textLinkWebsite" : " Site Web",
+        "linkWebsite": "https://gnut06.org/"
+      },
+      { 
+        "idHobby": 2,
+        "name": "Galerie artistique intéractive ",
+        "description":  " en cours ",
+        "textLinkGitHub": " Github",
+        "linkGithub": "https://github.com/ProjetsDevFanny/Galerie_dArt_Interactive_React_Sass",
+        "textLinkWebsite" : " Site Web",
+        "linkWebsite": ""
+      }
+    ]
+  }
+]
+    
+
+
+

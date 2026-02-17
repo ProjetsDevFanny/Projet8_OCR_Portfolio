@@ -6,8 +6,8 @@
  * @project Portfolio - Projet8 - OpenClassrooms
  */
 
- @use '../../../styles/variables' as *;
- @use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .about {
   background-color: $background;
@@ -50,7 +50,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       margin: 0 2rem;
 
       @include tablet {
@@ -60,89 +60,112 @@
           margin: 0;
         }
       }
-    
-    p {
-      @include font-style(1.4rem);
-      font-family: $font-secondary;
-      margin-bottom: 1.5rem;
-    }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    
-      li {
-        @include font-style(1.4rem);
-        font-family: $font-secondary;
-        margin-bottom: 1.2rem;
-        padding-left: 1.8rem;
-        position: relative;
-        line-height: 1.2;
-        cursor: default;
-        
-        // animation d’apparition
-        opacity: 0;
-        transform: translateX(-8px);
-        animation: liFadeIn 0.5s ease forwards;
-        
-        @include mobile {
-          margin-bottom: 2rem;
-        }
-    
-        // petit décalage progressif
-        &:nth-child(1) { animation-delay: 0.05s; }
-        &:nth-child(2) { animation-delay: 0.1s; }
-        &:nth-child(3) { animation-delay: 0.15s; }
-        &:nth-child(4) { animation-delay: 0.2s; }
-    
-        &::before {
-          content: "▸";
-          position: absolute;
-          left: 0;
-          color: $light_purple;
-          font-size: 2rem;
+      &_introduction {
+        @include font-style(1.8rem);    
+        margin-bottom: 1.7rem;
+
+      }
+
+      ul.aboutSection {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+
+        li {
+          @include font-style(1.4rem);
+          font-weight: 400;
+          font-family: $font-primary;
+          margin-bottom: 1.2rem;
+          padding-left: 1.8rem;
+          position: relative;
           line-height: 1.2;
-          transform: translateY(-0.2em);
-          transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-    
-        // animation au hover
-        &:hover {
+          cursor: default;
+          
+          .aboutSection_span {
+            color: $medium_purple;
+            font-weight: 700;
+            font-size: 1.5rem;
+            
+          }
+
+          // animation d’apparition
+          opacity: 0;
+          transform: translateX(-8px);
+          animation: liFadeIn 0.5s ease forwards;
+
+          @include mobile {
+            margin-bottom: 2rem;
+          }
+
+          // petit décalage progressif
+          &:nth-child(1) {
+            animation-delay: 0.05s;
+          }
+
+          &:nth-child(2) {
+            animation-delay: 0.1s;
+          }
+
+          &:nth-child(3) {
+            animation-delay: 0.15s;
+          }
+
+          &:nth-child(4) {
+            animation-delay: 0.2s;
+          }
+
           &::before {
-            transform: translateX(6px) translateY(-0.2em) scale(1.2);
-            opacity: 0.9;
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: $medium_purple;
+            font-size: 2rem;
+            line-height: 1.2;
+            transform: translateY(-0.25em);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+          }
+
+          // animation au hover
+          &:hover {
+            &::before {
+              transform: translateX(6px) translateY(-0.25em) scale(1.2);
+              opacity: 0.9;
+            }
           }
         }
       }
-    }
-    
-    // keyframes apparition
-    @keyframes liFadeIn {
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    
-    // keyframes apparition
-    @keyframes liFadeIn {
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
 
-    a {
-      color: $light_purple;
-      font-family: $font-secondary;
-      font-style: italic;
-      font-weight: 600;
+      // Liste "Hobbies" (style différent)
+      ul.hobbiesSection {
+        list-style: none;
+        padding-left: 2rem;
+        margin-top: 1rem;
 
-      &:hover {
-        color: $medium_purple;
+        .hobbiesSection_span {
+          color: $medium_purple;
+          font-weight: 700;         
+        }
       }
-    }
+
+      // keyframes apparition
+      @keyframes liFadeIn {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      a {
+        color: $violet_light;
+        font-family: $font-primary;
+        font-style: italic;
+        font-weight: 600;
+
+        &:hover {
+          color: $medium_purple;
+        }
+      }
     }
   }
 
@@ -154,28 +177,28 @@
     @include tablet {
       order: 1; // Image en première position sur mobile
     }
-    
+
     &_photo {
       width: 200px !important;
       height: 200px !important;
       border-radius: 50% !important;
       object-fit: cover;
       overflow: hidden;
-      box-shadow: 
-        0 0 30px rgba(188, 96, 251, 0.6),  // Violet lumineux
-        0 0 60px rgba(188, 96, 251, 0.3),  // Plus diffus
+      box-shadow:
+        0 0 30px rgba(188, 96, 251, 0.6), // Violet lumineux
+        0 0 60px rgba(188, 96, 251, 0.3), // Plus diffus
         inset 0 0 30px rgba(255, 255, 255, 0.1); // Lumière interne
       border: 3px solid rgba(255, 255, 255, 0.2);
       transition: all 0.3s ease;
-      
+
       &:hover {
         transform: scale(1.05);
-        box-shadow: 
-          0 0 40px rgba(188, 96, 251, 0.8),  // Plus intense au hover
+        box-shadow:
+          0 0 40px rgba(188, 96, 251, 0.8), // Plus intense au hover
           0 0 80px rgba(188, 96, 251, 0.4),
           inset 0 0 40px rgba(255, 255, 255, 0.2);
       }
-      
+
       @include tablet {
         width: 150px !important;
         height: 150px !important;
