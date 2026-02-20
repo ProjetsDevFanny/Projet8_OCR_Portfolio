@@ -60,9 +60,6 @@ function About() {
                     <span className="aboutSection_span">Approche :</span> {aboutSection.approach}
                   </li>
                   <li>
-                    <span className="aboutSection_span">Objectif :</span> {aboutSection.search}
-                  </li>
-                  <li>
                     <span className="aboutSection_span">Hobbies : </span>
                     {aboutSection.hobbies.map((hobby) => (
                       <ul className="hobbiesSection" key={hobby.idHobby}>

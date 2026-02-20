@@ -29,7 +29,7 @@ function Header() {
           <Link to="/#skills">Compétences</Link>
           <Link to="/#projects">Projets</Link>
           <Link to="/#history">Parcours</Link>
-          <Link to="/CV_Fanny_Simon_portfolio.pdf" target="_blank" rel="noopener noreferrer" aria-label="Télécharger mon CV au format PDF">CV</Link>
+          <Link to="/CV__Fanny_SIMON.pdf" target="_blank" rel="noopener noreferrer" aria-label="Télécharger mon CV au format PDF">CV</Link>
           <Link to="/#contact">Contact</Link>
         </nav>
       </div>

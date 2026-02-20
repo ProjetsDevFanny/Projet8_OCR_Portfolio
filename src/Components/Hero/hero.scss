@@ -26,7 +26,7 @@
     color: $white;
     @include center-flex;
     text-align: center;
-    min-height: 70vh;
+    min-height: 80vh;
     padding: 2rem;
 
     @include tablet {
@@ -49,12 +49,12 @@
 
       .hero__subtitle {
         @include font-style(1.8rem);
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         opacity: 0.9;
       }
 
       .hero__description {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         margin-bottom: 3rem;
         line-height: 1.6;
         opacity: 0.8;
@@ -116,7 +116,10 @@
       .hero__social-links {
         display: flex;
         justify-content: center;
-        margin-top: 2rem;
+        align-items: center;
+        width: 100%;
+        margin-top: 2.5rem;
+        margin-left: -5px;;
       }
     }
   }
