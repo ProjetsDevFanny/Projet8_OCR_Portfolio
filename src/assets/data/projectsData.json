@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Application React",
+    "title": "Kasa - Application Immobilière avec React",
     "slug": "project-kasa",
     "titleModal": "KASA - Application Immobilière avec React",
     "description": "Kasa est une application web de location immobilière entre particuliers, développée avec React, permettant de consulter des logements et leurs informations détaillées (photos, description, équipements...).",
@@ -29,7 +29,7 @@
   },
   {
     "id": 2,
-    "title": "Application Backend",
+    "title": "Mon Vieux Grimoire - Application de Gestion de Livres avec Backend",
     "slug": "project-mon-vieux-grimoire",
     "titleModal": "Mon Vieux Grimoire - Application de Gestion de Livres avec Backend",
     "description": "Backend complet d'une API REST pour une application de gestion de livres avec système de notation. Le développement a été entièrement réalisé en backend, mettant en œuvre une architecture moderne et sécurisée.",
@@ -56,7 +56,7 @@
   },
   {
     "id": 3,
-    "title": "Debugging & SEO",
+    "title": "Carducci - Optimisation de Site Vitrine d'une Photographe",
     "slug": "project-carducci",
     "titleModal": "Carducci - Optimisation de Site Vitrine d'une Photographe",
     "description": "Optimisation complète d'un site vitrine existant pour une photographe : corrections de bugs, amélioration des performances (98% de réduction du poids des images), accessibilité renforcée et SEO optimisé.",
@@ -80,6 +80,34 @@
     ],
     "githubUrl": "https://github.com/ProjetsDevFanny/Projet4_OCR_Debuggez-et-optimisez-un-site-de-photographe",
     "liveUrl": "https://ninacarducci-photographe-bordeaux.netlify.app",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Floppy_Bird — Jeu 2D en JavaScript Vanilla (Canvas)",
+    "slug": "project-floppy-bird",
+    "titleModal": "Floppy_Bird — Jeu 2D en JavaScript Vanilla (Canvas)",
+    "description": "Jeu vidéo 2D inspiré de Flappy Bird : faire voler l’oiseau sans tomber ni toucher les tuyaux. Développé de A à Z en JavaScript vanilla avec rendu Canvas, sprites animés, collisions, score et persistance locale.",
+    "projectSheet": {
+      "context": "Bienvenue dans ma version personnalisée de Flappy Bird, développée dans le cadre du TP11 (Formation autodidacte FromScratch) : un jeu 2D construit sans framework pour travailler la logique temps réel et le rendu sur canvas.",
+      "objectives": "Approfondir JavaScript natif (boucle de jeu, requestAnimationFrame) et le rendu Canvas : animations de sprites, génération aléatoire des tuyaux, gestion des événements clavier/souris, collisions et score.",
+      "stack": "HTML5 + CSS3, JavaScript Vanilla (sans librairie), Canvas 2D, gestion d’assets audio/visuels en local et localStorage pour persister le meilleur score.",
+      "skills": "Animation via requestAnimationFrame, structuration d’une boucle de jeu, gestion des ressources (sprites/sons), détection de collisions (hitboxes) et recyclage d’objets (tuyaux) pour un gameplay infini.",
+      "results": "Gameplay fluide (clavier/souris), animations par sprites (oiseau + fond défilant), collisions précises, score + meilleur score sauvegardé et ambiance sonore (musique + effets).",
+      "improvements": "Ajouter une difficulté progressive (vitesse / gap), implémenter une pause, ajouter un écran Game Over avec replay, et rendre le jeu plus responsive mobile."
+    },
+    "image": "/projects/screenshot_floppy_bird.webp",
+    "altImage": "Aperçu illustré du projet Floppy Bird",
+    "imageModal": "/projects/screenshot_floppy_bird.webp",
+    "altImageModal": "Aperçu illustré du projet Floppy Bird",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Canvas"
+    ],
+    "githubUrl": "https://github.com/ProjetsDevFanny/TP11_FromScratch_Floppy_Bird_Canvas_JS",
+    "liveUrl": "https://projetsdevfanny.github.io/TP11_FromScratch_Floppy_Bird_Canvas_JS/",
     "featured": false
   }
 ]
