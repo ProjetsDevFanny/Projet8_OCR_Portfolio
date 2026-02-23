@@ -11,7 +11,7 @@
 import React from 'react'
 import './hero.scss'
 import frequencyWave from '/src/assets/images/frequency-wave.webp'  // Préchargement de l'image
-import SocialLinks from '../SocialLinks/SocialLinks';
+import SocialLinks from '../../SocialLinks/SocialLinks';
 
 function Hero() {
   return (
@@ -30,15 +30,15 @@ function Hero() {
           <h2 className="hero__subtitle">Développeuse Web Full Stack</h2>
           <p className="hero__description">
             Eh oui.., encore une développeuse web junior me dirai vous ! Mais pas n'importe laquelle... <br /> <br />Ingénieure en agriculture de formation, je sais travailler en équipe et dialoguer avec des interlocuteurs aux points de vue assez affirmés... mais tellement intéressants !
-            <br />   <br />
-            En 2024, je me suis tournée vers le code et les algorithmes: résoudre des bugs, comprendre les concepts et créer des projets m'ont tout de suite passionnée, impossible de décrocher parfois ! <br />
-            Pendant mon temps libre, je travaille pour une association (Gnut06) au sein d'une équipe de développeurs. Je refactorise le CSS interne et inline des fichiers Twig (projet sous Docker, PHP, Symfony).
-            <br /> <br />
-            Aujourd'hui, Je recherche un poste salarié ou des missions en freelance. <br />Développeurs seniors freelance, n'hésitez pas à me solliciter: je peux vous dégager du temps sur certaines tâches.
+            <br />   
+            En 2024, je me suis tournée vers le code, et depuis, impossible de m'arrêter ! <br />
+            En ce moment, je donne de mon temps libre à une association informatique (Gnut06), dans laquelle je collabore avec plusieurs développeurs.
+            <br /> 
+            Aujourd'hui, Je recherche un poste salarié ou des missions en freelance. 
           </p>
-          <div className="hero__actions">
-            <a href="#projects" className="hero__button hero__button--primary">Projets</a>
-            <a href="#history" className="hero__button hero__button--secondary">Parcours</a>
+          <div className="hero__important-note">
+            <span className="hand">👉</span>
+            <span className="text">Développeurs seniors freelance, n'hésitez pas à me solliciter: je peux vous dégager du temps sur certaines tâches.</span>
           </div>
           <div className="hero__social-links">
             <SocialLinks />

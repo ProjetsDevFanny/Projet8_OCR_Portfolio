@@ -7,8 +7,8 @@
  */
 
 
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 // ===============================================================================
 // HERO
@@ -26,7 +26,7 @@
     color: $white;
     @include center-flex;
     text-align: center;
-    min-height: 80vh;
+    min-height: 90vh;
     padding: 2rem;
 
     @include tablet {
@@ -55,60 +55,33 @@
 
       .hero__description {
         font-size: 1.25rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         line-height: 1.6;
         opacity: 0.8;
       }
 
-      .hero__actions {
+      .hero__important-note {
         display: flex;
-        gap: 2rem;
-        justify-content: center;
-      }
+        font-size: 1.2rem;
+        font-weight: bold;
+        gap: 0.2rem;
 
-      .hero__button {
-        @include font-style(1.2rem);
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        display: inline-block;
-
-        &--primary {
-          background: linear-gradient(135deg,
-              rgba(138, 43, 226, 1) 0%,
-              rgba(147, 51, 234, 1) 25%,
-              rgba(168, 85, 247, 1) 40%,
-              rgb(54, 1, 75) 100%);
-          border: 2px solid transparent;
-          background-clip: padding-box;
-          box-shadow:
-            0 4px 15px rgba(138, 43, 226, 0.3),
-            inset 0 1px 0 rgba(255, 255, 255, 0.2);
-
-          &:hover {
-            background: transparent;
-            border: 2px solid $medium_purple;
-            color: $light_purple;
-            font-weight: 800;
-            transform: translateY(-2px);
-            box-shadow:
-              0 8px 25px rgba(156, 69, 238, 0.5),
-              0 0 40px rgba(147, 51, 234, 0.3),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          }
+        .hand {
+          display: inline-block;
+          animation: bounce 1s infinite alternate;
         }
-
-        &--secondary {
-          background-color: transparent;
-          color: $white;
-          border: 2px solid $white;
-
-          &:hover {
-            background-color: $white;
-            color: $background;
-            transform: translateY(-2px);
+        /* animation de rebond de la main */
+        @keyframes bounce {
+          0% {
+            transform: translateX(0);
+          }
+  
+          50% {
+            transform: translateX(-5px);
+          }
+  
+          100% {
+            transform: translateX(0);
           }
         }
       }
@@ -119,7 +92,11 @@
         align-items: center;
         width: 100%;
         margin-top: 2.5rem;
-        margin-left: -5px;;
+        // margin-left: -5px; when using buttons, to align with the left edge of the buttons
+
+        @include tablet {
+          margin-top: 1.5rem;
+        }
       }
     }
   }

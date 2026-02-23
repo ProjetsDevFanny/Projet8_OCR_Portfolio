@@ -13,7 +13,7 @@ import About from '../../Components/Sections/About/About'
 import Projects from '../../Components/Sections/Projects/Projects'
 import Contacts from '../../Components/Sections/Contacts/Contacts'
 import History from '../../Components/Sections/History/History-global/History'
-import Hero from '../../Components/Hero/Hero'
+import Hero from '../../Components/Sections/Hero/Hero'
 import Skills from '../../Components/Sections/Skills/Skills-global/Skills'
 import './home.scss'
 
