@@ -63,12 +63,14 @@
       .hero__important-note {
         display: flex;
         font-size: 1.2rem;
+        color: $light_purple;
         font-weight: bold;
         gap: 0.2rem;
 
         .hand {
           display: inline-block;
           animation: bounce 1s infinite alternate;
+          font-size: 15px;
         }
         /* animation de rebond de la main */
         @keyframes bounce {
@@ -77,7 +79,7 @@
           }
   
           50% {
-            transform: translateX(-5px);
+            transform: translateX(-10px);
           }
   
           100% {

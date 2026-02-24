@@ -98,7 +98,7 @@
     },
     "image": "/projects/screenshot_floppy_bird.webp",
     "altImage": "Aperçu illustré du projet Floppy Bird",
-    "imageModal": "/projects/screenshot_floppy_bird.webp",
+    "imageModal": "/projects/mokup_floppy_bird.webp",
     "altImageModal": "Aperçu illustré du projet Floppy Bird",
     "technologies": [
       "HTML",
@@ -108,6 +108,33 @@
     ],
     "githubUrl": "https://github.com/ProjetsDevFanny/TP11_FromScratch_Floppy_Bird_Canvas_JS",
     "liveUrl": "https://projetsdevfanny.github.io/TP11_FromScratch_Floppy_Bird_Canvas_JS/",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Sophie_Bluel — Portfolio Architecte (Front Vanilla JS)",
+    "slug": "project-sophie-bluel",
+    "titleModal": "Sophie_Bluel — Portfolio Architecte (Vanilla JS)",
+    "description": "Portfolio d'architecte d'intérieur interactif proposant une galerie filtrable, modales de visualisation et un mode édition sécurisé pour gérer les œuvres. Frontend en JavaScript vanilla consommant une API Node.js/Express pour l'administration et l'upload d'images.",
+    "projectSheet": {
+      "context": "Projet 3 de la formation Développeur Web (OpenClassrooms) : Coder le front-end d'un portfolio d'architecte d'intérieur en vanilla JS, en respectant une architecture modulaire. Le backend a déjà été codé.",
+      "objectives": "Construire une galerie dynamique avec filtres, modales accessibles, authentification pour le mode édition, et fonctionnalités d'ajout/suppression d'œuvres via une API REST. Travailler la communication front↔back et la gestion d'assets.",
+      "stack": "HTML5, CSS3, JavaScript (ES6 modules), Fetch API.",
+      "skills": "DOM dynamique, modularisation JS, fetch, gestion de modales accessibles, upload d'images, gestion d'état centralisée (projectsArray).",
+      "results": "Galerie fonctionnelle avec filtres par catégorie, modales pour afficher et ajouter des projets, authentification admin (compte test), upload d'images et suppression de projets depuis l'interface d'édition.",
+      "improvements": "Rendre l'interface plus responsive, optimiser les images (lazy/load/ compression), ajouter pagination ou infinite scroll, renforcer la sécurité des tokens et ajouter tests automatisés."
+    },
+    "image": "/projects/screenshot_desktop.webp",
+    "altImage": "Capture d'écran desktop du portfolio Sophie Bluel",
+    "imageModal": "/projects/sophie_bluel_mokup.webp",
+    "altImageModal": "Photo de présentation du projet Sophie Bluel",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "githubUrl": "https://github.com/ProjetsDevFanny/Projet3_OCR_Sophie_Bluel_JS_Vanilla",
+    "liveUrl": "",
     "featured": false
   }
 ]
