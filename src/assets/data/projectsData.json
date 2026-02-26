@@ -7,7 +7,7 @@
     "description": "Kasa est une application web de location immobilière entre particuliers, développée avec React, permettant de consulter des logements et leurs informations détaillées (photos, description, équipements...).",
     "projectSheet": {
       "context": "Kasa est une application web de location immobilière développée dans le cadre du Projet 5 de la formation Développeur Web OpenClassrooms, avec pour enjeu principal la prise en main de React et du routing côté client.",
-      "objectives": "L'objectif était de créer une application responsive et dynamique permettant la consultation de logements, tout en respectant une architecture React moderne et des contraintes fonctionnelles précises (navigation, gestion des erreurs, composants réutilisables).",
+      "objectives": "D'après une maquette figma fournie, l'objectif était de créer une application responsive et dynamique permettant la consultation de logements, tout en respectant une architecture React moderne et des contraintes fonctionnelles précises (navigation, gestion des erreurs, composants réutilisables).",
       "stack": "Le projet a été réalisé avec React, React Router DOM, Vite, et Sass, en utilisant des données simulées au format JSON et une organisation modulaire des composants.",
       "skills": "Ce projet m'a permis de renforcer ma compréhension des composants React, des hooks (useState, useEffect, useParams), de la gestion du routing et de la structuration d'une application front-end maintenable.",
       "results": "L'application est entièrement fonctionnelle, responsive et conforme aux spécifications, avec une navigation fluide, une page 404 gérée et un déploiement en ligne via Netlify.",
@@ -15,7 +15,7 @@
     },
     "image": "/projects/screenshot_HomePage_kasa.webp",
     "altImage": "Screenshot de la page d'accueil de Kasa",
-    "imageModal": "/projects/kasa_mokup_desktop.webp",
+    "imageModal": "/projects/kasa_mockup_desktop.webp",
     "altImageModal": "Mockup de la page d'accueil de Kasa",
     "technologies": [
       "HTML/CSS",
@@ -43,7 +43,7 @@
     },
     "image": "/projects/vieux_grimoire.webp",
     "altImage": "Screenshot de la page d'accueil de Mon Vieux Grimoire",
-    "imageModal": "/projects/vieux_grimoire_mokup_desktop.webp",
+    "imageModal": "/projects/vieux_grimoire_mockup_desktop.webp",
     "altImageModal": "Mockup de la page d'accueil de Mon Vieux Grimoire",
     "technologies": [
       "Node.js",
@@ -70,7 +70,7 @@
     },
     "image": "/projects/screenshot_carducci_desktop.webp",
     "altImage": "Screenshot de la page d'accueil de Carducci",
-    "imageModal": "/projects/carducci_mokup_desktop.webp",
+    "imageModal": "/projects/carducci_mockup_desktop.webp",
     "altImageModal": "Mockup de la page d'accueil de Carducci",
     "technologies": [
       "Lighthouse",
@@ -98,7 +98,7 @@
     },
     "image": "/projects/screenshot_floppy_bird.webp",
     "altImage": "Aperçu illustré du projet Floppy Bird",
-    "imageModal": "/projects/mokup_floppy_bird.webp",
+    "imageModal": "/projects/mockup_floppy_bird.webp",
     "altImageModal": "Aperçu illustré du projet Floppy Bird",
     "technologies": [
       "HTML",
@@ -117,7 +117,7 @@
     "titleModal": "Sophie_Bluel — Portfolio Architecte (Vanilla JS)",
     "description": "Portfolio d'architecte d'intérieur interactif proposant une galerie filtrable, modales de visualisation et un mode édition sécurisé pour gérer les œuvres. Frontend en JavaScript vanilla consommant une API Node.js/Express pour l'administration et l'upload d'images.",
     "projectSheet": {
-      "context": "Projet 3 de la formation Développeur Web (OpenClassrooms) : Coder le front-end d'un portfolio d'architecte d'intérieur en vanilla JS, en respectant une architecture modulaire. Le backend a déjà été codé.",
+      "context": "Projet 3 de la formation Développeur Web (OpenClassrooms) : Coder le front-end d'un portfolio d'architecte d'intérieur en vanilla JS, en respectant une architecture modulaire, d'après une maquette figma fournie. Le backend a déjà été codé.",
       "objectives": "Construire une galerie dynamique avec filtres, modales accessibles, authentification pour le mode édition, et fonctionnalités d'ajout/suppression d'œuvres via une API REST. Travailler la communication front↔back et la gestion d'assets.",
       "stack": "HTML5, CSS3, JavaScript (ES6 modules), Fetch API.",
       "skills": "DOM dynamique, modularisation JS, fetch, gestion de modales accessibles, upload d'images, gestion d'état centralisée (projectsArray).",
@@ -126,7 +126,7 @@
     },
     "image": "/projects/screenshot_desktop.webp",
     "altImage": "Capture d'écran desktop du portfolio Sophie Bluel",
-    "imageModal": "/projects/sophie_bluel_mokup.webp",
+    "imageModal": "/projects/sophie_bluel_mockup.webp",
     "altImageModal": "Photo de présentation du projet Sophie Bluel",
     "technologies": [
       "HTML",
@@ -136,5 +136,34 @@
     "githubUrl": "https://github.com/ProjetsDevFanny/Projet3_OCR_Sophie_Bluel_JS_Vanilla",
     "liveUrl": "",
     "featured": false
-  }
+  },
+  {
+  "id": 6,
+  "title": "Cine-App — Application Films (React + TMDB)",
+  "slug": "project-cine-app-react",
+  "titleModal": "Cine-App — Application de recherche de films (React)",
+  "description": "Application web de recherche de films permettant d'explorer les tendances, trier par popularité et sauvegarder ses films favoris. Développée en React avec intégration de l’API The Movie Database (TMDB) et persistance locale des données.",
+  "projectSheet": {
+    "context": "Projet de formation React visant à consolider les bases du développement front-end moderne : composants réutilisables, gestion d'état avec Hooks, intégration d'une API REST et mise en place d'une navigation entre pages.",
+    "objectives": "Créer une application permettant la recherche en temps réel de films, le tri par popularité (top/flop), l'affichage des genres et la gestion d'un système de favoris persistants grâce au localStorage.",
+    "stack": "React.js, Axios, SASS, CSS3, React Router DOM, TMDB API.",
+    "skills": "Hooks React (useState, useEffect), gestion d'état, appels API avec Axios, routing avec react-router-dom, persistance avec localStorage, tri et filtrage de données, composants réutilisables.",
+    "results": "Application fonctionnelle avec recherche dynamique, tri des films par popularité, affichage des genres, système de favoris sauvegardé localement et interface responsive adaptée mobile et desktop.",
+    "improvements": "Ajouter une pagination ou infinite scroll, implémenter un système de gestion d'erreurs plus avancé, optimiser les performances (memoization), ajouter des tests unitaires et améliorer l'accessibilité (ARIA)."
+  },
+  "image": "/projects/screenshot_cine_app.webp",
+  "altImage": "Capture d'écran desktop de l'application Cine-App",
+  "imageModal": "/projects/screenshot_cine_app_mockup.webp",
+  "altImageModal": "Mockup de présentation du projet Cine-App",
+  "technologies": [
+    "React",
+    "SASS",
+    "Axios",
+    "React Router",
+    "TMDB API"
+  ],
+  "githubUrl": "https://github.com/ProjetsDevFanny/FormationFS-REACT-TP2-Cine-app",
+  "liveUrl": "https://cine-app-react-fanny.netlify.app/",
+  "featured": false
+}
 ]

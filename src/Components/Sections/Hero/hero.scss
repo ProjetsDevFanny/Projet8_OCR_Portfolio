@@ -61,6 +61,7 @@
       }
 
       .hero__important-note {
+        position: relative;
         display: flex;
         font-size: 1.2rem;
         color: $light_purple;
@@ -68,20 +69,24 @@
         gap: 0.2rem;
 
         .hand {
+          position: absolute;
           display: inline-block;
           animation: bounce 1s infinite alternate;
           font-size: 15px;
+          top: -2px;
+          left: -10px;
         }
+
         /* animation de rebond de la main */
         @keyframes bounce {
           0% {
             transform: translateX(0);
           }
-  
+
           50% {
             transform: translateX(-10px);
           }
-  
+
           100% {
             transform: translateX(0);
           }
