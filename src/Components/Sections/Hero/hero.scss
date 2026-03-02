@@ -1,0 +1,110 @@
+/**
+ * @file hero.scss
+ * @description Styles pour la section Hero
+ * @author Simon Fanny
+ * @date 22/12/2025
+ * @project Portfolio - Projet8 - OpenClassrooms
+ */
+
+
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+// ===============================================================================
+// HERO
+// ===============================================================================
+.hero {
+  &__container {
+    position: relative;
+    background:
+      linear-gradient(135deg, rgba($background, 0.8) 0%, rgba($dark_violet, 0.8) 100%),
+      url('/src/assets/images/frequency-wave.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $white;
+    @include center-flex;
+    text-align: center;
+    min-height: 90vh;
+    padding: 2rem;
+
+    @include tablet {
+      min-height: 40vh;
+    }
+
+    .hero__content {
+      max-width: 800px;
+
+      .hero__title {
+        @include font-style(6rem);
+        font-family: $font-primary;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+        @include tablet {
+          font-size: 4rem;
+        }
+      }
+
+      .hero__subtitle {
+        @include font-style(1.8rem);
+        margin-bottom: 3rem;
+        opacity: 0.9;
+      }
+
+      .hero__description {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        opacity: 0.8;
+      }
+
+      .hero__important-note {
+        position: relative;
+        display: flex;
+        font-size: 1.2rem;
+        color: $light_purple;
+        font-weight: bold;
+        gap: 0.2rem;
+
+        .hand {
+          position: absolute;
+          display: inline-block;
+          animation: bounce 1s infinite alternate;
+          font-size: 15px;
+          top: -2px;
+          left: -10px;
+        }
+
+        /* animation de rebond de la main */
+        @keyframes bounce {
+          0% {
+            transform: translateX(0);
+          }
+
+          50% {
+            transform: translateX(-10px);
+          }
+
+          100% {
+            transform: translateX(0);
+          }
+        }
+      }
+
+      .hero__social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 2.5rem;
+        // margin-left: -5px; when using buttons, to align with the left edge of the buttons
+
+        @include tablet {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
