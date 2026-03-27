@@ -52,10 +52,10 @@
       },
       { 
         "idHobby": 2,
-        "name": "Galerie artistique intéractive ",
+        "name": "AgriTrade (TypeScript, React, Node.js, MongoDB)",
         "description":  " en cours ",
         "textLinkGitHub": " Github",
-        "linkGithub": "https://github.com/ProjetsDevFanny/Galery_Art",
+        "linkGithub": "https://github.com/ProjetsDevFanny/AgriTrade",
         "textLinkWebsite" : " Site Web",
         "linkWebsite": ""
       }

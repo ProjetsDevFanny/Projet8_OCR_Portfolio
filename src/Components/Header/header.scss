@@ -33,7 +33,6 @@
     position: fixed;
     left: 0;
     z-index: 15;
-    opacity: 0.8;
     border-radius: 0 0 20px 0;
   }
 
@@ -68,6 +67,71 @@
     }
   }
 
+  &__sidebar {
+    @include mobile {
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transition: 0.5s ease-out;
+      z-index: 4;
+      transform:translateX(-100px);
+    }
+  }
+
+  &__sidebar--deployed {
+    @include mobile {
+    transform: translateX(0);
+    }
+  }
+
+  /* Div hamburger */
+  &__toggle-btn {
+    @include mobile {
+      position: absolute;
+      top: 2px;
+      left: 105px;
+      cursor: pointer;
+      height: 50px;
+      width: 50px;
+    }
+}
+
+  &__toggle-btn span {
+    @include mobile {
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background: $white;
+    display: block;
+    margin-top: 4px;
+    transition: 0.3s ease;
+  }
+}
+
+  &__toggle-btn.open .bar:nth-child(1) {
+    @include mobile {
+    transform: rotate(45deg);
+    position: relative;
+    top: 9.5px;
+    }
+}
+
+  &__toggle-btn.open .bar:nth-child(2) {
+    @include mobile {
+    opacity: 0;
+    }
+}
+
+  &__toggle-btn.open .bar:nth-child(3) {
+    @include mobile {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 8.5px;
+    }
+}
+
   &__nav {
     display: flex;
     gap: 3.5rem;
@@ -82,7 +146,12 @@
       @include mobile {
         gap: 1rem;
         flex-direction: column;      
-        align-items: flex-start;
+        align-items: flex-start;       
+        padding: 0.7rem 0 0.7rem 0.7rem;
+        background: $background;
+        border-radius: 0 0 20px 0;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
       }
     }
 
@@ -102,3 +171,4 @@
       }      
     }
   }
+
