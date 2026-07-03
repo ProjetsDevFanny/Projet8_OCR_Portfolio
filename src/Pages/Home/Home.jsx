@@ -21,32 +21,32 @@ function Home() {
   return (
     <div className="home">
       {/* Section Accueil/Hero */}
-      <section id="hero" className="home__hero">
+      <section id="hero" className="home__hero" data-cy="hero">
         <Hero />
       </section>
 
       {/* Section À propos */}
-      <section id="about" className="home__about">
+      <section id="about" className="home__about" data-cy="about">
         <About />
       </section>
 
       {/* Section Skills */}
-      <section id="skills" className="home__skills">
+      <section id="skills" className="home__skills" data-cy="skills">
         <Skills />
       </section>
       
       {/* Section Projets */}
-      <section id="projects" className="home__projects">
+      <section id="projects" className="home__projects" data-cy="projects">
         <Projects />
       </section>
 
       {/* Section Parcours */}
-      <section id="history" className="home__history">
+      <section id="history" className="home__history" data-cy="history">
         <History />
       </section>
 
       {/* Section Contact */}
-      <section id="contact" className="home__contact">
+      <section id="contact" className="home__contact" data-cy="contact">
         <Contacts />
       </section>
 

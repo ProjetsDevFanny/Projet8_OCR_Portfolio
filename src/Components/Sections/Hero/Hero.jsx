@@ -26,7 +26,7 @@ function Hero() {
         />
 
         <div className="hero__content">
-          <h1 className="hero__title">Fanny SIMON</h1>
+          <h1 className="hero__title" data-cy="hero-title">Fanny SIMON</h1>
           <h2 className="hero__subtitle">Développeuse Web Full Stack</h2>
           <p className="hero__description">
             Eh oui.., encore une développeuse web junior me dirai vous ! Mais pas n'importe laquelle... <br /> <br />Ingénieure en agriculture de formation, je sais travailler en équipe et dialoguer avec des interlocuteurs aux points de vue assez affirmés... mais tellement intéressants !
