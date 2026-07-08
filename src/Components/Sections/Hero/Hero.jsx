@@ -27,8 +27,8 @@ function Hero() {
 
         <div className="hero__content">
           <h1 className="hero__title" data-cy="hero-title">Fanny SIMON</h1>
-          <h2 className="hero__subtitle">Développeuse Web Full Stack</h2>
-          <p className="hero__description">
+          <h2 className="hero__subtitle" data-cy="hero-subtitle">Développeuse Web Full Stack</h2>
+          <p className="hero__description" data-cy="hero-description">
             Eh oui.., encore une développeuse web junior me dirai vous ! Mais pas n'importe laquelle... <br /> <br />Ingénieure en agriculture de formation, je sais travailler en équipe et dialoguer avec des interlocuteurs aux points de vue assez affirmés... mais tellement intéressants !
             <br />   
             En 2024, je me suis tournée vers le code, et depuis, impossible de m'arrêter ! <br />
@@ -36,11 +36,11 @@ function Hero() {
             <br /> 
             Aujourd'hui, Je recherche un poste salarié ou des missions en freelance. 
           </p>
-          <div className="hero__important-note">
+          <div className="hero__important-note" data-cy="hero-important-note">
             <span className="hand">👉</span>
             <span className="text">Développeurs seniors freelance, n'hésitez pas à me solliciter: je peux vous dégager du temps sur certaines tâches.</span>
           </div>
-          <div className="hero__social-links">
+          <div className="hero__social-links" data-cy="hero-social-links">
             <SocialLinks />
           </div>
         </div>

@@ -21,6 +21,7 @@ function SocialLinks() {
         target="_blank"
         rel="noopener noreferrer"
         className="social-link social-link--github"
+        data-cy="hero-social-links-github"
         aria-label="Visitez mon GitHub"
       >
         <img src={githubIcon} alt="GitHub" className="social-icon social-icon--github" />
@@ -31,6 +32,7 @@ function SocialLinks() {
         target="_blank"
         rel="noopener noreferrer"
         className="social-link social-link--linkedin"
+        data-cy="hero-social-links-linkedin"
         aria-label="Visitez mon LinkedIn"
       >
         <img src={linkedinIcon} alt="LinkedIn" className="social-icon social-icon--linkedin" />
