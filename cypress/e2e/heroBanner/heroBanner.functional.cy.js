@@ -54,13 +54,13 @@ describe('Functional tests', () => {
 
       describe('Functional gitHub link', () => {
         it('should display the gitHub link', () => {
-          cy.getBySel('hero-social-links-github').should('be.visible');
+          cy.getBySel('hero-social-links-github').should('be.visible')
+            .and('have.attr', 'target', '_blank');
         });
 
         it('should have the correct GitHub link', () => {
           cy.getBySel('hero-social-links-github')
             .should('have.attr', 'href')
-            .and('have.attr', 'target', '_blank')
             .and('include', 'https://github.com/ProjetsDevFanny');
         });
       });
@@ -68,13 +68,12 @@ describe('Functional tests', () => {
 
       describe('Functional linkedIn link', () => {
         it('should display the linkedIn link', () => {
-          cy.getBySel('hero-social-links-linkedin').should('be.visible');
+          cy.getBySel('hero-social-links-linkedin').should('be.visible').and('have.attr', 'target', '_blank');
         });
 
         it('should have the correct LinkedIn link', () => {
           cy.getBySel('hero-social-links-linkedin')
             .should('have.attr', 'href')
-            .and('have.attr', 'target', '_blank')
             .and('include', 'https://www.linkedin.com/in/fannysimon-dev-web/');
         });
       });
