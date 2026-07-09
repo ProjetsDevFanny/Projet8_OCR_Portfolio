@@ -44,37 +44,94 @@ describe('Functional tests', () => {
     it('should display the important note', () => {
       cy.getBySel('hero-important-note').should('be.visible');
     });
-
+  });
 
 
     /**
      * Functional tests social links
-     **************************************/
+    **************************************/
     describe('Functional tests social links', () => {
 
       describe('Functional gitHub link', () => {
-        it('should display the gitHub link', () => {
-          cy.getBySel('hero-social-links-github').should('be.visible')
-            .and('have.attr', 'target', '_blank');
-        });
 
-        it('should have the correct GitHub link', () => {
-          cy.getBySel('hero-social-links-github')
-            .should('have.attr', 'href')
-            .and('include', 'https://github.com/ProjetsDevFanny');
-        });
-      });
+        describe('Functional gitHub icon link', () => {
 
+          it('should display the GitHub icon', () => {
+            cy.getBySel('github-icon')
+              .should('be.visible');
+          });
+
+          it('should load tke gitHub icon', () => {
+            cy.getBySel('github-icon')
+            .should(($img) => {
+              expect($img[0].naturalWidth).to.be.greaterThan(0);
+            });
+          });
+          
+          
+          
+        describe('Functional gitHub link details', () => {
+
+          it('should display the gitHub link', () => {
+            cy.getBySel('hero-social-links-github').should('be.visible')
+          });
+
+          it('should have the correct GitHub URL', () => {
+            cy.getBySel('hero-social-links-github')
+              .should('have.attr', 'href', 'https://github.com/ProjetsDevFanny')
+          });
+
+          it('should open GitHub in a new tab', () => {
+            cy.getBySel('hero-social-links-github')
+              .should('have.attr', 'target', '_blank');
+          });
+        });
+      
 
       describe('Functional linkedIn link', () => {
-        it('should display the linkedIn link', () => {
-          cy.getBySel('hero-social-links-linkedin').should('be.visible').and('have.attr', 'target', '_blank');
+
+        describe('Functional linkedIn icon link', () => {
+
+          it('should display the linkedIn icon', () => {
+            cy.getBySel('linkedin-icon')
+              .should('be.visible'); // but the icon could be broken..
+          });
+
+          it('should load tke linkedIn icon', () => {
+            cy.getBySel('linkedin-icon')
+              .should(($img) => {
+                expect($img[0].naturalWidth).to.be.greaterThan(0);
+              });
+          })
         });
 
-        it('should have the correct LinkedIn link', () => {
-          cy.getBySel('hero-social-links-linkedin')
-            .should('have.attr', 'href')
-            .and('include', 'https://www.linkedin.com/in/fannysimon-dev-web/');
+
+        describe('Functional linkedIn link details', () => {
+
+          it('should display the linkedIn link', () => {
+            cy.getBySel('hero-social-links-linkedin').should('be.visible')
+          });
+
+          it('should have the correct LinkedIn URL', () => {
+            cy.getBySel('hero-social-links-linkedin')
+              .should('have.attr', 'href', 'https://www.linkedin.com/in/fannysimon-dev-web/')    // Here for a strict link check 
+          });
+
+          it('should open LinkedIn in a new tab', () => {
+            cy.getBySel('hero-social-links-linkedin')
+              .should('have.attr', 'target', '_blank');
+          });
+
+        });
+
+          // it('should have the correct LinkedIn link', () => {
+          //   cy.getBySel('hero-social-links-linkedin')
+          //     .should('have.attr', 'href') // check first if the link has an href attribute, it doesn't matter wich link is it
+          //     .and('include', 'https://www.linkedin.com/in/fannysimon-dev-web/'); // then check if the link includes the correct LinkedIn profile
+
+
+
+
         });
       });
     });

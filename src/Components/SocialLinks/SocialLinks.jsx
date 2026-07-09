@@ -24,7 +24,7 @@ function SocialLinks() {
         data-cy="hero-social-links-github"
         aria-label="Visitez mon GitHub"
       >
-        <img src={githubIcon} alt="GitHub" className="social-icon social-icon--github" />
+        <img src={githubIcon} alt="GitHub" className="social-icon social-icon--github" data-cy="github-icon" />
       </a>
 
       <a
@@ -35,7 +35,7 @@ function SocialLinks() {
         data-cy="hero-social-links-linkedin"
         aria-label="Visitez mon LinkedIn"
       >
-        <img src={linkedinIcon} alt="LinkedIn" className="social-icon social-icon--linkedin" />
+        <img src={linkedinIcon} alt="LinkedIn" className="social-icon social-icon--linkedin" data-cy="linkedin-icon" />
       </a>
     </div>
   )
