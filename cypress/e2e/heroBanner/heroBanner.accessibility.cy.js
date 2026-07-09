@@ -1,0 +1,1 @@
+// alt on socials-link img

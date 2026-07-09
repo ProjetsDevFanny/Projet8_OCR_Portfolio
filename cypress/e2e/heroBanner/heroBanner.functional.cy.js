@@ -61,10 +61,10 @@ describe('Functional tests', () => {
               .should('be.visible');
           });
 
-          it('should load tke gitHub icon', () => {
+          it('should load the gitHub icon', () => {
             cy.getBySel('github-icon')
             .should(($img) => {
-              expect($img[0].naturalWidth).to.be.greaterThan(0);
+              expect($img[0].naturalWidth).to.be.greaterThan(0);  // Not very intetesting to test because Vite already check before
             });
           });
           
@@ -97,10 +97,10 @@ describe('Functional tests', () => {
               .should('be.visible'); // but the icon could be broken..
           });
 
-          it('should load tke linkedIn icon', () => {
+          it('should load the linkedIn icon', () => {
             cy.getBySel('linkedin-icon')
               .should(($img) => {
-                expect($img[0].naturalWidth).to.be.greaterThan(0);
+                expect($img[0].naturalWidth).to.be.greaterThan(0); // Not very intetesting to test because Vite already check before
               });
           })
         });
