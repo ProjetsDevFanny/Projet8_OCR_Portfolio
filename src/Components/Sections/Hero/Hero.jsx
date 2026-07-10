@@ -37,7 +37,7 @@ function Hero() {
             Aujourd'hui, Je recherche un poste salarié ou des missions en freelance. 
           </p>
           <div className="hero__important-note" data-cy="hero-important-note">
-            <span className="hand">👉</span>
+            <span className="hand" data-cy="hero-important-note-hand">👉</span>
             <span className="text">Développeurs seniors freelance, n'hésitez pas à me solliciter: je peux vous dégager du temps sur certaines tâches.</span>
           </div>
           <div className="hero__social-links" data-cy="hero-social-links">

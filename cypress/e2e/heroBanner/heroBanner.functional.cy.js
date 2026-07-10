@@ -41,8 +41,22 @@ describe('Functional tests', () => {
    * Functional tests important note
    **************************************/
   describe('Functional tests important note', () => {
-    it('should display the important note', () => {
-      cy.getBySel('hero-important-note').should('be.visible');
+    describe('Functional tests important note text', () => {
+      
+      it('should display the important note', () => {
+        cy.getBySel('hero-important-note').should('be.visible');
+      });
+    });
+    
+    describe('Functional tests important note hand', () => {
+      it('should display the waving hand', () => {
+        cy.getBySel('hero-important-note-hand')
+          .should('be.visible');
+      });
+      it('should have the bounce animation', () => {
+        cy.getBySel('hero-important-note-hand')
+          .should('have.css', 'animation-name', 'bounce');
+      });
     });
   });
 
@@ -86,6 +100,12 @@ describe('Functional tests', () => {
               .should('have.attr', 'target', '_blank');
           });
         });
+
+        describe('Functional github link animation', () => {
+          it('should animate github link  on hover', () => {
+
+          });
+        });
       
 
       describe('Functional linkedIn link', () => {
@@ -121,7 +141,6 @@ describe('Functional tests', () => {
             cy.getBySel('hero-social-links-linkedin')
               .should('have.attr', 'target', '_blank');
           });
-
         });
 
           // it('should have the correct LinkedIn link', () => {
@@ -130,7 +149,11 @@ describe('Functional tests', () => {
           //     .and('include', 'https://www.linkedin.com/in/fannysimon-dev-web/'); // then check if the link includes the correct LinkedIn profile
 
 
+        describe('Functional linkedIn link animation', () => {
+          it('should animate linkedIn link  on hover', () => {
 
+          });
+        });
 
         });
       });
