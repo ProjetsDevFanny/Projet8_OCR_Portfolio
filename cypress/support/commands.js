@@ -25,7 +25,15 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-
+// Commande pour les data-cy : 
 Cypress.Commands.add("getBySel", (selector, ...args) => {
   return cy.get(`[data-cy=${selector}]`, ...args)
 })
+
+// Commande pour générer un fakeUser : 
+Cypress.Commands.add("fillContactForm", (user) => {
+  cy.get('[data-cy="firstname"]').type(user.firstname);
+  cy.get('[data-cy="lastname"]').type(user.lastname);
+  cy.get('[data-cy="email"]').type(user.email);
+  cy.get('[data-cy="message"]').type(user.message);
+});

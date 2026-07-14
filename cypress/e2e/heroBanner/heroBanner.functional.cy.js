@@ -2,7 +2,7 @@
  * HeroBanner Functional tests
  **************/
 
-describe('Functional tests', () => {
+describe('HeroBanner Functional tests', () => {
 
   beforeEach(() => {
     cy.viewport(1920, 1080);
@@ -13,7 +13,7 @@ describe('Functional tests', () => {
   /**
    * HeroBanner Functional tests titles & subtitles
    **************************************/
-  describe('Functional tests titles & subtitles', () => {
+  describe('HeroBanner Functional tests titles & subtitles', () => {
 
     it('should display the title', () => {
       cy.getBySel('hero').should('be.visible');
@@ -29,7 +29,7 @@ describe('Functional tests', () => {
   /**
    * HeroBanner Functional tests description
    **************************************/
-  describe('Functional tests description ', () => {
+  describe('HeroBanner Functional tests description ', () => {
 
     it('should display the description', () => {
       cy.getBySel('hero-description').should('be.visible');
@@ -40,15 +40,15 @@ describe('Functional tests', () => {
   /**
    * HeroBanner Functional tests important note
    **************************************/
-  describe('Functional tests important note', () => {
-    describe('Functional tests important note text', () => {
+  describe('HeroBanner Functional tests important note', () => {
+    describe('HeroBanner Functional tests important note text', () => {
       
       it('should display the important note', () => {
         cy.getBySel('hero-important-note').should('be.visible');
       });
     });
     
-    describe('Functional tests important note hand', () => {
+    describe('HeroBanner Functional tests important note hand', () => {
       it('should display the waving hand', () => {
         cy.getBySel('hero-important-note-hand')
           .should('be.visible');
@@ -64,11 +64,11 @@ describe('Functional tests', () => {
     /**
      * HeroBanner Functional tests social links
     **************************************/
-    describe('Functional tests social links', () => {
+    describe('HeroBanner Functional tests social links', () => {
 
-      describe('Functional gitHub link', () => {
+      describe('HeroBanner Functional gitHub link', () => {
 
-        describe('Functional gitHub icon link', () => {
+        describe('HeroBanner Functional gitHub icon link', () => {
 
           it('should display the GitHub icon', () => {
             cy.getBySel('github-icon')
@@ -84,7 +84,7 @@ describe('Functional tests', () => {
           
           
           
-        describe('Functional gitHub link details', () => {
+        describe('HeroBanner Functional gitHub link details', () => {
 
           it('should display the gitHub link', () => {
             cy.getBySel('hero-social-links-github').should('be.visible')
@@ -101,16 +101,16 @@ describe('Functional tests', () => {
           });
         });
 
-        describe('Functional github link animation', () => {
+        describe('HeroBanner Functional github link animation', () => {
           it('should animate github link  on hover', () => {
 
           });
         });
       
 
-      describe('Functional linkedIn link', () => {
+      describe('HeroBanner Functional linkedIn link', () => {
 
-        describe('Functional linkedIn icon link', () => {
+        describe('HeroBanner Functional linkedIn icon link', () => {
 
           it('should display the linkedIn icon', () => {
             cy.getBySel('linkedin-icon')
@@ -126,7 +126,7 @@ describe('Functional tests', () => {
         });
 
 
-        describe('Functional linkedIn link details', () => {
+        describe('HeroBanner Functional linkedIn link details', () => {
 
           it('should display the linkedIn link', () => {
             cy.getBySel('hero-social-links-linkedin').should('be.visible')
@@ -149,7 +149,7 @@ describe('Functional tests', () => {
           //     .and('include', 'https://www.linkedin.com/in/fannysimon-dev-web/'); // then check if the link includes the correct LinkedIn profile
 
 
-        describe('Functional linkedIn link animation', () => {
+        describe('HeroBanner Functional linkedIn link animation', () => {
           it('should animate linkedIn link  on hover', () => {
 
           });
