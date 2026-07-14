@@ -1,5 +1,5 @@
 /**************
- * Functional tests
+ * HeroBanner Functional tests
  **************/
 
 describe('Functional tests', () => {
@@ -11,7 +11,7 @@ describe('Functional tests', () => {
   });
 
   /**
-   * Functional tests titles & subtitles
+   * HeroBanner Functional tests titles & subtitles
    **************************************/
   describe('Functional tests titles & subtitles', () => {
 
@@ -27,7 +27,7 @@ describe('Functional tests', () => {
 
 
   /**
-   * Functional tests description
+   * HeroBanner Functional tests description
    **************************************/
   describe('Functional tests description ', () => {
 
@@ -38,7 +38,7 @@ describe('Functional tests', () => {
 
 
   /**
-   * Functional tests important note
+   * HeroBanner Functional tests important note
    **************************************/
   describe('Functional tests important note', () => {
     describe('Functional tests important note text', () => {
@@ -62,7 +62,7 @@ describe('Functional tests', () => {
 
 
     /**
-     * Functional tests social links
+     * HeroBanner Functional tests social links
     **************************************/
     describe('Functional tests social links', () => {
 

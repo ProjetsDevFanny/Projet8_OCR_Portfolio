@@ -69,22 +69,30 @@ function Contacts() {
     return;
   }
 
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('Variables EmailJS manquantes. Vérifiez le fichier .env et redémarrez le serveur (npm run dev).');
+      setSubmitMessage('Configuration EmailJS manquante. Contactez l\'administrateur du site.');
+      setIsSubmitting(false);
+      return;
+    }
+
     // Envoi des données du formulaire à EmailJS
     try {
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
           message: formData.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        publicKey
       );
-
-      console.log('Données du formulaire:', formData);
-      console.log(typeof emailjs); // "object"
 
       // Délai d'envoi pour simuler un traitement asynchrone
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -95,6 +103,7 @@ function Contacts() {
       }, 5000);
 
     } catch (error) {
+      console.error('Erreur EmailJS:', error?.text || error);
       setSubmitMessage('Une erreur est survenue. Veuillez réessayer.');
       setTimeout(() => {
         resetMessageAndForm();
@@ -126,6 +135,7 @@ function Contacts() {
                 required
                 className="form-input"
                 placeholder="Votre prénom"
+                data-cy="contact-form-inputFirstname"
               />
             </div>
 
@@ -140,7 +150,8 @@ function Contacts() {
                 required
                 className="form-input"
                 placeholder="Votre nom"
-              />
+               data-cy="contact-form-inputLastname"
+               />
             </div>
           </div>
 
@@ -155,7 +166,8 @@ function Contacts() {
               required
               className="form-input"
               placeholder="votre.email@example.com"
-            />
+              data-cy="contact-form-inputEmail"
+              />
           </div>
 
           <div className="form-group">
@@ -169,13 +181,15 @@ function Contacts() {
               className="form-textarea"
               placeholder="Votre message..."
               rows="5"
-            />
+              data-cy="contact-form-inputMessage"
+              />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
             className="form-submit-btn"
+            data-cy="contact-form-submitButton"
           >
             {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
           </button>
