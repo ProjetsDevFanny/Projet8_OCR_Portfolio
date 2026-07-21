@@ -42,12 +42,22 @@ describe('Contact Functional tests', () => {
       cy.getBySel('contact-form-inputEmail').type(user.email);
       cy.getBySel('contact-form-inputMessage').type(user.message);
       
-      cy.fillContactForm(user);
+      // cy.fillContactForm(user); // on ne remplit PAS le lastname ! donc pas de fillContactForm() dans ce test.
       cy.getBySel('contact-form-submitButton').click();
 
     });
 
-    it("should require the last name");
+    it("should require the last name", () => {
+      const user = fakeUser();
+
+      cy.getBySel('contact-form-inputFirstname').type(user.firstname);
+      cy.getBySel('contact-form-inputEmail').type(user.email);
+      cy.getBySel('contact-form-inputMessage').type(user.message);
+      
+      // cy.fillContactForm(user); 
+      cy.getBySel('contact-form-submitButton').click();
+
+    });
 
     it("should require the email");
 
