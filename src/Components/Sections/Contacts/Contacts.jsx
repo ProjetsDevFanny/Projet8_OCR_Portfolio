@@ -122,7 +122,7 @@ function Contacts() {
           Un projet ? Une opportunité professionnelle ? <br /> N'hésitez pas à me contacter.
         </p>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" data-cy="contact-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="firstName" className="form-label">Prénom *</label>

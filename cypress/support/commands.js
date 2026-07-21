@@ -32,8 +32,19 @@ Cypress.Commands.add("getBySel", (selector, ...args) => {
 
 // Commande pour générer un fakeUser : 
 Cypress.Commands.add("fillContactForm", (user) => {
-  cy.get('[data-cy="firstname"]').type(user.firstname);
-  cy.get('[data-cy="lastname"]').type(user.lastname);
-  cy.get('[data-cy="email"]').type(user.email);
-  cy.get('[data-cy="message"]').type(user.message);
+  if (user.firstname) {
+    cy.getBySel('contact-form-inputFirstname').type(user.firstname);
+  }
+
+  if (user.lastname) {
+    cy.getBySel('contact-form-inputLastname').type(user.lastname);
+  }
+
+  if (user.email) {
+    cy.getBySel('contact-form-inputEmail').type(user.email);
+  }
+
+  if (user.message) {
+    cy.getBySel('contact-form-inputMessage').type(user.message);
+  }
 });
